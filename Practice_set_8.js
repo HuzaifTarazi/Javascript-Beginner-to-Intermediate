@@ -222,4 +222,25 @@ function StudentEligibilitySystem() {
 }
 
 submitInfo.onclick = StudentEligibilitySystem;
+
+/*<-------------------------->*/
+
+/* 9:
+   User enters one Number.*/
+
+const enterScore = document.getElementById("enterScore");
+const checkScore = document.getElementById("checkScore");
+const scoreOutput = document.getElementById("scoreOutput");
+let convertNumber;
+function CheckScoreResult() {
+  convertNumber = Number(enterScore.value);
+  if (convertNumber > 0 && (convertNumber % 2)=== 0) {
+    scoreOutput.textContent = `Valid Score`;
+  } else if (convertNumber <= 0) {
+    scoreOutput.textContent = `Invalid Score`;
+  } else {
+    scoreOutput.textContent = `Odd Number`
+  }
+}
+checkScore.onclick = CheckScoreResult;
 /*<-------------------------->*/
