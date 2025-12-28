@@ -234,13 +234,45 @@ const scoreOutput = document.getElementById("scoreOutput");
 let convertNumber;
 function CheckScoreResult() {
   convertNumber = Number(enterScore.value);
-  if (convertNumber > 0 && (convertNumber % 2)=== 0) {
+  if (convertNumber > 0 && convertNumber % 2 === 0) {
     scoreOutput.textContent = `Valid Score`;
   } else if (convertNumber <= 0) {
     scoreOutput.textContent = `Invalid Score`;
   } else {
-    scoreOutput.textContent = `Odd Number`
+    scoreOutput.textContent = `Odd Number`;
   }
 }
 checkScore.onclick = CheckScoreResult;
+
+/*<-------------------------->*/
+
+/* 10:
+   A user enters Age, Salary and Experience.*/
+
+const checkBonus = document.getElementById("checkBonus");
+
+function CheckBonusSalary() {
+  let yourAge = document.getElementById("yourAge");
+  let yourSalary = document.getElementById("yourSalary");
+  let yourExperience = document.getElementById("yourExperience");
+  let bonusAvailable = document.getElementById("bonusAvailable");
+  let bonusSalaryIs;
+  let bonusCode;
+
+  yourAge = Number(yourAge.value);
+  yourSalary = Number(yourSalary.value);
+  yourExperience = parseInt(yourExperience.value);
+
+  if ((yourAge >= 21 && yourSalary >= 30000) || yourExperience >= 5) {
+    bonusSalaryIs = yourSalary * (10 / 100);
+    bonusAvailable.textContent = `You Got ${bonusSalaryIs} of Bonus as per your salary`;
+  } else {
+    bonusAvailable.textContent = `No Bonus Available for you.`;
+  }
+  bonusCode = Math.trunc(Math.random() * 100) + 1;
+  bonusAvailable.textContent = `You Got ${bonusCode} of Bonus as per your salary`;
+}
+
+checkBonus.onclick = CheckBonusSalary;
+
 /*<-------------------------->*/
