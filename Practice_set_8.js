@@ -154,7 +154,7 @@ rollDice.onclick = DiceRollFunction;
 
 /*<-------------------------->*/
 
-/* 5:
+/* 6:
    Calculate Yearly Tax from Monthly Salary.*/
 
 const enterSalary = document.getElementById("enterSalary");
@@ -176,7 +176,29 @@ function TaxCalculation() {
     yearlyTax = yearlyTax * (10 / 100);
     printTax.textContent = `You have to pay ${yearlyTax} as per your yearly salary.`;
   }
-};
+}
 submitSalary.onclick = TaxCalculation;
+
+/*<-------------------------->*/
+
+/* 7:
+   A user enters a username and pin code.*/
+const pUsername = document.getElementById("pUsername");
+const pinCode = document.getElementById("pinCode");
+const pSubmit = document.getElementById("pSubmit");
+const pOutput = document.getElementById("pOutput");
+
+function AuthenticationSystem() {
+  let getUsername = String(pUsername.value);
+  let getPincode = Number(pinCode.value);
+
+  if (getUsername !== "" && getPincode >= 1000 && getPincode <= 10000) {
+    pOutput.textContent = `Login Successful`;
+  } else {
+    pOutput.textContent = `Login Failed`;
+  }
+}
+
+pSubmit.onclick = AuthenticationSystem;
 
 /*<-------------------------->*/
