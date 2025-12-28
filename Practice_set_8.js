@@ -202,3 +202,24 @@ function AuthenticationSystem() {
 pSubmit.onclick = AuthenticationSystem;
 
 /*<-------------------------->*/
+
+/* 8:
+   A student enters Age and Attendance Percentage.*/
+let studentAge = document.getElementById("studentAge");
+let studentAttendance = document.getElementById("studentAttendance");
+let submitInfo = document.getElementById("submitInfo");
+let studentEligible = document.getElementById("studentEligible");
+
+function StudentEligibilitySystem() {
+  studentAge = parseInt(studentAge.value);
+  studentAttendance = parseInt(studentAttendance.value);
+  console.log(studentAge, studentAttendance);
+  if (!(studentAge >= 18 && studentAttendance >= 75)) {
+    studentEligible.textContent = `You are Not Eligible to enter.`;
+  } else {
+    studentEligible.textContent = `You are Eligible to enter.`;
+  }
+}
+
+submitInfo.onclick = StudentEligibilitySystem;
+/*<-------------------------->*/
