@@ -1,583 +1,589 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Js Practice Sets</title>
-  </head>
 
-  <body>
-    <!-- Practice set 1 -->
-    <h2
-      style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Js Practice Sets</title>
+</head>
+
+<body>
+  <!-- Practice set 1 -->
+  <h2 style="
         text-align: center;
         text-align: black;
         background-color: red;
         margin: 15px;
         padding: 10px;
-      "
-    >
-      Practice Set 1
-    </h2>
-    <hr />
+      ">
+    Practice Set 1
+  </h2>
+  <hr />
 
-    <!-- Practice set 2 -->
-    <h2
-      style="
+  <!-- Practice set 2 -->
+  <h2 style="
         text-align: center;
         text-align: black;
         background-color: red;
         margin: 15px;
         padding: 10px;
-      "
-    >
-      Practice Set 2
-    </h2>
-    <hr />
-    <!-- Question No 1 -->
-    <h4>Question 1</h4>
-    <p>
-      Make an input for name and a button when clicked show the message on the
-      page?
-    </p>
-    <label for="username">Username: </label>
-    <input id="input_username" type="text" placeholder="Username" />
-    <input id="username_submit" type="submit" />
-    <span id="show_output_user">Output Is: </span>
-    <br />
-    <hr />
-    <!-- Question No 2 -->
-    <h4>Question 2</h4>
-    <p>
-      User Enters two numbers Calculate the sum of them and print them on the
-      webpage?
-    </p>
-    <label for="number_sum_1">Enter Number 1:</label>
-    <input id="number_sum_1" type="number" placeholder="Enter Number" />
-    <label for="number_sum_2">Enter Number 2:</label>
-    <input id="number_sum_2" type="number" placeholder="Enter Number" />
-    <input id="calculate_sum" type="submit" />
-    <span id="sumofnumbers">Sum of Numbers are: </span>
-    <!-- Question No 3 -->
-    <hr />
-    <h4>Question 3</h4>
-    <p>
-      Take User age and display it on webpage and console.log and also check the
-      type of the datatype?
-    </p>
-    <label for="myage">Enter Your Age:</label>
-    <input id="myage" type="number" />
-    <input id="myagesubmit" type="submit" />
-    <span id="ageoutput">You are __ Years old.</span>
-    <!-- Question No 4 -->
-    <hr />
-    <h4>Question 4</h4>
-    <p>Ask for Width and Height and then display the area of a rectangle?</p>
-    <label for="rectangle_width">Enter Rectangle Width:</label>
-    <input id="rectangle_width" type="number" />
-    <label for="">Enter Rectangle Height:</label>
-    <input id="rectangle_height" type="number" />
-    <input id="calculate_rec_area" type="submit" />
-    <span id="rec_output">Area of Rectangle is: </span>
+      ">
+    Practice Set 2
+  </h2>
+  <hr />
+  <!-- Question No 1 -->
+  <h4>Question 1</h4>
+  <p>
+    Make an input for name and a button when clicked show the message on the
+    page?
+  </p>
+  <label for="username">Username: </label>
+  <input id="input_username" type="text" placeholder="Username" />
+  <input id="username_submit" type="submit" />
+  <span id="show_output_user">Output Is: </span>
+  <br />
+  <hr />
+  <!-- Question No 2 -->
+  <h4>Question 2</h4>
+  <p>
+    User Enters two numbers Calculate the sum of them and print them on the
+    webpage?
+  </p>
+  <label for="number_sum_1">Enter Number 1:</label>
+  <input id="number_sum_1" type="number" placeholder="Enter Number" />
+  <label for="number_sum_2">Enter Number 2:</label>
+  <input id="number_sum_2" type="number" placeholder="Enter Number" />
+  <input id="calculate_sum" type="submit" />
+  <span id="sumofnumbers">Sum of Numbers are: </span>
+  <!-- Question No 3 -->
+  <hr />
+  <h4>Question 3</h4>
+  <p>
+    Take User age and display it on webpage and console.log and also check the
+    type of the datatype?
+  </p>
+  <label for="myage">Enter Your Age:</label>
+  <input id="myage" type="number" />
+  <input id="myagesubmit" type="submit" />
+  <span id="ageoutput">You are __ Years old.</span>
+  <!-- Question No 4 -->
+  <hr />
+  <h4>Question 4</h4>
+  <p>Ask for Width and Height and then display the area of a rectangle?</p>
+  <label for="rectangle_width">Enter Rectangle Width:</label>
+  <input id="rectangle_width" type="number" />
+  <label for="">Enter Rectangle Height:</label>
+  <input id="rectangle_height" type="number" />
+  <input id="calculate_rec_area" type="submit" />
+  <span id="rec_output">Area of Rectangle is: </span>
 
-    <!-- Question No 5 -->
-    <hr />
-    <h4>Question 5</h4>
-    <p>Ask for Number Show "Your number is double is : x"</p>
-    <label for="doubled_no">Enter Number:</label>
-    <input id="doubled_no" type="number" />
-    <input id="mydouble_no" type="submit" />
-    <span id="double_output">The double of the number you entered is: </span>
-    <!-- Question No 6 -->
-    <hr />
-    <h4>Question 6</h4>
-    <p>
-      Show the input value in a p and then clear the input (.value = "") on
-      click
-    </p>
-    <input id="mydata" type="text" />
-    <input id="mydatasubmit" type="submit" />
-    <span id="showmydata">Your Input is: </span>
-    <!-- Question No 7 -->
-    <hr />
-    <h4>Question 7</h4>
-    <p>Ask for Two numbers and show the subtraction</p>
-    <input id="sub1" type="number" />
-    <input id="sub2" type="number" />
-    <input id="subtractionsubmit" type="submit" />
-    <span id="show_sub_value">Result: </span>
+  <!-- Question No 5 -->
+  <hr />
+  <h4>Question 5</h4>
+  <p>Ask for Number Show "Your number is double is : x"</p>
+  <label for="doubled_no">Enter Number:</label>
+  <input id="doubled_no" type="number" />
+  <input id="mydouble_no" type="submit" />
+  <span id="double_output">The double of the number you entered is: </span>
+  <!-- Question No 6 -->
+  <hr />
+  <h4>Question 6</h4>
+  <p>
+    Show the input value in a p and then clear the input (.value = "") on
+    click
+  </p>
+  <input id="mydata" type="text" />
+  <input id="mydatasubmit" type="submit" />
+  <span id="showmydata">Your Input is: </span>
+  <!-- Question No 7 -->
+  <hr />
+  <h4>Question 7</h4>
+  <p>Ask for Two numbers and show the subtraction</p>
+  <input id="sub1" type="number" />
+  <input id="sub2" type="number" />
+  <input id="subtractionsubmit" type="submit" />
+  <span id="show_sub_value">Result: </span>
 
-    <!-- Question No 8 -->
-    <hr />
-    <h4>Question 8</h4>
-    <p>Ask for two numbers and show subtraction</p>
-    <input id="increment" type="number" />
-    <input id="submit_increment" type="submit" />
-    <span id="show_increment">Result: </span>
+  <!-- Question No 8 -->
+  <hr />
+  <h4>Question 8</h4>
+  <p>Ask for two numbers and show subtraction</p>
+  <input id="increment" type="number" />
+  <input id="submit_increment" type="submit" />
+  <span id="show_increment">Result: </span>
 
-    <!-- Practice set 3 -->
-    <hr />
-    <h2
-      style="
+  <!-- Practice set 3 -->
+  <hr />
+  <h2 style="
         text-align: center;
         background-color: red;
         margin: 15px;
         padding: 10px;
-      "
-    >
-      Practice Set 3
-    </h2>
-    <hr />
-    <!-- Question 1 -->
-    <h4>Question 1</h4>
-    <p>
-      Show Name on screen -- When clicked show the input text inside a
-      paragraph.
-    </p>
-    <input id="myinputtext" type="text" />
-    <input id="myinputsubmit" type="submit" />
-    <span id="myinputresult">You Entered: </span>
-    <!-- Question 2 -->
-    <h4>Question 2</h4>
-    <p>
-      Sum Two Numbers from Input. <br />Create two input for numbers and a
-      button. <br />when clicked show their sum in a span. Use Number() or unary
-      to convert.
-    </p>
-    <input id="num1" type="number" />
-    <input id="num2" type="number" />
-    <input id="cal_sum" type="submit" />
-    <span id="cal_result">SUM OF </span>
-    <!-- Question 3 -->
-    <h4>Question 3</h4>
-    <p>
-      Take two inputs. <br />When button clicked, <br />show the multiplication
-      result in a paragraph. Use parseFloat() for decimal numbers.
-    </p>
-    <input id="mul_num1" type="number" />
-    <input id="mul_num2" type="number" />
-    <input id="cal_mul" type="submit" />
-    <span id="mul_cal_result">Multiplication OF </span>
-    <!-- Question 4 -->
-    <h4>Question 4</h4>
-    <p>
-      Take two inputs. <br />On button click, <br />Show the result of first
-      input divided by the second. Use parseInt() or parseFloat().
-    </p>
-    <input id="divide_num1" type="text" />
-    <input id="divide_num2" type="text" />
-    <input id="cal_divide" type="submit" />
-    <span id="divide_cal_result">Division of </span>
-    <!-- Question 5 -->
-    <h4>Question 5</h4>
-    <p>
-      Take two inputs. <br />On button click, <br />Convert it to a string
-      string() and show the type using ${} in a paragraph.
-    </p>
-    <input id="entervalue" type="text" />
-    <input id="convertvalue" type="submit" />
-    <span id="showconverttype">Type is Converted to: </span>
-    <!-- Question 6 -->
-    <h4>Question 6</h4>
-    <p>
-      Take input. <br />On button click, <br />convert it to boolean using
-      boolea() and display in a paragraph.
-    </p>
-    <input id="booleanvalue" type="text" />
-    <input id="convertbooleanvalue" type="submit" />
-    <span id="showbooleantype">Type is Converted to: </span>
-    <!-- Question 7 -->
-    <h4>Question 7</h4>
-    <p>
-      Take input. <br />On button click, <br />Increase it by 1 using arthimatic
-      operator and display using template literal.
-    </p>
-    <input id="expected_increment" type="number" />
-    <input id="increment_submit" type="submit" />
-    <span id="increment_result">Incremented Value is: </span>
-    <!-- Question 8 -->
-    <h4>Question 8</h4>
-    <p>
-      Use window prompt To take a number <br />On button click, <br />Convert it
-      to a number and show double of it in a span.
-    </p>
-    <input id="double_submit" type="submit" />
-    <span id="double_result">Doubled Value: </span>
-    <!-- Question 9 -->
-    <h4>Question 9</h4>
-    <p>
-      Take two numbers <br />On Button Click, <br />Show remainder of first
-      divided b second using %.
-    </p>
-    <input id="rem1" type="number" />
-    <input id="rem2" type="number" />
-    <input id="rem_submit" type="submit" />
-    <span id="rem_result">Remainder of </span>
-    <!-- Question 10 -->
-    <h4>Question 10</h4>
-    <p>
-      Take two numbers <br />On Button Click, <br />Perform the respective
-      arthimatic operation and show result in a span. <br />Use Number(),
-      parseFloat() or parseInt() to handle input values.
-    </p>
-    <input id="input1" type="number" />
-    <input id="input2" type="number" />
-    <input id="cal_add" value="+" type="submit" />
-    <input id="cal_minus" value="-" type="submit" />
-    <input id="cal_multiply" value="*" type="submit" />
-    <input id="cal_mydivide" value="/" type="submit" />
-    <input id="cal_remainder" value="%" type="submit" />
-    <p class="calculator_output_color" id="calculations_output">
-      Calculation of Both Numbers =
-    </p>
+      ">
+    Practice Set 3
+  </h2>
+  <hr />
+  <!-- Question 1 -->
+  <h4>Question 1</h4>
+  <p>
+    Show Name on screen -- When clicked show the input text inside a
+    paragraph.
+  </p>
+  <input id="myinputtext" type="text" />
+  <input id="myinputsubmit" type="submit" />
+  <span id="myinputresult">You Entered: </span>
+  <!-- Question 2 -->
+  <h4>Question 2</h4>
+  <p>
+    Sum Two Numbers from Input. <br />Create two input for numbers and a
+    button. <br />when clicked show their sum in a span. Use Number() or unary
+    to convert.
+  </p>
+  <input id="num1" type="number" />
+  <input id="num2" type="number" />
+  <input id="cal_sum" type="submit" />
+  <span id="cal_result">SUM OF </span>
+  <!-- Question 3 -->
+  <h4>Question 3</h4>
+  <p>
+    Take two inputs. <br />When button clicked, <br />show the multiplication
+    result in a paragraph. Use parseFloat() for decimal numbers.
+  </p>
+  <input id="mul_num1" type="number" />
+  <input id="mul_num2" type="number" />
+  <input id="cal_mul" type="submit" />
+  <span id="mul_cal_result">Multiplication OF </span>
+  <!-- Question 4 -->
+  <h4>Question 4</h4>
+  <p>
+    Take two inputs. <br />On button click, <br />Show the result of first
+    input divided by the second. Use parseInt() or parseFloat().
+  </p>
+  <input id="divide_num1" type="text" />
+  <input id="divide_num2" type="text" />
+  <input id="cal_divide" type="submit" />
+  <span id="divide_cal_result">Division of </span>
+  <!-- Question 5 -->
+  <h4>Question 5</h4>
+  <p>
+    Take two inputs. <br />On button click, <br />Convert it to a string
+    string() and show the type using ${} in a paragraph.
+  </p>
+  <input id="entervalue" type="text" />
+  <input id="convertvalue" type="submit" />
+  <span id="showconverttype">Type is Converted to: </span>
+  <!-- Question 6 -->
+  <h4>Question 6</h4>
+  <p>
+    Take input. <br />On button click, <br />convert it to boolean using
+    boolea() and display in a paragraph.
+  </p>
+  <input id="booleanvalue" type="text" />
+  <input id="convertbooleanvalue" type="submit" />
+  <span id="showbooleantype">Type is Converted to: </span>
+  <!-- Question 7 -->
+  <h4>Question 7</h4>
+  <p>
+    Take input. <br />On button click, <br />Increase it by 1 using arthimatic
+    operator and display using template literal.
+  </p>
+  <input id="expected_increment" type="number" />
+  <input id="increment_submit" type="submit" />
+  <span id="increment_result">Incremented Value is: </span>
+  <!-- Question 8 -->
+  <h4>Question 8</h4>
+  <p>
+    Use window prompt To take a number <br />On button click, <br />Convert it
+    to a number and show double of it in a span.
+  </p>
+  <input id="double_submit" type="submit" />
+  <span id="double_result">Doubled Value: </span>
+  <!-- Question 9 -->
+  <h4>Question 9</h4>
+  <p>
+    Take two numbers <br />On Button Click, <br />Show remainder of first
+    divided b second using %.
+  </p>
+  <input id="rem1" type="number" />
+  <input id="rem2" type="number" />
+  <input id="rem_submit" type="submit" />
+  <span id="rem_result">Remainder of </span>
+  <!-- Question 10 -->
+  <h4>Question 10</h4>
+  <p>
+    Take two numbers <br />On Button Click, <br />Perform the respective
+    arthimatic operation and show result in a span. <br />Use Number(),
+    parseFloat() or parseInt() to handle input values.
+  </p>
+  <input id="input1" type="number" />
+  <input id="input2" type="number" />
+  <input id="cal_add" value="+" type="submit" />
+  <input id="cal_minus" value="-" type="submit" />
+  <input id="cal_multiply" value="*" type="submit" />
+  <input id="cal_mydivide" value="/" type="submit" />
+  <input id="cal_remainder" value="%" type="submit" />
+  <p class="calculator_output_color" id="calculations_output">
+    Calculation of Both Numbers =
+  </p>
 
-    <!-- Practice set 4 -->
-    <hr />
-    <h2
-      style="
+  <!-- Practice set 4 -->
+  <hr />
+  <h2 style="
         text-align: center;
         background-color: red;
         margin: 15px;
         padding: 10px;
-      "
-    >
-      Practice Set 4
-    </h2>
-    <hr />
-    <!-- Question 1 -->
-    <h4>Question 1</h4>
-    <p>
-      Calculate Circumference of circle <br />User Enter radius. <br />You have
-      a constant pi <br />When the button is clicked > calculate Circumference.
-    </p>
-    <input id="myRadius" type="number" />
-    <input id="getRadius" type="submit" />
-    <span id="showRadius">Radius of </span>
+      ">
+    Practice Set 4
+  </h2>
+  <hr />
+  <!-- Question 1 -->
+  <h4>Question 1</h4>
+  <p>
+    Calculate Circumference of circle <br />User Enter radius. <br />You have
+    a constant pi <br />When the button is clicked > calculate Circumference.
+  </p>
+  <input id="myRadius" type="number" />
+  <input id="getRadius" type="submit" />
+  <span id="showRadius">Radius of </span>
 
-    <!-- Practice set 5 -->
-    <hr />
-    <h2
-      style="
+  <!-- Practice set 5 -->
+  <hr />
+  <h2 style="
         text-align: center;
         background-color: red;
         margin: 15px;
         padding: 10px;
-      "
-    >
-      Practice Set 5 ( Program )
-    </h2>
-    <hr />
-    <!-- Question 1 -->
-    <h4>Counter Program</h4>
-    <p class="countLabel" id="countLabel">0</p>
-    <br />
-    <div class="direction">
-      <button class="counterBtn" id="decreaseBtn">Decrease Value</button>
-      <button class="counterBtn" id="resetBtn">Reset Value</button>
-      <button class="counterBtn" id="increaseBtn">Increase Value</button>
-    </div>
+      ">
+    Practice Set 5 ( Program )
+  </h2>
+  <hr />
+  <!-- Question 1 -->
+  <h4>Counter Program</h4>
+  <p class="countLabel" id="countLabel">0</p>
+  <br />
+  <div class="direction">
+    <button class="counterBtn" id="decreaseBtn">Decrease Value</button>
+    <button class="counterBtn" id="resetBtn">Reset Value</button>
+    <button class="counterBtn" id="increaseBtn">Increase Value</button>
+  </div>
 
-    <!-- Practice set 6 -->
-    <hr />
-    <h2
-      style="
+  <!-- Practice set 6 -->
+  <hr />
+  <h2 style="
         text-align: center;
         background-color: red;
         margin: 15px;
         padding: 10px;
-      "
-    >
-      Practice Set 6
-    </h2>
-    <hr />
-    <!-- Question 1 -->
-    <h4>Question 1</h4>
-    <p>
-      Take age input and show age in month <br />Use Number(), *, ${},
-      .textContent
-    </p>
-    <input id="ageInput" type="text" />
-    <input id="submitAge" type="submit" />
-    <span id="ageOutput">Your Age Converted to Month is: </span>
-    <!-- Question 2 -->
-    <h4>Question 2</h4>
-    <p>User enteres a number > display its square.</p>
-    <p style="font-size: 12px">
-      Math.pow(inputPower, 2) takes the value in inputPower and multiplies it by
-      itself to get its square.
-    </p>
-    <input id="inputPower" type="text" />
-    <input id="submitPower" type="submit" />
-    <span id="displayPower">The Square Of </span>
-    <!-- Question 3 -->
-    <h4>Question 3</h4>
-    <p>User Enters a decimal > show rounded value.</p>
-    <p style="font-size: 12px">
-      Math.round() rounds a number to the nearest whole number (0.5 and above
-      rounds up, below 0.5 rounds down).
-    </p>
-    <input id="roundedVal" type="number" />
-    <input id="submitroundedvalue" type="submit" />
-    <span id="displayrounded">The Rounded Number Of </span>
-    <!-- Question 4 -->
-    <h4>Question 4</h4>
-    <p>User enters a decimal > show rounded down value.</p>
-    <p style="font-size: 12px">
-      Math.floor() rounds the value of dec down to the nearest whole number by
-      removing the decimal part.
-    </p>
-    <input id="floorInput" type="number" />
-    <input id="floorSubmit" type="submit" />
-    <span id="floorDisplay">Rounded Down value of </span>
-    <!-- Question 5 -->
-    <h4>Question 5</h4>
-    <p>User enter a deciaml > show rounded up value.</p>
-    <p style="font-size: 12px">
-      Math.ceil() rounds a number up to the nearest whole integer, even if the
-      decimal part is very small.
-    </p>
-    <input id="ceilValue" type="number" />
-    <input id="ceilSubmit" type="submit" />
-    <span id="ceilOutput"> </span>
-    <!-- Question 6 -->
-    <h4>Question 6</h4>
-    <p>User clicks button > show random number.</p>
-    <p style="font-size: 12px">
-      Math.floor(Math.random() * 100) + 1 is a JavaScript expression that
-      produces a random integer between 1 and 100 by generating a random
-      decimal, scaling it, rounding down, and then shifting the range.
-    </p>
-    <h1 id="randomDisplay">0</h1>
-    <input id="randomSubmit" value="Generate Random Number" type="submit" />
-    <input id="randomReset" value="Reset Number" type="submit" />
-    <!-- Question 7 -->
-    <h4>Question 7</h4>
-    <p>User enters 2 numbers > show the larger number of them</p>
-    <p style="font-size: 12px">
-      largest = Math.max(a, b); compares the values of a and b and stores the
-      larger number in largest.
-    </p>
-    <input id="largerNum1" type="number" placeholder="Enter Number 1" />
-    <input id="largerNum2" type="number" placeholder="Enter Number 2" />
-    <input id="findLg" type="submit" value="Get Larger Number" />
-    <span id="printLg">The Larger Number is </span>
-    <!-- Question 8 -->
-    <h4>Question 8</h4>
-    <p>User enters two numbers and find smallest between them.</p>
-    <p style="font-size: 12px">
-      Math.min() returns the smallest (lowest) number from the values you
-      provide.
-    </p>
-    <input id="smNum1" type="number" placeholder="Enter Number 1" />
-    <input id="smNum2" type="number" placeholder="Enter Number 2" />
-    <input id="smNum3" type="number" placeholder="Enter Number 3" />
-    <input id="findSm" type="submit" value="Get Larger Number" />
-    <span id="printSm">The Smallest Number is </span>
-    <!-- Question 9 -->
-    <h4>Question 9</h4>
-    <p>User enter number > show its square root</p>
-    <p style="font-size: 12px">
-      Math.sqrt(); calculates and returns the square root of the value.
-    </p>
-    <input
-      id="squareRoot"
-      type="number"
-      placeholder="Enter Number To get Square Root"
-    />
-    <input id="getSquare" type="submit" value="Get Larger Number" />
-    <span id="printSquare">Square Root of </span>
-    <!-- Question 10 -->
-    <h4>Question 10</h4>
-    <p>User enters decimal number > show only integer part.</p>
-    <p style="font-size: 12px">
-      Math.trunc(); removes the decimal part and returns only the whole number,
-      without rounding.
-    </p>
-    <input id="decimalValue" type="text" placeholder="Remove Decimal Part" />
-    <input id="removeDeciaml" type="submit" value="Remove Decimal" />
-    <span id="printdecimal">The </span>
-    <!-- Practice set 7 -->
-    <hr />
-    <h2
-      style="
+      ">
+    Practice Set 6
+  </h2>
+  <hr />
+  <!-- Question 1 -->
+  <h4>Question 1</h4>
+  <p>
+    Take age input and show age in month <br />Use Number(), *, ${},
+    .textContent
+  </p>
+  <input id="ageInput" type="text" />
+  <input id="submitAge" type="submit" />
+  <span id="ageOutput">Your Age Converted to Month is: </span>
+  <!-- Question 2 -->
+  <h4>Question 2</h4>
+  <p>User enteres a number > display its square.</p>
+  <p style="font-size: 12px">
+    Math.pow(inputPower, 2) takes the value in inputPower and multiplies it by
+    itself to get its square.
+  </p>
+  <input id="inputPower" type="text" />
+  <input id="submitPower" type="submit" />
+  <span id="displayPower">The Square Of </span>
+  <!-- Question 3 -->
+  <h4>Question 3</h4>
+  <p>User Enters a decimal > show rounded value.</p>
+  <p style="font-size: 12px">
+    Math.round() rounds a number to the nearest whole number (0.5 and above
+    rounds up, below 0.5 rounds down).
+  </p>
+  <input id="roundedVal" type="number" />
+  <input id="submitroundedvalue" type="submit" />
+  <span id="displayrounded">The Rounded Number Of </span>
+  <!-- Question 4 -->
+  <h4>Question 4</h4>
+  <p>User enters a decimal > show rounded down value.</p>
+  <p style="font-size: 12px">
+    Math.floor() rounds the value of dec down to the nearest whole number by
+    removing the decimal part.
+  </p>
+  <input id="floorInput" type="number" />
+  <input id="floorSubmit" type="submit" />
+  <span id="floorDisplay">Rounded Down value of </span>
+  <!-- Question 5 -->
+  <h4>Question 5</h4>
+  <p>User enter a deciaml > show rounded up value.</p>
+  <p style="font-size: 12px">
+    Math.ceil() rounds a number up to the nearest whole integer, even if the
+    decimal part is very small.
+  </p>
+  <input id="ceilValue" type="number" />
+  <input id="ceilSubmit" type="submit" />
+  <span id="ceilOutput"> </span>
+  <!-- Question 6 -->
+  <h4>Question 6</h4>
+  <p>User clicks button > show random number.</p>
+  <p style="font-size: 12px">
+    Math.floor(Math.random() * 100) + 1 is a JavaScript expression that
+    produces a random integer between 1 and 100 by generating a random
+    decimal, scaling it, rounding down, and then shifting the range.
+  </p>
+  <h1 id="randomDisplay">0</h1>
+  <input id="randomSubmit" value="Generate Random Number" type="submit" />
+  <input id="randomReset" value="Reset Number" type="submit" />
+  <!-- Question 7 -->
+  <h4>Question 7</h4>
+  <p>User enters 2 numbers > show the larger number of them</p>
+  <p style="font-size: 12px">
+    largest = Math.max(a, b); compares the values of a and b and stores the
+    larger number in largest.
+  </p>
+  <input id="largerNum1" type="number" placeholder="Enter Number 1" />
+  <input id="largerNum2" type="number" placeholder="Enter Number 2" />
+  <input id="findLg" type="submit" value="Get Larger Number" />
+  <span id="printLg">The Larger Number is </span>
+  <!-- Question 8 -->
+  <h4>Question 8</h4>
+  <p>User enters two numbers and find smallest between them.</p>
+  <p style="font-size: 12px">
+    Math.min() returns the smallest (lowest) number from the values you
+    provide.
+  </p>
+  <input id="smNum1" type="number" placeholder="Enter Number 1" />
+  <input id="smNum2" type="number" placeholder="Enter Number 2" />
+  <input id="smNum3" type="number" placeholder="Enter Number 3" />
+  <input id="findSm" type="submit" value="Get Larger Number" />
+  <span id="printSm">The Smallest Number is </span>
+  <!-- Question 9 -->
+  <h4>Question 9</h4>
+  <p>User enter number > show its square root</p>
+  <p style="font-size: 12px">
+    Math.sqrt(); calculates and returns the square root of the value.
+  </p>
+  <input id="squareRoot" type="number" placeholder="Enter Number To get Square Root" />
+  <input id="getSquare" type="submit" value="Get Larger Number" />
+  <span id="printSquare">Square Root of </span>
+  <!-- Question 10 -->
+  <h4>Question 10</h4>
+  <p>User enters decimal number > show only integer part.</p>
+  <p style="font-size: 12px">
+    Math.trunc(); removes the decimal part and returns only the whole number,
+    without rounding.
+  </p>
+  <input id="decimalValue" type="text" placeholder="Remove Decimal Part" />
+  <input id="removeDeciaml" type="submit" value="Remove Decimal" />
+  <span id="printdecimal">The </span>
+  <!-- Practice set 7 -->
+  <hr />
+  <h2 style="
         text-align: center;
         background-color: red;
         margin: 15px;
         padding: 10px;
-      "
-    >
-      Practice Set 7
-    </h2>
-    <hr />
-    <!-- Question 1 -->
-    <h4>Question 1</h4>
-    <p>User Enter age. if age > 18 show Adult, otherwise minor.</p>
-    <input id="enterAge" type="number" placeholder="Enter Your Age" />
-    <input id="checkAge" type="submit" value="Submit Age" />
-    <span id="printAge">You are </span>
-    <!-- Question 2 -->
-    <h4>Question 2</h4>
-    <p>Check if the number is positive, negative or zero.</p>
-    <input id="checkNumber" type="number" placeholder="Enter Number" />
-    <input id="submitNumber" type="submit" value="Check Number" />
-    <span id="printNumber">The Number is </span>
-    <!-- Question 3 -->
-    <h4>Question 3</h4>
-    <p>Determine whether a number is even or odd.</p>
-    <input id="checkEvenOdd" type="number" placeholder="Enter Number" />
-    <input id="submitCheck" type="submit" value="Check Even or Odd" />
-    <span id="printResult">The Number is </span>
-    <!-- Question 4 -->
-    <h4>Question 4</h4>
-    <p>If number is negative, convert it to positive.</p>
-    <input id="removeMinus" type="text" placeholder="Enter Number" />
-    <input id="submitMinus" type="submit" value="Change Value" />
-    <span id="printMinusResult">Number is Converted to Positive = </span>
+      ">
+    Practice Set 7
+  </h2>
+  <hr />
+  <!-- Question 1 -->
+  <h4>Question 1</h4>
+  <p>User Enter age. if age > 18 show Adult, otherwise minor.</p>
+  <input id="enterAge" type="number" placeholder="Enter Your Age" />
+  <input id="checkAge" type="submit" value="Submit Age" />
+  <span id="printAge">You are </span>
+  <!-- Question 2 -->
+  <h4>Question 2</h4>
+  <p>Check if the number is positive, negative or zero.</p>
+  <input id="checkNumber" type="number" placeholder="Enter Number" />
+  <input id="submitNumber" type="submit" value="Check Number" />
+  <span id="printNumber">The Number is </span>
+  <!-- Question 3 -->
+  <h4>Question 3</h4>
+  <p>Determine whether a number is even or odd.</p>
+  <input id="checkEvenOdd" type="number" placeholder="Enter Number" />
+  <input id="submitCheck" type="submit" value="Check Even or Odd" />
+  <span id="printResult">The Number is </span>
+  <!-- Question 4 -->
+  <h4>Question 4</h4>
+  <p>If number is negative, convert it to positive.</p>
+  <input id="removeMinus" type="text" placeholder="Enter Number" />
+  <input id="submitMinus" type="submit" value="Change Value" />
+  <span id="printMinusResult">Number is Converted to Positive = </span>
 
-    <!-- Question 5 -->
-    <h4>Question 5</h4>
-    <p>Square only if the numbers are positive.</p>
-    <input id="sqrPositive" type="text" placeholder="Enter Number" />
-    <input id="submitSqr" type="submit" value="Get Square" />
-    <span id="printSqr">Square of Number </span>
-    <!-- Question 6 -->
-    <h4>Question 6</h4>
-    <p>Calculate square root only if number is greater and equal to 0.</p>
-    <input id="takeSqrt" type="text" placeholder="Enter Number" />
-    <input id="submitSqrt" type="submit" value="Get Square Root" />
-    <span id="printSqrt">Square of Number </span>
-    <!-- Question 7 -->
-    <h4>Question 7</h4>
-    <p>
-      if number is greater and equal to 5 then round it and if lower then floor
-      it.
-    </p>
-    <input id="getValue2" type="text" placeholder="Enter Number" />
-    <input id="submitValue2" type="submit" value="Get Square" />
-    <span id="printValue2">Square of Number </span>
-    <!-- Question 8 -->
-    <h4>Question 8</h4>
-    <p>If number has decimal → use Math.ceil().</p>
-    <input id="inputDecimal" type="text" placeholder="Enter Number" />
-    <input id="getDeci" type="submit" value="Get Square" />
-    <span id="printDeci">Square of Number </span>
-    <!-- MINI PROJECTS -->
-    <hr />
-    <h2
-      style="
+  <!-- Question 5 -->
+  <h4>Question 5</h4>
+  <p>Square only if the numbers are positive.</p>
+  <input id="sqrPositive" type="text" placeholder="Enter Number" />
+  <input id="submitSqr" type="submit" value="Get Square" />
+  <span id="printSqr">Square of Number </span>
+  <!-- Question 6 -->
+  <h4>Question 6</h4>
+  <p>Calculate square root only if number is greater and equal to 0.</p>
+  <input id="takeSqrt" type="text" placeholder="Enter Number" />
+  <input id="submitSqrt" type="submit" value="Get Square Root" />
+  <span id="printSqrt">Square of Number </span>
+  <!-- Question 7 -->
+  <h4>Question 7</h4>
+  <p>
+    if number is greater and equal to 5 then round it and if lower then floor
+    it.
+  </p>
+  <input id="getValue2" type="text" placeholder="Enter Number" />
+  <input id="submitValue2" type="submit" value="Get Square" />
+  <span id="printValue2">Square of Number </span>
+  <!-- Question 8 -->
+  <h4>Question 8</h4>
+  <p>If number has decimal → use Math.ceil().</p>
+  <input id="inputDecimal" type="text" placeholder="Enter Number" />
+  <input id="getDeci" type="submit" value="Get Square" />
+  <span id="printDeci">Square of Number </span>
+  <!-- MINI PROJECTS -->
+  <hr />
+  <h2 style="
         text-align: center;
         background-color: red;
         margin: 15px;
         padding: 10px;
-      "
-    >
-      MINI PROJECTS USING WHAT I HAVE LEAREND SO FAR
-    </h2>
-    <hr />
-    <!-- MINI PROJECT 1 -->
-    <h4>Mini Project 1</h4>
-    <p>A User Enters a Product Price.</p>
-    <p>Apply a discount based on the price range and show final price.</p>
-    <input id="actualPrice" type="number" placeholder="Product Price" />
-    <input id="checkDiscount" type="submit" value="Check Discount" />
-    <span id="printDiscountPrice"></span>
-    <!-- MINI PROJECT 2 -->
-    <h4>Mini Project 2</h4>
-    <p>A User Enters Marks.</p>
-    <p>Display Pass/Fail and Grades.</p>
-    <input id="enterMarks" type="number" placeholder="Enter Obtained Marks" />
-    <input id="checkResult" type="submit" value="Check Result" />
-    <span id="printGrade"></span>
-    <!-- MINI PROJECT 3 -->
-    <h4>Mini Project 3</h4>
-    <p>Calculate total electricity bill base on units consumed.</p>
-    <input
-      id="unitsConsumed"
-      type="number"
-      placeholder="Enter Obtained Marks"
-    />
-    <input id="checkBill" type="submit" value="Check Electricity Bill" />
-    <span id="printBill"></span>
-    <!-- MINI PROJECT 4 -->
-    <h4>Mini Project 4</h4>
-    <p>User Enters Weight and Height Calculate BMI and Health Category.</p>
-    <input id="userHeight" type="number" placeholder="Enter Your Height" />
-    <input id="userWeight" type="number" placeholder="Enter Your Weight" />
-    <input id="getBmi" type="submit" value="Check BMI and Health Catergory" />
-    <span id="bmiPrint"></span>
-    <!-- MINI PROJECT 5 -->
-    <h4>Mini Project 5</h4>
-    <p>Generate a Dice Roll and Classify Result.</p>
-    <p>
-      <input id="rollDice" type="submit" value="Roll Dice" />
-      <span id="diceNumber"></span>
-    </p>
-    <!-- MINI PROJECT 6 -->
-    <h4>Mini Project 6</h4>
-    <p>Calculate Yearly Tax from Monthly Salary.</p>
-    <input id="enterSalary" type="number" placeholder="Enter Monthly Salary" />
-    <input id="submitSalary" type="submit" value="Check Tax">
-    <br>
-    <span id="printYearlySalary"></span>
-    <br><br>
-    <span id="printTax"></span>
-    <!-- MINI PROJECT 7 -->
-    <h4>Mini Project 7</h4>
-    <p>A user enters username and pin code.</p>
-    <p><b>Rules:</b></p>
-    <p>1.Username must not be empty.</p>
-    <p>2.Pin must be exactly 4 digits.</p>
-    <p>3.Pin must be greater than 999 and less than 10,000.</p>
-    <input id="pUsername" type="text" placeholder="Enter Username" />
-    <input id="pinCode" type="number" placeholder="Enter Pin Code" />
-    <input id="pSubmit" type="submit" value="Check Tax">
-    <span id="pOutput"></span>
-    <!-- MINI PROJECT 8 -->
-    <h4>Mini Project 8</h4>
-    <p>A user enters Age and Attendance Percentage.</p>
-    <p><b>Rules:</b></p>
-    <p>1.Age Must be 18 or above.</p>
-    <p>2.Attendance must be 75% or above.</p>
-    <p>3.If any rule fail student is not eligible.</p>
-    <input id="studentAge" type="number" placeholder="Enter Age" />
-    <input id="studentAttendance" type="number" placeholder="Attendance Percentage" />
-    <input id="submitInfo" type="submit" value="Check Eligibility">
-    <span id="studentEligible"></span>
-    <!-- MINI PROJECT 9 -->
-    <h4>Mini Project 9</h4>
-    <p>A user enters one number.</p>
-    <p><b>Rules:</b></p>
-    <p>1.If number is positive AND even "Valid Score".</p>
-    <p>2.If number is Negative OR Zero "Invalid Score".</p>
-    <p>3.Else "Odd Positive".</p>
-    <input id="enterScore" type="number" placeholder="Enter Number" />
-    <input id="checkScore" type="submit" value="Check Score">
-    <span id="scoreOutput"></span>
-    <!-- MINI PROJECT 10 -->
-    <h4>Mini Project 10</h4>
-    <p>A user enters Age, Salary and Experience.</p>
-    <p><b>Rules:</b></p>
-    <p>Eligible If:</p>
-    <p>Age >= 21 AND Salary >=30,000</p>
-    <p>If Eligible:</p>
-    <p>Bonus is 10% of salary</p>
-    <p>Else:</p>
-    <p>Bonus is zero</p>
-    <input id="yourAge" type="number" placeholder="Enter Your Age" />
-    <input id="yourSalary" type="number" placeholder="Enter Your Salary" />
-    <input id="yourExperience" type="text" placeholder="Enter Your Experience" />
-    <input id="checkBonus" type="submit" value="Check Score">
-    <span id="bonusAvailable"></span>
+      ">
+    MINI PROJECTS USING WHAT I HAVE LEAREND SO FAR
+  </h2>
+  <hr />
+  <!-- MINI PROJECT 1 -->
+  <h4>Mini Project 1</h4>
+  <p>A User Enters a Product Price.</p>
+  <p>Apply a discount based on the price range and show final price.</p>
+  <input id="actualPrice" type="number" placeholder="Product Price" />
+  <input id="checkDiscount" type="submit" value="Check Discount" />
+  <span id="printDiscountPrice"></span>
+  <!-- MINI PROJECT 2 -->
+  <h4>Mini Project 2</h4>
+  <p>A User Enters Marks.</p>
+  <p>Display Pass/Fail and Grades.</p>
+  <input id="enterMarks" type="number" placeholder="Enter Obtained Marks" />
+  <input id="checkResult" type="submit" value="Check Result" />
+  <span id="printGrade"></span>
+  <!-- MINI PROJECT 3 -->
+  <h4>Mini Project 3</h4>
+  <p>Calculate total electricity bill base on units consumed.</p>
+  <input id="unitsConsumed" type="number" placeholder="Enter Obtained Marks" />
+  <input id="checkBill" type="submit" value="Check Electricity Bill" />
+  <span id="printBill"></span>
+  <!-- MINI PROJECT 4 -->
+  <h4>Mini Project 4</h4>
+  <p>User Enters Weight and Height Calculate BMI and Health Category.</p>
+  <input id="userHeight" type="number" placeholder="Enter Your Height" />
+  <input id="userWeight" type="number" placeholder="Enter Your Weight" />
+  <input id="getBmi" type="submit" value="Check BMI and Health Catergory" />
+  <span id="bmiPrint"></span>
+  <!-- MINI PROJECT 5 -->
+  <h4>Mini Project 5</h4>
+  <p>Generate a Dice Roll and Classify Result.</p>
+  <p>
+    <input id="rollDice" type="submit" value="Roll Dice" />
+    <span id="diceNumber"></span>
+  </p>
+  <!-- MINI PROJECT 6 -->
+  <h4>Mini Project 6</h4>
+  <p>Calculate Yearly Tax from Monthly Salary.</p>
+  <input id="enterSalary" type="number" placeholder="Enter Monthly Salary" />
+  <input id="submitSalary" type="submit" value="Check Tax">
+  <br>
+  <span id="printYearlySalary"></span>
+  <br><br>
+  <span id="printTax"></span>
+  <!-- MINI PROJECT 7 -->
+  <h4>Mini Project 7</h4>
+  <p>A user enters username and pin code.</p>
+  <p><b>Rules:</b></p>
+  <p>1.Username must not be empty.</p>
+  <p>2.Pin must be exactly 4 digits.</p>
+  <p>3.Pin must be greater than 999 and less than 10,000.</p>
+  <input id="pUsername" type="text" placeholder="Enter Username" />
+  <input id="pinCode" type="number" placeholder="Enter Pin Code" />
+  <input id="pSubmit" type="submit" value="Check Tax">
+  <span id="pOutput"></span>
+  <!-- MINI PROJECT 8 -->
+  <h4>Mini Project 8</h4>
+  <p>A user enters Age and Attendance Percentage.</p>
+  <p><b>Rules:</b></p>
+  <p>1.Age Must be 18 or above.</p>
+  <p>2.Attendance must be 75% or above.</p>
+  <p>3.If any rule fail student is not eligible.</p>
+  <input id="studentAge" type="number" placeholder="Enter Age" />
+  <input id="studentAttendance" type="number" placeholder="Attendance Percentage" />
+  <input id="submitInfo" type="submit" value="Check Eligibility">
+  <span id="studentEligible"></span>
+  <!-- MINI PROJECT 9 -->
+  <h4>Mini Project 9</h4>
+  <p>A user enters one number.</p>
+  <p><b>Rules:</b></p>
+  <p>1.If number is positive AND even "Valid Score".</p>
+  <p>2.If number is Negative OR Zero "Invalid Score".</p>
+  <p>3.Else "Odd Positive".</p>
+  <input id="enterScore" type="number" placeholder="Enter Number" />
+  <input id="checkScore" type="submit" value="Check Score">
+  <span id="scoreOutput"></span>
+  <!-- MINI PROJECT 10 -->
+  <h4>Mini Project 10</h4>
+  <p>A user enters Age, Salary and Experience.</p>
+  <p><b>Rules:</b></p>
+  <p>Eligible If:</p>
+  <p>Age >= 21 AND Salary >=30,000</p>
+  <p>If Eligible:</p>
+  <p>Bonus is 10% of salary</p>
+  <p>Else:</p>
+  <p>Bonus is zero</p>
+  <input id="yourAge" type="number" placeholder="Enter Your Age" />
+  <input id="yourSalary" type="number" placeholder="Enter Your Salary" />
+  <input id="yourExperience" type="text" placeholder="Enter Your Experience" />
+  <input id="checkBonus" type="submit" value="Check Score">
+  <span id="bonusAvailable"></span>
 
-      <script src="./Practice_set_1.js"></script>
-      <script src="./Practice_set_2.js"></script>
-      <script src="./Practice_set_3.js"></script>
-      <script src="./Practice_set_4.js"></script>
-      <script src="./Practice_set_5.js"></script>
-      <script src="./Practice_set_6.js"></script>
-      <script src="./Practice_set_7.js"></script>
-      <script src="./Practice_set_8.js"></script>
-    </p>
-  </body>
+  <!-- Practice set 8 -->
+  <hr />
+  <h2 style="
+        text-align: center;
+        background-color: red;
+        margin: 15px;
+        padding: 10px;
+      ">
+    Practice Set 8
+  </h2>
+  <hr />
+  <!-- Question 1 -->
+  <h4>Question 1</h4>
+  <p></p>
+  <input type="checkbox" id="" />
+  <label for="newsTellers">Subscribe to Newstellers</label>
+  <br><br>
+
+  <input type="radio" id="">
+  <label for="visaCard">Visa Card</label>
+  <br>
+  <input type="radio" id="">
+  <label for="visaCard">Visa Card</label>
+  <br>
+  <input type="radio" id="">
+  <label for="visaCard">Visa Card</label>
+
+
+  <script src="./Practice_set_1.js"></script>
+  <script src="./Practice_set_2.js"></script>
+  <script src="./Practice_set_3.js"></script>
+  <script src="./Practice_set_4.js"></script>
+  <script src="./Practice_set_5.js"></script>
+  <script src="./Practice_set_6.js"></script>
+  <script src="./Practice_set_7.js"></script>
+  <script src="./Practice_set_8.js"></script>
+  </p>
+</body>
+
 </html>
