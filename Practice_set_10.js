@@ -19,6 +19,9 @@ pow, sqrt, abs, trunc
 .checked, Trinary Function , Switch Case
 --------------------------------------------*/
 
+/* 1:
+   User enters a number (1-7) and the program displays the corresponding day.*/
+
 const checkDay = document.getElementById("checkDay");
 function whichDay() {
   const dayInput = document.getElementById("dayInput");
@@ -57,3 +60,51 @@ function whichDay() {
   }
 }
 checkDay.onclick = whichDay;
+
+/*<-------------------------->*/
+
+/* 2:
+   User enters marks (0–100).
+    Program prints the grade using switch case.*/
+
+const getGrade = document.getElementById("getGrade");
+
+function getGrades() {
+  let switchGrade = document.getElementById("switchGrade");
+  const printGrades = document.getElementById("printGrades");
+  switchGrade = switchGrade.value;
+  console.log(switchGrade);
+
+  if (switchGrade === "" || isNaN(switchGrade)) {
+    printGrades.textContent = `input Not Valid`;
+    return;
+  }
+
+  const checkGrades = Number(switchGrade);
+  switch (true) {
+    case checkGrades <= 30:
+      printGrades.textContent = `You have Failed`;
+      switchGrade.value = "";
+      console.log("failed");
+      break;
+    case checkGrades <= 60:
+      printGrades.textContent = `You have Gotten Grade C`;
+      switchGrade.value = "";
+      console.log("Grade C");
+      break;
+    case checkGrades <= 75:
+      printGrades.textContent = `You have Gotten Grade B`;
+      switchGrade.value = "";
+      console.log("Grade B");
+      break;
+    case checkGrades <= 100:
+      printGrades.textContent = `You have Gotten Grade A`;
+      switchGrade.value = "";
+      console.log("Grade A");
+      break;
+    default:
+      printGrades.textContent = `Please Enter Value Input from 1 - 100`;
+  }
+}
+getGrade.onclick = getGrades;
+/*<-------------------------->*/
