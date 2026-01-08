@@ -16,7 +16,7 @@ console.log
 Math:
 round, floor, ceil, random, max, min
 pow, sqrt, abs, trunc
-.checke
+.checked
 --------------------------------------------*/
 
 const newsTellers = document.getElementById("newsTellers");
