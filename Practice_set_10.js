@@ -73,10 +73,10 @@ function getGrades() {
   let switchGrade = document.getElementById("switchGrade");
   const printGrades = document.getElementById("printGrades");
   switchGrade = switchGrade.value;
-  console.log(switchGrade);
 
   if (switchGrade === "" || isNaN(switchGrade)) {
     printGrades.textContent = `input Not Valid`;
+    console.log("input not valid");
     return;
   }
 
