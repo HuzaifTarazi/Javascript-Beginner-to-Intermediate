@@ -53,4 +53,5 @@ function StringTrim() {
   console.log(getString);
 }
 trimDown.onclick = StringTrim;
+
 /*<-------------------------->*/
