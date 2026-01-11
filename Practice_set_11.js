@@ -32,7 +32,7 @@ charAt(),
 /* 1:
    
   Username Validation (Strings + if + length + trim)
-  You get a username from an input field.
+    You get a username from an input field.
   Rules:
     Remove extra spaces
     Username length must be at least 5 characters
@@ -53,5 +53,31 @@ function StringTrim() {
   console.log(getString);
 }
 trimDown.onclick = StringTrim;
+
+/*<-------------------------->*/
+
+/* 2:
+   
+  Email Checker (Strings + includes + if else)
+    User enters an email.
+  Rules:
+    Convert email to lowercase
+    Check if it includes "@gmail.com"
+  Tasks:
+    Print "Gmail User" or "Not a Gmail User" */
+
+  const checkEmail = document.getElementById("checkEmail");
+
+function EmailCheckSystem() {
+  let emailCheck = document.getElementById("emailCheck");
+  let printEmailCheck = document.getElementById("printEmailCheck");
+  emailCheck = emailCheck.value;
+  emailCheck = emailCheck.toLowerCase();
+  console.log(emailCheck);
+  if(emailCheck.includes("@gamil.com")){
+    
+  }
+}
+checkEmail.onclick = EmailCheckSystem;
 
 /*<-------------------------->*/
