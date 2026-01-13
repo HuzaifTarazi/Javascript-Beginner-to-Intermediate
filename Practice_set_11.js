@@ -146,7 +146,7 @@ PassLength.onclick = PasswordLength;
 
 /*<-------------------------->*/
 
-/* 4:
+/* 5:
    
   File Type Checker (endsWith + if else)
     User enters a file name.
@@ -155,21 +155,49 @@ PassLength.onclick = PasswordLength;
   Tasks:
     Print "PDF File" or "Invalid File" */
 
-  const  checkType = document.getElementById("checkType");
-  
-  function FileTypeCheck(){
-    let  typeFile = document.getElementById("typeFile");
-    let printType = document.getElementById("printType");
-    let getType;
-    getType = typeFile.value;
-    getType = getType.trim();
+const checkType = document.getElementById("checkType");
 
-    if(getType.endsWith(".pdf")){
-      printType.textContent = `File has Successfully Uploaded`;
-    }else{
-      printType.textContent = `Please! Upload Correct File Type.`;
-    }
+function FileTypeCheck() {
+  let typeFile = document.getElementById("typeFile");
+  let printType = document.getElementById("printType");
+  let getType;
+  getType = typeFile.value;
+  getType = getType.trim();
+
+  if (getType.endsWith(".pdf")) {
+    printType.textContent = `File has Successfully Uploaded`;
+  } else {
+    printType.textContent = `Please! Upload Correct File Type.`;
   }
-  checkType.onclick = FileTypeCheck;
+}
+checkType.onclick = FileTypeCheck;
+
+/*<-------------------------->*/
+
+/* 6:
+   
+  Replace Word (replace + string logic)
+   Given a sentence from user input.
+  Rules:
+    Replace "bad" with "good"
+    Display updated sentence */
+
+const updateString = document.getElementById("updateString");
+
+function ReplaceWord() {
+  const enterString = document.getElementById("enterString");
+  const printString = document.getElementById("printString");
+  let changeString;
+  changeString = enterString.value;
+  changeString = changeString.trim();
+
+  if (changeString.includes("bad")) {
+    changeString = changeString.replace("bad", "Good");
+    printString.textContent = `The Text Bad Changed to ${changeString}`;
+  } else {
+    printString.textContent = `Word Change UnSuccessful`;
+  }
+}
+updateString.onclick = ReplaceWord;
 
 /*<-------------------------->*/
