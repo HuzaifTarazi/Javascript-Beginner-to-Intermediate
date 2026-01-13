@@ -229,7 +229,29 @@ updateString.onclick = ReplaceWord;
    }
    findCharacters.onclick = CharacterFinding;
 
-
-
 /*<-------------------------->*/
 
+/* 8:
+   Replace Using replace and replace all function. */
+
+   const checkString = document.getElementById("checkString");
+
+   function ReplaceStringFunction(){
+    let repalceString = document.getElementById("repalceString");
+    let printReplacedString = document.getElementById("printReplacedString");
+    let tempChng;
+    repalceString = repalceString.value;
+    repalceString = repalceString.trim();
+    repalceString = repalceString.toLowerCase();
+    printReplacedString.textContent = `Original Text: ${repalceString}`;
+    if(repalceString.includes("javascript")){
+      tempChng = repalceString.replaceAll("javascript", "Js");
+      printReplacedString.textContent = `Replaced: ${tempChng}`;
+    } else{
+      printReplacedString.textContent = `Content doesn't contain javascript!`;
+    }
+   
+   }
+   checkString.onclick = ReplaceStringFunction;
+
+/*<-------------------------->*/
