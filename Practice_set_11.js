@@ -145,3 +145,31 @@ function PasswordLength() {
 PassLength.onclick = PasswordLength;
 
 /*<-------------------------->*/
+
+/* 4:
+   
+  File Type Checker (endsWith + if else)
+    User enters a file name.
+  Rules:
+    Check if file ends with .pdf
+  Tasks:
+    Print "PDF File" or "Invalid File" */
+
+  const  checkType = document.getElementById("checkType");
+  
+  function FileTypeCheck(){
+    let  typeFile = document.getElementById("typeFile");
+    let printType = document.getElementById("printType");
+    let getType;
+    getType = typeFile.value;
+    getType = getType.trim();
+
+    if(getType.endsWith(".pdf")){
+      printType.textContent = `File has Successfully Uploaded`;
+    }else{
+      printType.textContent = `Please! Upload Correct File Type.`;
+    }
+  }
+  checkType.onclick = FileTypeCheck;
+
+/*<-------------------------->*/
