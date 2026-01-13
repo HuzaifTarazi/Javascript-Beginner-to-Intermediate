@@ -83,3 +83,32 @@ function EmailCheckSystem() {
 checkEmail.onclick = EmailCheckSystem;
 
 /*<-------------------------->*/
+
+/* 3:
+   
+  Login Button (DOM + onclick + strings)
+    A login button is clicked.
+  Rules:
+    Get username from input
+    If trimmed username is empty, show "Please enter username"
+    Otherwise show "Welcome <username>"
+  Use:
+    getElementById().value, getElementById().textContent */
+
+const userLogin = document.getElementById("userLogin");
+
+function UserLogin() {
+  let loginUsername = document.getElementById("loginUsername");
+  let loggedIn = document.getElementById("loggedIn");
+
+  loginUsername = loginUsername.value;
+  loginUsername = loginUsername.trim();
+  if(loginUsername === ""){
+    loggedIn.textContent = `Username Can't stay Empty! Please Enter Username`;
+  }else{
+    loggedIn.textContent = `${loginUsername} Congradulations! You are Logged In`;
+  }
+}
+userLogin.onclick = UserLogin;
+
+/*<-------------------------->*/
