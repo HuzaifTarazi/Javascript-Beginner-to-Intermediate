@@ -24,7 +24,7 @@ Switch Case.
 String Operation:
 length, toUpperCase(), toLowerCase(), trim(), 
 includes(), startsWith(), endsWith(), indexOf(), 
-slice(), subString(), replace(), replaceAll, split(),
+slice(), replace(), replaceAll, split(),
 charAt(),
 
 --------------------------------------------*/
@@ -253,5 +253,35 @@ updateString.onclick = ReplaceWord;
    
    }
    checkString.onclick = ReplaceStringFunction;
+
+/*<-------------------------->*/
+
+/* 9:
+  Email Masking System (Using slice())
+    Takes a Email (string).
+    Shows only the first 2 and last 2 characters.
+    Masks the middle part using *.
+    Uses slice() to extract parts safely. */
+
+    const maskEmailNow = document.getElementById("maskEmailNow");
+
+    function EmailMaskingSystem(){
+      let getMask = document.getElementById("getMask");
+      let printMaskedEmail = document.getElementById("printMaskedEmail");
+      getMask = getMask.value;
+      emailMask = getMask.trim();
+      let startSlice;
+      startSlice = getMask.slice(0, 3);
+      let endSlice;
+      endSlice = getMask.slice(-3);
+      let calculateRest;
+      calculateRest = getMask.length -6;
+      let hash = "*";
+      calculateRest = hash.repeat(calculateRest);
+      console.log(startSlice, calculateRest , endSlice);
+      printMaskedEmail.textContent = `Your Masked Email is ${startSlice} ${calculateRest} ${endSlice}`;
+
+    }
+    maskEmailNow.onclick = EmailMaskingSystem;
 
 /*<-------------------------->*/
