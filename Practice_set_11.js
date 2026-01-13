@@ -201,3 +201,35 @@ function ReplaceWord() {
 updateString.onclick = ReplaceWord;
 
 /*<-------------------------->*/
+
+/* 7:
+   Check Indexof Character and Charater Position. */
+
+   const findCharacters = document.getElementById("findCharacters");
+
+   function CharacterFinding(){
+    let positionFinder = document.getElementById("positionFinder");
+    let indexOf = document.getElementById("indexOf");
+    let charat = document.getElementById("charat");
+    let findNow = document.getElementById("findNow");
+
+    positionFinder = positionFinder.value;
+    positionFinder = positionFinder.toLowerCase();
+    positionFinder = positionFinder.trim();
+    indexOf = indexOf.value;
+    indexOf = indexOf.toLowerCase();
+    let storeIndex;
+    storeIndex = positionFinder.indexOf(indexOf);
+    charat = Number(charat.value);
+    let storeCharAt;
+    storeCharAt = positionFinder.charAt(charat);
+
+    findNow.textContent = `Username is ${positionFinder}. \n Index of "${indexOf}" is ${storeIndex}. Character at ${charat} is "${storeCharAt}"`;
+
+   }
+   findCharacters.onclick = CharacterFinding;
+
+
+
+/*<-------------------------->*/
+
