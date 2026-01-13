@@ -103,12 +103,45 @@ function UserLogin() {
 
   loginUsername = loginUsername.value;
   loginUsername = loginUsername.trim();
-  if(loginUsername === ""){
+  if (loginUsername === "") {
     loggedIn.textContent = `Username Can't stay Empty! Please Enter Username`;
-  }else{
+  } else {
     loggedIn.textContent = `${loginUsername} Congradulations! You are Logged In`;
   }
 }
 userLogin.onclick = UserLogin;
+
+/*<-------------------------->*/
+
+/* 4:
+   
+  Password Strength (Strings + length + if else)
+    User enters a password.
+  Rules:
+    Trim spaces
+    If length < 8 → "Weak Password"
+    Else → "Strong Password" */
+
+const PassLength = document.getElementById("PassLength");
+
+function PasswordLength() {
+  const passwordStrength = document.getElementById("passwordStrength");
+  const checkPass = document.getElementById("checkPass");
+  const lengthUser = document.getElementById("lengthUser");
+  let storePass;
+  let storeUser;
+  storeUser = lengthUser.value;
+  storeUser = storeUser.trim();
+  console.log(storeUser);
+  storePass = passwordStrength.value;
+  storePass = storePass.trim();
+  console.log(storePass);
+  if (storePass.length <= 8) {
+    checkPass.textContent = `${storeUser}! Please Enter Valid Password to Proceed`;
+  } else {
+    checkPass.textContent = `${storeUser}! Welcome You are Successfully Logged In`;
+  }
+}
+PassLength.onclick = PasswordLength;
 
 /*<-------------------------->*/
