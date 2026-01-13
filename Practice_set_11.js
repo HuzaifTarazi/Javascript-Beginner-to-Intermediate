@@ -66,7 +66,7 @@ trimDown.onclick = StringTrim;
   Tasks:
     Print "Gmail User" or "Not a Gmail User" */
 
-  const checkEmail = document.getElementById("checkEmail");
+const checkEmail = document.getElementById("checkEmail");
 
 function EmailCheckSystem() {
   let emailCheck = document.getElementById("emailCheck");
@@ -74,8 +74,10 @@ function EmailCheckSystem() {
   emailCheck = emailCheck.value;
   emailCheck = emailCheck.toLowerCase();
   console.log(emailCheck);
-  if(emailCheck.includes("@gamil.com")){
-    
+  if (emailCheck.includes("@gmail.com")) {
+    printEmailCheck.textContent = `Your Email includes @gmail.com`;
+  } else {
+    printEmailCheck.textContent = `Please Enter Email correctly`;
   }
 }
 checkEmail.onclick = EmailCheckSystem;
