@@ -27,6 +27,8 @@ includes(), startsWith(), endsWith(), indexOf(),
 slice(), replace(), replaceAll, split(),
 charAt(),
 
+Method Chaining,
+
 --------------------------------------------*/
 
 /* 1:
