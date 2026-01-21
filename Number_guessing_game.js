@@ -49,11 +49,11 @@ function GuessRandomNumber() {
     guessGame = Number(guessGame);
     attempt++;
     if (guessGame > randomNumber) {
-    guessResult.textContent = `Number is Too High`;
+      guessResult.textContent = `Number is Too High`;
     } else if (guessGame < randomNumber) {
-    guessResult.textContent = `Number is Too Low`;
+      guessResult.textContent = `Number is Too Low`;
     } else {
-      guessResult.textContent = `Congrats! It took you ${attempt} to get it Right`;
+      guessResult.textContent = `Congrats! It took you ${attempt} Attempts to get it Right`;
     }
   }
 }
