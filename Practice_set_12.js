@@ -27,7 +27,7 @@ includes(), startsWith(), endsWith(), indexOf(),
 slice(), subString(), replace(), replaceAll, split(),
 charAt(),
 
-Function, Function Parameters, Function Arguments, Return Statement
+Method Chaining , While Loop, For Loop
+Functions, Function Parameters,Function Arguments, Return Statement
 
 --------------------------------------------*/
-
