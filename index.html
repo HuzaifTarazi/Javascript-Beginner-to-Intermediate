@@ -669,7 +669,7 @@
   <input type="text" name="Username" id="stringOpTrim">
   <input type="submit" value="Trim" id="trimDown">
   <p id="trimOutput"></p>
-  
+
   <!-- Question 2 -->
   <h4>Question 2</h4>
   <p>Email Checker (Strings + includes + if else)</p>
@@ -745,13 +745,13 @@
   <label for="Character">Update String: </label>
   <input type="text" name="Character" id="positionFinder"> <br><br>
   <label for="Index">Index No: </label>
-  <input type="text" name="Index" id="indexOf" ><br><br>
+  <input type="text" name="Index" id="indexOf"><br><br>
   <label for="char">Character At: </label>
-  <input type="text" name="char" id="charat" ><br><br>
+  <input type="text" name="char" id="charat"><br><br>
   <input type="submit" value="Check Location" id="findCharacters">
   <span id="findNow"> </span>
 
-   <!-- Question 8 -->
+  <!-- Question 8 -->
   <h4>Question 8</h4>
   <p>Replace string</p>
   <label for="replacefunction">Input:</label>
@@ -770,7 +770,7 @@
   <input type="text" name="emailmasking" id="getMask">
   <input type="submit" value="Mask Email" id="maskEmailNow">
   <p id="printMaskedEmail"> </p>
-  
+
   <!-- Number Guessing Game-->
   <hr />
   <h2 style="
@@ -783,11 +783,73 @@
   </h2>
   <hr />
   <div class="center">
-  <label for="guessNumberOne">Guess a Number from 1 - 100</label> <br>
-  <input type="text" name="guessNumberOne" id="guessGame" class="guessGame">
-  <input type="submit" id="guessNow" value="Guess Now" class="guessNow">
-  <p id="guessResult" class="guessResult"> </p>
-</div>
+    <label for="guessNumberOne">Guess a Number from 1 - 100</label> <br>
+    <input type="text" name="guessNumberOne" id="guessGame" class="guessGame">
+    <input type="submit" id="guessNow" value="Guess Now" class="guessNow">
+    <p id="guessResult" class="guessResult"> </p>
+  </div>
+
+  <!-- Practice Set 12-->
+  <hr />
+  <h2 style="
+        text-align: center;
+        background-color: red;
+        margin: 15px;
+        padding: 10px;
+      ">
+    Practice Set 12
+  </h2>
+  <hr />
+  <!-- Question 1 -->
+  <h4>Question 1</h4>
+  <p>USER GREETING ENGINE</p>
+  <p>Goal:</p>
+  <p>Display a personalized greeting using a function parameter.</p>
+  <p>Concept Used:</p>
+  <p>Function parameter</p>
+  <p>String concatenation</p>
+  <p>Logic:</p>
+  <p>The function receives a name and prints a greeting.</p>
+  <input id="greetUser" type="text" placeholder="yourName" />
+  <input id="greetNow" type="submit" value="Greetings" />
+  <p id="printGreeting"></p>
+  <!-- Question 2 -->
+  <h4>Question 2</h4>
+  <p>LOGIN VALIDATOR (CORE REAL-WORLD USE)</p>
+  <p>Goal:</p>
+  <p>Validate username and password using parameters.</p>
+  <p>Concept Used:</p>
+  <p>Parameters</p>
+  <p>Conditions</p>
+  <p>Reusability</p>
+  <label for="loginValidatorUser">Username: </label>
+  <input id="loginValidUser" type="text" placeholder="Username" name="loginValidatorUser" />
+  <label for="loginValidatorPass">Password:</label>
+  <input id="loginValidatorPass" type="text" name="loginValidatorPass" />
+  <input type="submit" id="validateNow">
+  <p id="printValidValues"></p>
+
+  <!-- Question 3 -->
+  <h4>Question 3</h4>
+  <p>SIMPLE CALCULATOR FUNCTION</p>
+  <p>Goal:</p>
+  <p>Perform math operations dynamically.</p>
+  <p>Concept Used:</p>
+  <p>Multiple parameters</p>
+  <p>Arithmetic operations</p>
+  <label for="number1">Enter First Number: </label><br>
+  <input type="text" name="number1" id="userNumber1"><br>
+  <label for="operator">Enter Operator: </label><br>
+  <input type="text" name="operator" id="operator"><br>
+  <label for="number2">Enter Second Number</label><br>
+  <input type="text" name="number2" id="userNumber2"><br>
+  <input type="submit" id="calculateNow"> 
+  <p id="printCalculation"></p>
+
+
+
+
+
 
   <script src="./Practice_set_1.js"></script>
   <script src="./Practice_set_2.js"></script>
