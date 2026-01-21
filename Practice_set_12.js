@@ -140,19 +140,19 @@ calculateNow.onclick = function () {
 
 /*<-------------------------->*/
 
-/* 3:
+/* 4:
    
-  SIMPLE CALCULATOR FUNCTION
+  ATTEMPT COUNTER SYSTEM
     
   Goal:
-    Perform math operations dynamically.
+    Track attempts using parameters instead of global variables.
   Concept Used:
     Multiple parameters
-    Arithmetic operations
+    Comparison logic
     Reusability  */
 
 function CheckTotalAttempts(startAttempt, maxAttempt) {
-  attemptLeft = maxAttempt - startAttempt ;
+  attemptLeft = maxAttempt - startAttempt;
   let remainAttempts = document.getElementById("remainAttempts");
   if (startAttempt >= maxAttempt) {
     alert("Sorry! Your Account is Locked..");
@@ -165,8 +165,38 @@ const checkAttempts = document.getElementById("checkAttempts");
 checkAttempts.onclick = function () {
   let maxAttempts = document.getElementById("maxAttempts").value;
   maxAttempts = Number(maxAttempts);
-  maxAttempts--;
-  CheckTotalAttempts( 1, maxAttempts)
+
+  CheckTotalAttempts(1, maxAttempts);
+};
+
+/*<-------------------------->*/
+
+/* 5:
+   
+  PASSWORD STRENGTH CHECKER
+    
+  Goal:
+    Check password length dynamically.
+  Concept Used:
+    Multiple parameters
+    String length
+    Reusability  */
+
+function PasswordStrengthChecker(PassLength) {
+  let printPassStrength = document.getElementById("printPassStrength");
+
+  if (PassLength.length <= 6) {
+    alert("Password Must be Greater Then 6.!");
+  } else {
+    printPassStrength.textContent = `Hi,Your ${PassLength} is Approved!`;
+  }
+}
+
+const checkStrength = document.getElementById("checkStrength");
+checkStrength.onclick = function () {
+  let passStrength = document.getElementById("passStrength").value;
+
+  PasswordStrengthChecker(passStrength);
 };
 
 /*<-------------------------->*/
