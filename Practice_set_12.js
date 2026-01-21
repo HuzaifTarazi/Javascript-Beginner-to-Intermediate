@@ -139,3 +139,34 @@ calculateNow.onclick = function () {
 };
 
 /*<-------------------------->*/
+
+/* 3:
+   
+  SIMPLE CALCULATOR FUNCTION
+    
+  Goal:
+    Perform math operations dynamically.
+  Concept Used:
+    Multiple parameters
+    Arithmetic operations
+    Reusability  */
+
+function CheckTotalAttempts(startAttempt, maxAttempt) {
+  attemptLeft = maxAttempt - startAttempt ;
+  let remainAttempts = document.getElementById("remainAttempts");
+  if (startAttempt >= maxAttempt) {
+    alert("Sorry! Your Account is Locked..");
+  } else {
+    remainAttempts.textContent = `You have ${attemptLeft} Attempts Left.`;
+  }
+}
+
+const checkAttempts = document.getElementById("checkAttempts");
+checkAttempts.onclick = function () {
+  let maxAttempts = document.getElementById("maxAttempts").value;
+  maxAttempts = Number(maxAttempts);
+  maxAttempts--;
+  CheckTotalAttempts( 1, maxAttempts)
+};
+
+/*<-------------------------->*/
