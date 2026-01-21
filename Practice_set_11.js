@@ -24,8 +24,10 @@ Switch Case.
 String Operation:
 length, toUpperCase(), toLowerCase(), trim(), 
 includes(), startsWith(), endsWith(), indexOf(), 
-slice(), subString(), replace(), replaceAll, split(),
+slice(), replace(), replaceAll, split(),
 charAt(),
+
+Method Chaining,
 
 --------------------------------------------*/
 
@@ -66,7 +68,7 @@ trimDown.onclick = StringTrim;
   Tasks:
     Print "Gmail User" or "Not a Gmail User" */
 
-  const checkEmail = document.getElementById("checkEmail");
+const checkEmail = document.getElementById("checkEmail");
 
 function EmailCheckSystem() {
   let emailCheck = document.getElementById("emailCheck");
@@ -74,10 +76,214 @@ function EmailCheckSystem() {
   emailCheck = emailCheck.value;
   emailCheck = emailCheck.toLowerCase();
   console.log(emailCheck);
-  if(emailCheck.includes("@gamil.com")){
-    
+  if (emailCheck.includes("@gmail.com")) {
+    printEmailCheck.textContent = `Your Email includes @gmail.com`;
+  } else {
+    printEmailCheck.textContent = `Please Enter Email correctly`;
   }
 }
 checkEmail.onclick = EmailCheckSystem;
+
+/*<-------------------------->*/
+
+/* 3:
+   
+  Login Button (DOM + onclick + strings)
+    A login button is clicked.
+  Rules:
+    Get username from input
+    If trimmed username is empty, show "Please enter username"
+    Otherwise show "Welcome <username>"
+  Use:
+    getElementById().value, getElementById().textContent */
+
+const userLogin = document.getElementById("userLogin");
+
+function UserLogin() {
+  let loginUsername = document.getElementById("loginUsername");
+  let loggedIn = document.getElementById("loggedIn");
+
+  loginUsername = loginUsername.value;
+  loginUsername = loginUsername.trim();
+  if (loginUsername === "") {
+    loggedIn.textContent = `Username Can't stay Empty! Please Enter Username`;
+  } else {
+    loggedIn.textContent = `${loginUsername} Congradulations! You are Logged In`;
+  }
+}
+userLogin.onclick = UserLogin;
+
+/*<-------------------------->*/
+
+/* 4:
+   
+  Password Strength (Strings + length + if else)
+    User enters a password.
+  Rules:
+    Trim spaces
+    If length < 8 → "Weak Password"
+    Else → "Strong Password" */
+
+const PassLength = document.getElementById("PassLength");
+
+function PasswordLength() {
+  const passwordStrength = document.getElementById("passwordStrength");
+  const checkPass = document.getElementById("checkPass");
+  const lengthUser = document.getElementById("lengthUser");
+  let storePass;
+  let storeUser;
+  storeUser = lengthUser.value;
+  storeUser = storeUser.trim();
+  console.log(storeUser);
+  storePass = passwordStrength.value;
+  storePass = storePass.trim();
+  console.log(storePass);
+  if (storePass.length <= 8) {
+    checkPass.textContent = `${storeUser}! Please Enter Valid Password to Proceed`;
+  } else {
+    checkPass.textContent = `${storeUser}! Welcome You are Successfully Logged In`;
+  }
+}
+PassLength.onclick = PasswordLength;
+
+/*<-------------------------->*/
+
+/* 5:
+   
+  File Type Checker (endsWith + if else)
+    User enters a file name.
+  Rules:
+    Check if file ends with .pdf
+  Tasks:
+    Print "PDF File" or "Invalid File" */
+
+const checkType = document.getElementById("checkType");
+
+function FileTypeCheck() {
+  let typeFile = document.getElementById("typeFile");
+  let printType = document.getElementById("printType");
+  let getType;
+  getType = typeFile.value;
+  getType = getType.trim();
+
+  if (getType.endsWith(".pdf")) {
+    printType.textContent = `File has Successfully Uploaded`;
+  } else {
+    printType.textContent = `Please! Upload Correct File Type.`;
+  }
+}
+checkType.onclick = FileTypeCheck;
+
+/*<-------------------------->*/
+
+/* 6:
+   
+  Replace Word (replace + string logic)
+   Given a sentence from user input.
+  Rules:
+    Replace "bad" with "good"
+    Display updated sentence */
+
+const updateString = document.getElementById("updateString");
+
+function ReplaceWord() {
+  const enterString = document.getElementById("enterString");
+  const printString = document.getElementById("printString");
+  let changeString;
+  changeString = enterString.value;
+  changeString = changeString.trim();
+
+  if (changeString.includes("bad")) {
+    changeString = changeString.replace("bad", "Good");
+    printString.textContent = `The Text Bad Changed to ${changeString}`;
+  } else {
+    printString.textContent = `Word Change UnSuccessful`;
+  }
+}
+updateString.onclick = ReplaceWord;
+
+/*<-------------------------->*/
+
+/* 7:
+   Check Indexof Character and Charater Position. */
+
+   const findCharacters = document.getElementById("findCharacters");
+
+   function CharacterFinding(){
+    let positionFinder = document.getElementById("positionFinder");
+    let indexOf = document.getElementById("indexOf");
+    let charat = document.getElementById("charat");
+    let findNow = document.getElementById("findNow");
+
+    positionFinder = positionFinder.value;
+    positionFinder = positionFinder.toLowerCase();
+    positionFinder = positionFinder.trim();
+    indexOf = indexOf.value;
+    indexOf = indexOf.toLowerCase();
+    let storeIndex;
+    storeIndex = positionFinder.indexOf(indexOf);
+    charat = Number(charat.value);
+    let storeCharAt;
+    storeCharAt = positionFinder.charAt(charat);
+
+    findNow.textContent = `Username is ${positionFinder}. \n Index of "${indexOf}" is ${storeIndex}. Character at ${charat} is "${storeCharAt}"`;
+
+   }
+   findCharacters.onclick = CharacterFinding;
+
+/*<-------------------------->*/
+
+/* 8:
+   Replace Using replace and replace all function. */
+
+   const checkString = document.getElementById("checkString");
+
+   function ReplaceStringFunction(){
+    let repalceString = document.getElementById("repalceString");
+    let printReplacedString = document.getElementById("printReplacedString");
+    let tempChng;
+    repalceString = repalceString.value;
+    repalceString = repalceString.trim();
+    repalceString = repalceString.toLowerCase();
+    printReplacedString.textContent = `Original Text: ${repalceString}`;
+    if(repalceString.includes("javascript")){
+      tempChng = repalceString.replaceAll("javascript", "Js");
+      printReplacedString.textContent = `Replaced: ${tempChng}`;
+    } else{
+      printReplacedString.textContent = `Content doesn't contain javascript!`;
+    }
+   
+   }
+   checkString.onclick = ReplaceStringFunction;
+
+/*<-------------------------->*/
+
+/* 9:
+  Email Masking System (Using slice())
+    Takes a Email (string).
+    Shows only the first 2 and last 2 characters.
+    Masks the middle part using *.
+    Uses slice() to extract parts safely. */
+
+    const maskEmailNow = document.getElementById("maskEmailNow");
+
+    function EmailMaskingSystem(){
+      let getMask = document.getElementById("getMask");
+      let printMaskedEmail = document.getElementById("printMaskedEmail");
+      getMask = getMask.value;
+      emailMask = getMask.trim();
+      let startSlice;
+      startSlice = getMask.slice(0, 3);
+      let endSlice;
+      endSlice = getMask.slice(-3);
+      let calculateRest;
+      calculateRest = getMask.length -6;
+      let hash = "*";
+      calculateRest = hash.repeat(calculateRest);
+      console.log(startSlice, calculateRest , endSlice);
+      printMaskedEmail.textContent = `Your Masked Email is ${startSlice} ${calculateRest} ${endSlice}`;
+
+    }
+    maskEmailNow.onclick = EmailMaskingSystem;
 
 /*<-------------------------->*/

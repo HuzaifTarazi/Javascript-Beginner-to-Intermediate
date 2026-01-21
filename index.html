@@ -684,6 +684,110 @@
   <input type="submit" value="Check Email" id="checkEmail">
   <p id="printEmailCheck"></p>
 
+  <!-- Question 3 -->
+  <h4>Question 3</h4>
+  <p>Login Button (DOM + onclick + strings)</p>
+  <p>A login button is clicked.</p>
+  <p>Rules:</p>
+  <p>Get username from input</p>
+  <p>If trimmed username is empty, show "Please enter username"</p>
+  <p>Otherwise show "Welcome <username>"</p>
+  <p>Use:</p>
+  <p>getElementById().value, getElementById().textContent</p>
+  <label for="loginUsername">Login:</label>
+  <input type="text" name="loginUsername" id="loginUsername">
+  <input type="submit" value="Login Now" id="userLogin">
+  <p id="loggedIn"></p>
+
+  <!-- Question 4 -->
+  <h4>Question 4</h4>
+  <p>Password Strength (Strings + length + if else)</p>
+  <p>User enters a password.</p>
+  <p>Rules:</p>
+  <p>Trim spaces</p>
+  <p>If length 8 → "Weak Password"</p>
+  <p>Else → "Strong Password"</p>
+  <label for="PassLengthUser">Username: </label>
+  <input type="text" name="PassLengthUser" id="lengthUser">
+  <label for="Password">Password:</label>
+  <input type="text" name="Password" id="passwordStrength">
+  <input type="submit" value="Password Length" id="PassLength">
+  <p id="checkPass"> </p>
+
+  <!-- Question 5 -->
+  <h4>Question 5</h4>
+  <p>File Type Checker (endsWith + if else)</p>
+  <p>User enters a file name.</p>
+  <p>Rules:</p>
+  <p>Check if file ends with .pdf</p>
+  <p>Tasks:</p>
+  <p>Print "PDF File" or "Invalid File"</p>
+  <label for="FileType">Upload Now: </label>
+  <input type="file" name="FileType" id="typeFile">
+  <input type="submit" value="Type Check" id="checkType">
+  <p id="printType"> </p>
+
+  <!-- Question 6 -->
+  <h4>Question 6</h4>
+  <p>Replace Word (replace + string logic)</p>
+  <p>Given a sentence from user input.</p>
+  <p>Rules:</p>
+  <p>Replace "bad" with "good"</p>
+  <p>Display updated sentence</p>
+  <label for="UpdateString">Update String: </label>
+  <input type="text" name="UpdateString" id="enterString">
+  <input type="submit" value="Type Check" id="updateString">
+  <p id="printString"> </p>
+
+  <!-- Question 7 -->
+  <h4>Question 7</h4>
+  <p>Check Indexof Character and Charater Position</p>
+  <label for="Character">Update String: </label>
+  <input type="text" name="Character" id="positionFinder"> <br><br>
+  <label for="Index">Index No: </label>
+  <input type="text" name="Index" id="indexOf" ><br><br>
+  <label for="char">Character At: </label>
+  <input type="text" name="char" id="charat" ><br><br>
+  <input type="submit" value="Check Location" id="findCharacters">
+  <span id="findNow"> </span>
+
+   <!-- Question 8 -->
+  <h4>Question 8</h4>
+  <p>Replace string</p>
+  <label for="replacefunction">Input:</label>
+  <input type="text" name="replacefunction" id="repalceString">
+  <input type="submit" id="checkString" value="Replace Now">
+  <p id="printReplacedString"> </p>
+
+  <!-- Question 9 -->
+  <h4>Question 9</h4>
+  <p>Email Masking System (Using slice())</p>
+  <p>Takes a Email (string)</p>
+  <p>Shows only the first 2 and last 2 characters</p>
+  <p>Masks the middle part using *</p>
+  <p>Uses slice() to extract parts safely</p>
+  <label for="emailmasking">Email: </label>
+  <input type="text" name="emailmasking" id="getMask">
+  <input type="submit" value="Mask Email" id="maskEmailNow">
+  <p id="printMaskedEmail"> </p>
+  
+  <!-- Number Guessing Game-->
+  <hr />
+  <h2 style="
+        text-align: center;
+        background-color: red;
+        margin: 15px;
+        padding: 10px;
+      ">
+    Mini Numbers Guessing Game
+  </h2>
+  <hr />
+  <div class="center">
+  <label for="guessNumberOne">Guess a Number from 1 - 100</label> <br>
+  <input type="text" name="guessNumberOne" id="guessGame" class="guessGame">
+  <input type="submit" id="guessNow" value="Guess Now" class="guessNow">
+  <p id="guessResult" class="guessResult"> </p>
+</div>
 
   <script src="./Practice_set_1.js"></script>
   <script src="./Practice_set_2.js"></script>
@@ -696,6 +800,8 @@
   <script src="./Practice_set_9.js"></script>
   <script src="./Practice_set_10.js"></script>
   <script src="./Practice_set_11.js"></script>
+  <script src="./Number_guessing_game.js"></script>
+  </p>
   <script src="./Practice_set_12.js"></script>
 </body>
 

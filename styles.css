@@ -37,3 +37,29 @@ h4{
     background-color: black;
     color: white;
 }
+
+/* Guessing Game */
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.guessGame{
+    margin: 12px;
+    border: 1px solid red;
+    padding: 5px;
+    border-radius: 3px;
+}
+.guessNow{
+    padding: 5px;
+    background-color: aquamarine;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.guessNow:hover{
+    background-color: black;
+    color: white;
+}
