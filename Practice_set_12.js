@@ -30,6 +30,8 @@ charAt(),
 Method Chaining , While Loop, For Loop
 Functions, Function Parameters,Function Arguments, Return Statement
 
+Variable Scopes (Local , Global)
+
 --------------------------------------------*/
 
 /* 1:
