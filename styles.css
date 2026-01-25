@@ -63,3 +63,69 @@ h4{
     background-color: black;
     color: white;
 }
+
+/* Temperature Converter */
+
+.converter-container {
+    
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 25px;
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#appTitle {
+    margin: 8px 3 8px 3;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+#temperatureInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#resultBox {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #eef1f4;
+    border-radius: 5px;
+}
+
+#resultText {
+    font-size: 16px;
+    color: #333;
+}
+.radio-group{
+    color: black;
+}
