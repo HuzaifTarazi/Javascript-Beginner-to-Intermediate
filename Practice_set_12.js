@@ -77,6 +77,7 @@ function LoginValidator(userName, passWord) {
   }
   if (!passWord || passWord.includes(" ")) {
     printValidValues.textContent = `Enter Correct Password`;
+    return;
   }
 
   printValidValues.textContent = `Hi, ${userName} Your Password is: ${passWord}`;
