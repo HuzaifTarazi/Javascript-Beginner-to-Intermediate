@@ -89,17 +89,57 @@ concat(), length, reverse(), sort(),
 // }
 // console.log(arr)
 
+// ----------------------
 
-let numbers = [12, 45, 2, 89, 33];
-let large = numbers[0]
-for(let i = 0; i < numbers.length; i++){
-  console.log(numbers[i])
+// Exercise 5:
+// Find the maximum number using for loop and Math.max() logic.
 
-  if(numbers[i] > large){
+// let arr = [1,2,3,4,5,6,7,8];
+// let tempArr = arr[0]
+// for(let i = 1; i < arr.length; i++){
+//   if(arr[i] > tempArr){
+//     tempArr = arr[i]
+//   }
+// }
+// console.log(tempArr)
 
-    // large = numbers[i]
+// ----------------------
 
-    console.log(numbers[i])
+// Exercise 6:
+// Check whether "JS" exists in an array using includes().
+
+// let arr = ["js", "huzaif", "osaf", "zukhruf"]
+
+// if(arr.includes("js")){
+//   console.log(true)
+// } else {
+//   console.log(false)
+// }
+
+// ----------------------
+
+// Exercise 7 :
+// Count Words Greater Than 4 Characters.
+
+// let arr = ["huzaif", "osaf", "zukhruf", "rufaf", "naz"];
+// let count = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i].length > 5) {
+//     count++;
+//   }
+// }
+// console.log(count);
+
+
+// Exercise 8 :
+// Function That Returns Average of Array
+
+function averageArray(arr) {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
   }
+  return sum / arr.length;
 }
-
+console.log(averageArray([10, 20, 30]));
