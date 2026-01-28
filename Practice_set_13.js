@@ -134,12 +134,12 @@ concat(), length, reverse(), sort(),
 // Exercise 8 :
 // Function That Returns Average of Array
 
-function averageArray(arr) {
-  let sum = 0;
+// function averageArray(arr) {
+//   let sum = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    sum = sum + arr[i];
-  }
-  return sum / arr.length;
-}
-console.log(averageArray([10, 20, 30]));
+//   for (let i = 0; i < arr.length; i++) {
+//     sum = sum + arr[i];
+//   }
+//   return sum / arr.length;
+// }
+// console.log(averageArray([10, 20, 30]));
