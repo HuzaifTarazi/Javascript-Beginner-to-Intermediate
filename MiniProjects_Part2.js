@@ -1,5 +1,5 @@
 /* -----------------------------------------
-               << Practice Set 13 >>
+               << Mini Project Part_2 >>
 
 let, const
 + - * / %
@@ -57,25 +57,26 @@ function SimpleCalculator(numberOne, numberTwo, operatorType) {
     printOp.textContent = `Please Enter Correct Number`;
     return;
   }
-  if (!operatorType || operatorType.includes(" ")) {
+  const operatorsArr = ["+", "-", "/", "*"];
+  if (!operatorsArr.includes(operatorType)) {
     printOp.textContent = `Operator Type is wrong!`;
     return;
   }
 
-  switch (true) {
-    case operatorType === "+":
+  switch (operatorType) {
+    case "+":
       result = numberOne + numberTwo;
       printOp.textContent = `${numberOne} ${operatorType} ${numberTwo} = ${result}`;
       break;
-    case operatorType === "-":
+    case "-":
       result = numberOne - numberTwo;
       printOp.textContent = `${numberOne} ${operatorType} ${numberTwo} = ${result}`;
       break;
-    case operatorType === "/":
+    case "/":
       result = numberOne / numberTwo;
       printOp.textContent = `${numberOne} ${operatorType} ${numberTwo} = ${result}`;
       break;
-    case operatorType === "*":
+    case "*":
       result = numberOne * numberTwo;
       printOp.textContent = `${numberOne} ${operatorType} ${numberTwo} = ${result}`;
       break;
@@ -91,4 +92,40 @@ performOp.onclick = function () {
 
   SimpleCalculator(enterNumber1, enterNumber2, operatorType);
 };
+
+/*<-------------------------->*/
+
+/* 2:
+   
+  Age Checker (if / else + Comparison)
+    Topics Used:
+        if, else if, else, > < >= <= === !==, functions, function parameters, function arguments
+    Tasks:
+        Take age from input and:
+            If age < 18 → log "Minor"
+            If age ≥ 18 and < 60 → log "Adult"
+            If age ≥ 60 → log "Senior" */
+
+function AgeCheckFunc(yourAge) {
+    if(isNaN(yourAge)){
+        alert("Error! Please Enter Correct Age..!");
+        return;
+    }
+    const prntAgeCheck = document.getElementById("prntAgeCheck");
+    if(yourAge < 18){
+        prntAgeCheck.textContent = `You are A Minor..!`;
+    } else if(yourAge >= 18 && yourAge < 60){
+        prntAgeCheck.textContent = `You are An Adult..!`;
+    } else if(yourAge > 60){
+        prntAgeCheck.textContent = `You are a Senior..!`
+    }
+}
+
+const checkAgeElig = document.getElementById("checkAgeElig");
+checkAgeElig.onclick = function(){
+  let eligibleAgeOp = Number(document.getElementById("eligibleAgeOp").value);
+  
+  AgeCheckFunc(eligibleAgeOp);
+};
+
 /*<-------------------------->*/
