@@ -107,25 +107,61 @@ performOp.onclick = function () {
             If age ≥ 60 → log "Senior" */
 
 function AgeCheckFunc(yourAge) {
-    if(isNaN(yourAge)){
-        alert("Error! Please Enter Correct Age..!");
-        return;
-    }
-    const prntAgeCheck = document.getElementById("prntAgeCheck");
-    if(yourAge < 18){
-        prntAgeCheck.textContent = `You are A Minor..!`;
-    } else if(yourAge >= 18 && yourAge < 60){
-        prntAgeCheck.textContent = `You are An Adult..!`;
-    } else if(yourAge > 60){
-        prntAgeCheck.textContent = `You are a Senior..!`
-    }
+  if (isNaN(yourAge)) {
+    alert("Error! Please Enter Correct Age..!");
+    return;
+  }
+  const prntAgeCheck = document.getElementById("prntAgeCheck");
+  if (yourAge < 18) {
+    prntAgeCheck.textContent = `You are A Minor..!`;
+  } else if (yourAge >= 18 && yourAge < 60) {
+    prntAgeCheck.textContent = `You are An Adult..!`;
+  } else if (yourAge > 60) {
+    prntAgeCheck.textContent = `You are a Senior..!`
+  }
 }
 
 const checkAgeElig = document.getElementById("checkAgeElig");
-checkAgeElig.onclick = function(){
+checkAgeElig.onclick = function () {
   let eligibleAgeOp = Number(document.getElementById("eligibleAgeOp").value);
-  
+
   AgeCheckFunc(eligibleAgeOp);
 };
 
 /*<-------------------------->*/
+
+/* 3:
+   
+Login Validation (Logical Operators)
+
+  Topics Used:
+     && || !, if else, let , const, function, parameters, arguments
+  Tasks:
+    Username is not empty
+    Password length is at least 6
+    Log "Login Successful" or "Invalid Credentials" */
+
+function UserAuthentication(fetchUser) {
+  if (!fetchUser || fetchUser.includes(" ")) {
+    alert("Username Invalid.! Try Again");
+    return;
+  }
+  const getUserOp = document.getElementById("getUserOp");
+  if (fetchUser.length >= 6) {
+    getUserOp.textContent = `${fetchUser}..! Login Successful`;
+  } else {
+    getUserOp.textContent = `${fetchUser}..! Login Unsuccessful`;
+  }
+}
+
+const pushUserOp = document.getElementById("pushUserOp");
+pushUserOp.onclick = function () {
+  const userNameOp = document.getElementById("userNameOp").value.trim();
+  let updateUser = userNameOp.slice(0, 1).toUpperCase() + userNameOp.slice(1).toLowerCase();
+
+  UserAuthentication(updateUser)
+}
+/*<-------------------------->*/
+
+
+
