@@ -219,28 +219,28 @@ String Analyzer
       Check if it includes "JS"
       Check if it starts with "Hello" */
 
-      function TextAnalyzerFunction(fetchText){
-        fetchText = fetchText.trim();
-        // fetchText = fetchText.slice(0 , 1).toUpperCase() + fetchText.slice(1, -1) + fetchText.slice(-1).toUpperCase();
-        fetchText =  fetchText.slice(0, 1).toUpperCase() + fetchText.slice(1, -2) + fetchText.slice(-2, -1).toUpperCase() + fetchText.slice(-1);
-        if(!fetchText){
-          alert("Please Fill the Feild To Proceed..!");
-          return;
-        }
-        const printText = document.getElementById("printText");
-        if(fetchText.startsWith("Hello") && fetchText.endsWith("Js")){
-          printText.textContent = `Congradulations.! '${fetchText}' is Correct Input. :)`
-        } else{
-          printText.textContent = `Unfortunatly.! '${fetchText}' is Not Correct Input. :)`
-        }
+function TextAnalyzerFunction(fetchText) {
+  fetchText = fetchText.trim();
+  // fetchText = fetchText.slice(0 , 1).toUpperCase() + fetchText.slice(1, -1) + fetchText.slice(-1).toUpperCase();
+  fetchText = fetchText.slice(0, 1).toUpperCase() + fetchText.slice(1, -2) + fetchText.slice(-2, -1).toUpperCase() + fetchText.slice(-1);
+  if (!fetchText) {
+    alert("Please Fill the Feild To Proceed..!");
+    return;
+  }
+  const printText = document.getElementById("printText");
+  if (fetchText.startsWith("Hello") && fetchText.endsWith("Js")) {
+    printText.textContent = `Congradulations.! '${fetchText}' is Correct Input. :)`
+  } else {
+    printText.textContent = `Unfortunatly.! '${fetchText}' is Not Correct Input. :)`
+  }
 
-      }
-      
-      const textAnalyzer = document.getElementById("textAnalyzer");
-      textAnalyzer.onclick = function(){
-        let analyzeString = document.getElementById("analyzeString").value;
-        TextAnalyzerFunction(analyzeString);
-      }
+}
+
+const textAnalyzer = document.getElementById("textAnalyzer");
+textAnalyzer.onclick = function () {
+  let analyzeString = document.getElementById("analyzeString").value;
+  TextAnalyzerFunction(analyzeString);
+}
 
 
 /*<-------------------------->*/
