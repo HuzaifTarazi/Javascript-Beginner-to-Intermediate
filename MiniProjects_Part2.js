@@ -161,6 +161,49 @@ pushUserOp.onclick = function () {
 
   UserAuthentication(updateUser)
 }
+
+/*<-------------------------->*/
+
+/* 4:
+   
+Math Tool (Math Object)
+
+  Topics Used:
+     Math.round, floor, ceil, random, max, min, pow, sqrt, abs
+  Tasks:
+    Given two numbers:
+    Show max and min
+    Square the first number
+    Square root of second number
+    Absolute difference
+    Generate a random number between 1–10 */
+
+const mathToolSubmit = document.getElementById("mathToolSubmit");
+function MathToolFunctions() {
+  const mathValueOne = document.getElementById("mathValueOne").value;
+  const mathValueTwo = document.getElementById("mathValueTwo").value;
+  const prntMathTool = document.getElementById("prntMathTool");
+
+  if (isNaN(mathValueOne) || isNaN(mathValueTwo)) {
+    alert("Please Enter Valid Number.!");
+    return;
+  }
+  let maxValue = Math.max(mathValueOne, mathValueTwo);
+  let minValue = Math.min(mathValueOne, mathValueTwo);
+  let firstSqr = Math.sqrt(mathValueOne);
+  let secondSqr = Math.sqrt(mathValueTwo);
+  let difference = Math.abs(mathValueOne);
+  let randomNumber = Math.trunc(Math.random() * 10) + 1;
+  prntMathTool.textContent = `The Max Value from ${mathValueOne} and ${mathValueTwo} is : ${maxValue} 
+                          \n  The Min Value from ${mathValueOne} and ${mathValueTwo} is : ${minValue}
+                          \n  The Square Root of ${mathValueOne} is : ${firstSqr}
+                          \n  The Square Root of ${mathValueTwo} is : ${secondSqr}
+                          \n  The Absolute Difference of ${mathValueOne} is : ${difference}
+                          \n  The Random Number From 1-10 is: ${randomNumber}`;
+
+}
+mathToolSubmit.onclick = MathToolFunctions;
+
 /*<-------------------------->*/
 
 
