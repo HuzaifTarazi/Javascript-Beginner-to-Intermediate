@@ -242,8 +242,42 @@ textAnalyzer.onclick = function () {
   TextAnalyzerFunction(analyzeString);
 }
 
-
 /*<-------------------------->*/
 
 
+/* 6:
+   
+Password Masker (String Methods)
+
+  Topics Used:
+     slice, charAt, replaceAll
+  Tasks:
+    Take a string input and:
+      Show first and last character
+      Replace all middle characters with * 
+    */
+
+function TextMaskingSystem(maskNow) {
+  if(!maskNow || maskNow.includes(" ")){
+    alert("Please Fill the Feild Correctly.!");
+    return;
+  }
+  
+  let firstText;
+  firstText = maskNow.charAt(0, 1);
+  let middleText = "*".repeat(maskNow.length -2);
+  let lastText = maskNow.charAt(maskNow.length -2)
+  let lastText2 = maskNow.at(maskNow.length -1)
+
+  let maskOp = document.getElementById("maskOp");
+  maskOp.textContent = `${firstText} ${middleText} ${lastText} ${lastText2}`;
+}
+
+const subMask = document.getElementById("subMask");
+subMask.onclick = function () {
+  let passMask = document.getElementById("passMask").value;
+  TextMaskingSystem(passMask);
+}
+
+/*<-------------------------->*/
 
