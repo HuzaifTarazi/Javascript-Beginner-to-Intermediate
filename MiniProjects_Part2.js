@@ -258,16 +258,16 @@ Password Masker (String Methods)
     */
 
 function TextMaskingSystem(maskNow) {
-  if(!maskNow || maskNow.includes(" ")){
+  if (!maskNow || maskNow.includes(" ")) {
     alert("Please Fill the Feild Correctly.!");
     return;
   }
-  
+
   let firstText;
   firstText = maskNow.charAt(0, 1);
-  let middleText = "*".repeat(maskNow.length -2);
-  let lastText = maskNow.charAt(maskNow.length -2)
-  let lastText2 = maskNow.at(maskNow.length -1)
+  let middleText = "*".repeat(maskNow.length - 2);
+  let lastText = maskNow.charAt(maskNow.length - 2)
+  let lastText2 = maskNow.at(maskNow.length - 1)
 
   let maskOp = document.getElementById("maskOp");
   maskOp.textContent = `${firstText} ${middleText} ${lastText} ${lastText2}`;
@@ -277,6 +277,37 @@ const subMask = document.getElementById("subMask");
 subMask.onclick = function () {
   let passMask = document.getElementById("passMask").value;
   TextMaskingSystem(passMask);
+}
+
+/*<-------------------------->*/
+
+
+/* 6:
+   
+Checkbox Agreement (DOM + .checked)
+
+  Topics Used:
+     .checked, getElementById(), if else
+  Tasks:
+    If checkbox is checked:
+      Show "You agreed to terms"
+      Else: 
+      Show "Please agree first"
+    */
+function AgreementSystem(agreeTo) {
+  const agreementOp = document.getElementById("agreementOp");
+
+  if (agreeTo.checked) {
+    agreementOp.textContent = `You Accept the Agreement.`
+  } else {
+    agreementOp.textContent = `Please Accept the Agreement First..!`
+  }
+}
+
+const agreeNow = document.getElementById("agreeNow");
+agreeNow.onclick = function () {
+  const checkAgreement = document.getElementById("checkAgreement");
+  AgreementSystem(checkAgreement);
 }
 
 /*<-------------------------->*/
