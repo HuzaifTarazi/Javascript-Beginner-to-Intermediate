@@ -282,7 +282,7 @@ subMask.onclick = function () {
 /*<-------------------------->*/
 
 
-/* 6:
+/* 7:
    
 Checkbox Agreement (DOM + .checked)
 
@@ -310,5 +310,80 @@ agreeNow.onclick = function () {
   AgreementSystem(checkAgreement);
 }
 
+/*<-------------------------->*/
+
+/* 8:
+   
+Array Manager
+
+  Topics Used:
+     Array, push, pop, shift, unshift, splice, length, indexOf
+  Tasks:
+    Create an array of fruits and:
+      Add one at the end
+      Remove one from start
+      Insert one in the middle
+      Log array length  
+      Find index of "Apple"
+    */
+
+
+let printArrOp = document.getElementById("printArrOp");
+function ArrayManagerSystem(fruitsArr) {
+  fruits = ["apple", "mango", "orange", "banana"];
+  fruits.push(fruitsArr);
+  const arrInsertedOp = document.getElementById("arrInsertedOp");
+  arrInsertedOp.textContent = `You Have Inserted '${fruitsArr}' in Fruits Array. The Updated Array is ${fruits}`;
+}
+
+const insertArray = document.getElementById("insertArray");
+insertArray.onclick = function () {
+  const fruitArr = document.getElementById("fruitArr").value.trim();
+  ArrayManagerSystem(fruitArr);
+}
+
+
+function RemoveFirstArray() {
+
+  let removeFirst = ["apple", "mango", "orange", "banana"];
+  let removeStart = removeFirst.shift();
+  console.log(removeStart);
+  let arrShiftedOp = document.getElementById("arrShiftedOp");
+  arrShiftedOp.textContent = `You Have Removed '${removeStart}' From Array. Your Updated Array is ${removeFirst}`
+}
+const removeFirstArr = document.getElementById("removeFirstArr");
+removeFirstArr.onclick = function () {
+  RemoveFirstArray();
+}
+
+// Insert Array in Middle -- 
+
+function InsertArrayMiddle(insertMiddle) {
+  fruits = ["apple", "mango", "orange", "banana"];
+  fruits.splice(1, 0, insertMiddle)
+  const middleArrOp = document.getElementById("middleArrOp");
+  middleArrOp.textContent = `You Have Inserted '${insertMiddle}' in Middle of Array. Your Updated Array is: ${fruits}`
+
+
+}
+const insertMiddleArr = document.getElementById("insertMiddleArr");
+insertMiddleArr.onclick = function () {
+  const fruitArr = document.getElementById("fruitArr").value.trim();
+  InsertArrayMiddle(fruitArr);
+}
+
+// Find Index Number of Array --
+function FindIndexNumber (findIndex){
+  fruits = ["apple", "mango", "orange", "banana"];
+  fruits = fruits.indexOf(findIndex);
+  const findIndexOp = document.getElementById("findIndexOp");
+  findIndexOp.textContent = `The Index of ${findIndex} is : ${fruits}`
+}
+
+const findIndexArr = document.getElementById("findIndexArr");
+findIndexArr.onclick = function () {
+  const fruitArr = document.getElementById("fruitArr").value.trim();
+  FindIndexNumber(fruitArr)
+}
 /*<-------------------------->*/
 
