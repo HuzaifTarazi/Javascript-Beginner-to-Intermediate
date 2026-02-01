@@ -391,3 +391,37 @@ findIndexArr.onclick = function () {
 
 /*<-------------------------->*/
 
+/* 9:
+   
+Smart Search System (Loops + Functions)
+
+  Topics Used:
+     Functions, parameters, return, for loop, includes, console.log
+  Tasks:
+    Create a function that:
+      Takes an array of names
+      Takes a search word  
+      Returns "Found" or "Not Found"
+  
+    */
+
+function SmartSearchSystem(smartSearch) {
+  let names = ["zukhruf", "huzaif", "rufaf", "osaf"]
+
+  for (let i = 0; i < names.length; i++) {
+    if (names[i].includes(smartSearch)) {
+      console.log("found")
+      return;
+    } 
+  }
+  console.log("not found")
+}
+
+const smartSubmit = document.getElementById("smartSubmit");
+smartSubmit.onclick = function () {
+  const smartSearch = document.getElementById("smartSearch").value.trim().toLowerCase();
+  SmartSearchSystem(smartSearch)
+}
+
+/*<-------------------------->*/
+
