@@ -327,6 +327,7 @@ Array Manager
       Find index of "Apple"
     */
 
+// Insert Array at The End --
 
 let printArrOp = document.getElementById("printArrOp");
 function ArrayManagerSystem(fruitsArr) {
@@ -342,6 +343,7 @@ insertArray.onclick = function () {
   ArrayManagerSystem(fruitArr);
 }
 
+// Remove First Array --
 
 function RemoveFirstArray() {
 
@@ -373,7 +375,8 @@ insertMiddleArr.onclick = function () {
 }
 
 // Find Index Number of Array --
-function FindIndexNumber (findIndex){
+
+function FindIndexNumber(findIndex) {
   fruits = ["apple", "mango", "orange", "banana"];
   fruits = fruits.indexOf(findIndex);
   const findIndexOp = document.getElementById("findIndexOp");
@@ -385,5 +388,6 @@ findIndexArr.onclick = function () {
   const fruitArr = document.getElementById("fruitArr").value.trim();
   FindIndexNumber(fruitArr)
 }
+
 /*<-------------------------->*/
 
