@@ -18,7 +18,7 @@ function DiceRollProgram(diceAttempts) {
     }
     const diceResult = document.getElementById("diceResult");
     const diceImage = document.getElementById("diceImage");
-    diceResult.textContent = `Dice Results ${tempArr.join(", ")}`
+    diceResult.textContent = `Dice Results: ${tempArr.join(", ")}`
     diceImage.innerHTML = imageArr.join('-');
 
 }
