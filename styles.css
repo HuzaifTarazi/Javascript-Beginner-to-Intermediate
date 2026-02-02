@@ -1,28 +1,32 @@
-body{
+body {
     border: 1px solid white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(32, 32, 32);
     color: white;
 }
-h4{
+
+h4 {
     color: yellow;
     text-decoration: underline;
 }
-.calculator_output_color{
+
+.calculator_output_color {
     color: rgb(171, 115, 115);
 }
 
-.countLabel{
+.countLabel {
     margin: 10px 10px;
     text-align: center;
     font-size: 80px;
     font-weight: 500;
 }
-.direction{
+
+.direction {
     display: flex;
     justify-content: center;
 }
-.counterBtn{
+
+.counterBtn {
     margin: 10px;
     padding: 10px;
     border: 0px;
@@ -30,28 +34,32 @@ h4{
     background-color: aquamarine;
     cursor: pointer;
 }
-.counterBtn:hover{
+
+.counterBtn:hover {
     background-color: whitesmoke;
 }
-.counterBtn:active{
+
+.counterBtn:active {
     background-color: black;
     color: white;
 }
 
 /* Guessing Game */
-.center{
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.guessGame{
+
+.guessGame {
     margin: 12px;
     border: 1px solid red;
     padding: 5px;
     border-radius: 3px;
 }
-.guessNow{
+
+.guessNow {
     padding: 5px;
     background-color: aquamarine;
     border-radius: 3px;
@@ -59,7 +67,7 @@ h4{
     border: 1px solid black;
 }
 
-.guessNow:hover{
+.guessNow:hover {
     background-color: black;
     color: white;
 }
@@ -67,7 +75,7 @@ h4{
 /* Temperature Converter */
 
 .converter-container {
-    
+
     margin: auto;
     display: flex;
     justify-content: center;
@@ -126,10 +134,90 @@ button:hover {
     font-size: 16px;
     color: #333;
 }
-.radio-group{
+
+.radio-group {
     color: black;
 }
 
-.preSpace{
+.preSpace {
     white-space: pre-line;
+}
+
+
+/* Dice Game */
+
+/* Main Screen */
+.dice-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Title */
+.dice-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Box */
+.dice-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #111827;
+    padding: 25px 30px;
+    border-radius: 10px;
+    border: 1px solid #374151;
+    width: 580px;
+}
+
+/* Input */
+.dice-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #374151;
+    background: #020617;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Button */
+.dice-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dice-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Result Text */
+.dice-result {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Dice Image */
+.dice-image {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* Show via JS */
 }

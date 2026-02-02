@@ -48,7 +48,7 @@ push(), pop(), shift(), unshift(), splice(), slice(),
 indexOf(), includes(), join(), toString(), 
 concat(), length, reverse(), sort().
 
-Spread Operator, 
+Spread Operator, Spread Operator(...), Rest Parameter(...)
 
 ---------------------------------------------->
 
@@ -1151,12 +1151,38 @@ Spread Operator,
   <input type="text" id="smartSearch" placeholder="Find Data"> <br><br>
   <input type="submit" value="Find Now" id="smartSubmit">
   <p id="smartPrint"> </p>
+  <hr />
+  <h2 style="
+        text-align: center;
+        background-color: red;
+        margin: 15px;
+        padding: 10px;
+      ">
+    Dice Roll Program
+  </h2>
+  <hr />
+  <br><br><br>
 
 
+  <div class="page-body">
+    <div class="dice-screen">
+      <div class="dice-box">
+        <h1 class="dice-title">Dice Roll Program</h1>
+        <!-- Input -->
+        <input type="number" id="diceInput" class="dice-input" min="1" max="6" placeholder="Enter number (1-6)">
 
+        <!-- Button -->
+        <button id="rollBtn" class="dice-btn">Roll Dice</button>
 
+        <!-- Result -->
+        <p id="diceResult" class="dice-result">Result will show here</p>
 
-
+        <!-- Image -->
+        <div id="diceImage" class="dice-image"></div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
 
 
 
@@ -1178,6 +1204,7 @@ Spread Operator,
   <script src="./Practice_set_13.js"></script>
   <script src="MiniPorjects_Part1.js"></script>
   <script src="MiniProjects_Part2.js"></script>
+  <script src="Dice_Roll_Program.js"></script>
 </body>
 
 </html>
