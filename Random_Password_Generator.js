@@ -43,36 +43,42 @@ Spread Operator, Spread Operator(...), Rest Parameter(...)
 -------------------------------------------- */
 
 // Random Password Generator
-const upperCaseChar = document.getElementById("upperCaseChar");
+function RandomPasswordGenerator(passLength, upperCaseChar, lowerCaseChar, includeNumbers, includeSpecialChars) {
 
-function RandomPasswordGenerator(passLength) {
-    // if (passLength < 1 || isNaN(passLength)) {
-    //     alert("Password Can't be Lower then 1.!!");
-    //     return;
-    // }
-
+    let UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
+    let NUMBERS = "1234567890";
+    let SYMBOLS = "!@#$%^&*()_+=-";
     let charSet = "";
+    let password = "";
 
-    let upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let lowerCaseChar = "abcdefghijklmnopqrstuvwxyz";
-    let includeNumbers = "123456789";
-    let includeSpecialChars = "!@#$%^&*()_+=-"
+    upperCaseChar ? charSet += UPPERCASE : "";
+    lowerCaseChar ? charSet += LOWERCASE : "";
+    includeNumbers ? charSet += NUMBERS : "";
+    includeSpecialChars ? charSet += SYMBOLS : "";
 
+    for (let i = 0; i < passLength; i++) {
 
- upperCaseChar.checked ? upperCaseChar+=charSet : "False";
-    console.log(charSet)
+        let randomFunc = Math.trunc(Math.random() * charSet.length);
+        password += charSet[randomFunc];
+    }
 
-    // let storePass = "";
-    // for (let i = 0; i < passLength; i++) {
-    //     let randomNumber = Math.floor(Math.random() * lowerCaseChar.length)
-    //     storePass += lowerCaseChar.charAt(randomNumber)
-    // }
-    // const printRandomPass = document.getElementById("printRandomPass")
-    // printRandomPass.textContent = `Random Pass: ${storePass}`
+    return password
 }
 
 const generatePassBtn = document.getElementById("generatePassBtn");
 generatePassBtn.onclick = function () {
     const passLength = Number(document.getElementById("randomPass").value);
-    RandomPasswordGenerator(passLength)
+    if (passLength < 1 || passLength > 30) {
+        alert("Password Length Must be between 1 - 30");
+        return;
+    }
+
+    const upperCaseChar = document.getElementById("upperCaseChar").checked;
+    const lowerCaseChar = document.getElementById("lowerCaseChar").checked;
+    const includeNumbers = document.getElementById("includeNumbers").checked;
+    const includeSpecialChars = document.getElementById("includeSpecialChars").checked;
+    const printRandomPass = document.getElementById("printRandomPass");
+  let passGenerated =   RandomPasswordGenerator(passLength, upperCaseChar, lowerCaseChar, includeNumbers, includeSpecialChars)
+    printRandomPass.textContent = `Random Password Generated: ${passGenerated}`
 }
