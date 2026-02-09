@@ -85,10 +85,37 @@ submitArr.onclick = function () {
 
 
 /* 2:
-   
+    SPREAD OPERATOR CLONE ARRAY SYSTEM
 
+    Predefined numbers array
+    Clone array using spread operator
+    Add new numbers
+    Show original and cloned arrays
 */
 
+
+let preDefinedArr = [10, 20, 30];
+
+function PreDefined(arrStorage) {
+    let cloneArray = [...preDefinedArr];
+    cloneArray.push(...arrStorage)
+    return cloneArray
+}
+
+
+const submitSpreadOp = document.getElementById("submitSpreadOp");
+submitSpreadOp.onclick = function () {
+    let spreadOp = document.getElementById("spreadOp").value;
+    let spreadArray = spreadOp.split('');
+
+    for (let i = 0; i < spreadArray.length; i++) {
+        spreadArray[i] = Number(spreadArray[i])
+    }
+
+    let storeResult = PreDefined(spreadArray)
+    const printSpreadOp = document.getElementById("printSpreadOp");
+    printSpreadOp.textContent = `Combined Pre Defined Array With Input Values: ${storeResult}`
+}
 
 
 /*<-------------------------->*/
