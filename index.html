@@ -48,7 +48,7 @@ push(), pop(), shift(), unshift(), splice(), slice(),
 indexOf(), includes(), join(), toString(), 
 concat(), length, reverse(), sort().
 
-Spread Operator, Spread Operator(...), Rest Parameter(...)
+Spread Operator, Spread Operator(...), Rest Parameter(...), Callback Function
 
 ---------------------------------------------->
 
@@ -1207,10 +1207,35 @@ Spread Operator, Spread Operator(...), Rest Parameter(...)
   <br><br>
   <label for="includeSpecialChars">Include Special Characters</label>
   <input type="checkbox" name="specialcasechar" id="includeSpecialChars">
-    <br><br>
+  <br><br>
   <input type="submit" value="Generate Password" id="generatePassBtn">
-
   <span id="printRandomPass"> </span>
+
+  <hr />
+  <h2 style="
+        text-align: center;
+        background-color: red;
+        margin: 15px;
+        padding: 10px;
+      ">
+    Practice Set 14
+  </h2>
+  <hr />
+
+  <!-- Question 1-->
+  <h4>Question 1</h4>
+  <p>Number Check System (Callback)</p>
+  <p> User inputs numbers (comma separated) <br>
+    Convert to array using split() and Number() <br>
+    Use callback function to: <br>
+    Check even numbers <br>
+    Show result in UI <br>
+  </p>
+  <label for="inputArr">Input Numbers: </label>
+  <input type="text" id="inputArr" placeholder="Input Numbers">
+  <input type="submit" id="submitArr">
+  <p id="printArrNew"> </p>
+
 
 
 
@@ -1233,6 +1258,8 @@ Spread Operator, Spread Operator(...), Rest Parameter(...)
   <script src="MiniProjects_Part2.js"></script>
   <script src="Dice_Roll_Program.js"></script>
   <script src="Random_Password_Generator.js"></script>
+  <script src="./Practice_set_14.js"></script>
+
 </body>
 
 </html>
