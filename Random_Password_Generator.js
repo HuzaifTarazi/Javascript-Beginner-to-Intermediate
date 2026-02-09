@@ -58,11 +58,9 @@ function RandomPasswordGenerator(passLength, upperCaseChar, lowerCaseChar, inclu
     includeSpecialChars ? charSet += SYMBOLS : "";
 
     for (let i = 0; i < passLength; i++) {
-
         let randomFunc = Math.trunc(Math.random() * charSet.length);
         password += charSet[randomFunc];
     }
-
     return password
 }
 
@@ -79,6 +77,6 @@ generatePassBtn.onclick = function () {
     const includeNumbers = document.getElementById("includeNumbers").checked;
     const includeSpecialChars = document.getElementById("includeSpecialChars").checked;
     const printRandomPass = document.getElementById("printRandomPass");
-  let passGenerated =   RandomPasswordGenerator(passLength, upperCaseChar, lowerCaseChar, includeNumbers, includeSpecialChars)
+    let passGenerated = RandomPasswordGenerator(passLength, upperCaseChar, lowerCaseChar, includeNumbers, includeSpecialChars)
     printRandomPass.textContent = `Random Password Generated: ${passGenerated}`
 }
