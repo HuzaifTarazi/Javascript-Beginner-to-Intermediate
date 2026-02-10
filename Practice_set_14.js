@@ -93,7 +93,6 @@ submitArr.onclick = function () {
     Show original and cloned arrays
 */
 
-
 let preDefinedArr = [10, 20, 30];
 
 function PreDefined(arrStorage) {
@@ -101,7 +100,6 @@ function PreDefined(arrStorage) {
     cloneArray.push(...arrStorage)
     return cloneArray
 }
-
 
 const submitSpreadOp = document.getElementById("submitSpreadOp");
 submitSpreadOp.onclick = function () {
@@ -117,5 +115,37 @@ submitSpreadOp.onclick = function () {
     printSpreadOp.textContent = `Combined Pre Defined Array With Input Values: ${storeResult}`
 }
 
+
+/*<-------------------------->*/
+
+/* 3:
+    REST PARAMETER PRODUCT PRICE SYSTEM
+
+    User inputs product prices
+    Pass prices using spread
+    Function receives using rest
+    Calculate total price
+*/
+
+function ProductPriceSystem(...data) {
+    let total = 0;
+    for (let i = 0; i < data.length; i++) {
+        total = total + data[i];
+    }
+    return total;
+}
+
+const submitRestPara = document.getElementById("submitRestPara");
+submitRestPara.onclick = function () {
+    let restPara = document.getElementById("restPara").value;
+    let storeRestPara = restPara.split(",");
+
+    for (let i = 0; i < storeRestPara.length; i++) {
+        storeRestPara[i] = Number(storeRestPara[i]);
+    }
+    let storeResult = ProductPriceSystem(...storeRestPara);
+    const restParaOp = document.getElementById("restParaOp");
+    restParaOp.textContent = `The Total Of Numbers Given: ${storeResult}`
+}
 
 /*<-------------------------->*/
