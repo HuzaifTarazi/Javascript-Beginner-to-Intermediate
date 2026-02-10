@@ -149,3 +149,43 @@ submitRestPara.onclick = function () {
 }
 
 /*<-------------------------->*/
+
+/* 4:
+    CALLBACK NAME LENGTH CHECKER
+
+    Predefined names array
+    Callback finds names with length > 4
+    Show filtered names
+*/
+
+function NameLengthChecker(tempStorage, CallBackFunc) {
+    CallBackFunc(tempStorage);
+}
+
+
+let definedData = ["Zukhruf", "Huzaif", "Rufaf", "Osaf"]
+
+function CheckLength(newData) {
+    let tempStorage = [...definedData, ...newData]
+    const lengthOp = document.getElementById("lengthOp");
+    let printingValue = [];
+    for (let i = 0; i < tempStorage.length; i++) {
+        if (tempStorage[i].length > 4) {
+            printingValue.push(tempStorage[i]);
+        }
+    }
+
+    lengthOp.textContent = `Filtered Names Greater Then 4: ${printingValue.join(", ")}`
+
+}
+
+const checklengthNow = document.getElementById("checklengthNow");
+
+checklengthNow.onclick = function () {
+    let lengthChecker = document.getElementById("lengthChecker").value;
+    let tempStorage = lengthChecker.split(",");
+
+    NameLengthChecker(tempStorage, CheckLength)
+}
+
+/*<-------------------------->*/
