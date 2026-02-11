@@ -189,3 +189,52 @@ checklengthNow.onclick = function () {
 }
 
 /*<-------------------------->*/
+
+/* 5:
+    CALLBACK + REST + SPREAD DICE ANALYZER
+
+    Generate random dice numbers
+    Pass dice array using spread
+    Receive using rest
+    Callback counts how many 6 appeared
+*/
+
+
+function SpreadDice(restArray, callbackspread) {
+    callbackspread(...restArray);
+}
+
+function CallbackCount(...restArray) {
+
+    let count = 0;
+
+    for (let i = 0; i < restArray.length; i++) {
+        if(restArray[i] === 6){
+            count++;
+        }
+    }
+    
+    const genData = document.getElementById("genData");
+    genData.textContent = `There Are ${count} = 6 in Array`;
+}
+
+
+
+
+
+const analyzeDataNow = document.getElementById("analyzeDataNow");
+
+analyzeDataNow.onclick = function () {
+    let spreadDiceStart = document.getElementById("spreadDiceStart").value;
+    let attempts = Number(spreadDiceStart);
+    let arrStorage = [];
+
+    for (let i = 0; i < attempts; i++) {
+        let randomNumber = Math.floor(Math.random() * 6) + 1;
+        arrStorage.push(randomNumber);
+    }
+
+    SpreadDice(arrStorage, CallbackCount)
+}
+
+/*<-------------------------->*/
