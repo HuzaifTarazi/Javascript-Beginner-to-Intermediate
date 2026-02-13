@@ -209,21 +209,16 @@ function CallbackCount(...restArray) {
     let count = 0;
 
     for (let i = 0; i < restArray.length; i++) {
-        if(restArray[i] === 6){
+        if (restArray[i] === 6) {
             count++;
         }
     }
-    
+
     const genData = document.getElementById("genData");
     genData.textContent = `There Are ${count} = 6 in Array`;
 }
 
-
-
-
-
 const analyzeDataNow = document.getElementById("analyzeDataNow");
-
 analyzeDataNow.onclick = function () {
     let spreadDiceStart = document.getElementById("spreadDiceStart").value;
     let attempts = Number(spreadDiceStart);
