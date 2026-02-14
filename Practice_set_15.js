@@ -91,17 +91,42 @@ marksUpgradeGet.onclick = function () {
 
 /* 2:
      
-Student Marks Upgrade System
+Even Number Filter System
     
-    User enters marks (comma separated)
-    Convert to numbers
-    Use map() to add +5 bonus marks
-    Use spread to clone original array before modification
-Show:
-    Original Marks
-    Updated Marks
+    User inputs numbers
+    Use filter() to keep even numbers
+    Show filtered result
 
 */
+function NumberFilterationStorage(arrStorage, callBack) {
+    callBack(arrStorage);
+}
+
+function NumberFilterationSystem(originalArr) {
+
+    let originalArrCopied = [...originalArr]
+
+    let filteration = originalArr.filter((element) => {
+        return element % 2 === 0;
+    })
+
+    const printfilteredOp = document.getElementById("printfilteredOp");
+    printfilteredOp.textContent = `Original Array of Numbers are { ${originalArrCopied} } and Filtered Array is { ${filteration} }`;
+}
+
+const filterOpNow = document.getElementById("filterOpNow");
+filterOpNow.onclick = function () {
+    const numberFilter = document.getElementById("numberFilter").value;
+    let arrStorage = numberFilter.split(",");
+
+    arrStorage.forEach((element, index) => {
+        arrStorage[index] = Number(element);
+    })
+
+    NumberFilterationStorage(arrStorage, NumberFilterationSystem)
+
+}
+
 
 
 /*<-------------------------->*/
