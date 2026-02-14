@@ -98,6 +98,7 @@ Even Number Filter System
     Show filtered result
 
 */
+
 function NumberFilterationStorage(arrStorage, callBack) {
     callBack(arrStorage);
 }
@@ -126,7 +127,5 @@ filterOpNow.onclick = function () {
     NumberFilterationStorage(arrStorage, NumberFilterationSystem)
 
 }
-
-
 
 /*<-------------------------->*/
