@@ -1,5 +1,5 @@
 /* -----------------------------------------
-               << Practice Set 13 >>
+               << Practice Set 15 >>
 
 let, const
 + - * / %
@@ -44,8 +44,63 @@ forEach(), map(), filter(), reduce()
 -------------------------------------------- */
 
 /* 1:
-   
-  
+     
+Student Marks Upgrade System
+    
+    User enters marks (comma separated)
+    Convert to numbers
+    Use map() to add +5 bonus marks
+    Use spread to clone original array before modification
+Show:
+    Original Marks
+    Updated Marks
+
+*/
+
+function StudentMarksStorage(marksArr, callBack) {
+
+    callBack(marksArr);
+}
+
+function StudentMarksCalculation(originalMarksArr) {
+    let originalMarks = [...originalMarksArr]
+
+    let modifiedMarks = originalMarksArr.map((element) => {
+        return element + 5;
+    })
+
+    const printMarksOp = document.getElementById("printMarksOp");
+    printMarksOp.textContent = `Original Array Of Numbers are ${originalMarks} and Updated ${modifiedMarks}`
+
+}
+
+const marksUpgradeGet = document.getElementById("marksUpgradeGet");
+marksUpgradeGet.onclick = function () {
+    let marksCalculationSystem = document.getElementById("marksCalculationSystem").value;
+    marksCalculationSystem = marksCalculationSystem.split(",");
+
+    marksCalculationSystem.forEach((element, index) => {
+        marksCalculationSystem[index] = Number(element)
+    });
+
+    StudentMarksStorage(marksCalculationSystem, StudentMarksCalculation)
+}
+
+/*<-------------------------->*/
+
+
+/* 2:
+     
+Student Marks Upgrade System
+    
+    User enters marks (comma separated)
+    Convert to numbers
+    Use map() to add +5 bonus marks
+    Use spread to clone original array before modification
+Show:
+    Original Marks
+    Updated Marks
+
 */
 
 
