@@ -158,9 +158,56 @@ performCalculationOp.onclick = function () {
 
     TotalExpenseCalculator(...storeValues)
 
+}
+
+/*<-------------------------->*/
+
+
+/* 3: 
+    Total Expense Calculator
+
+    User enters expenses
+    Pass expenses using spread
+    Function receives using rest parameter
+    Use reduce() to calculate total
+*/
+
+
+
+function NameFilterArrayStorage(originalArr, callBack) {
+    callBack(...originalArr)
+}
+
+function NameFilterationSystem(...originalArr) {
+
+    let getNewArr = originalArr.map((element, index) => {
+        return element.slice(0, 1).toUpperCase() + element.slice(1).toLowerCase();
+    })
+
+    let convertTostring = "";
+    getNewArr.forEach((element) => {
+
+        convertTostring += element + ' | ';
+
+    })
+
+    const displayFormatedOp = document.getElementById("displayFormatedOp");
+    displayFormatedOp.textContent = `Modified Array: [${convertTostring}]`
+}
+
+const formatNameOp = document.getElementById("formatNameOp")
+formatNameOp.onclick = function () {
+
+    let preDefinedNamesArr = ['huzaif', 'zukhruf', 'osaf', 'rufaf']
+    const nameFormaterSys = document.getElementById("nameFormaterSys").value;
+    let convertToArr = nameFormaterSys.split(",")
+
+    for (let i = 0; i < convertToArr.length; i++) {
+        preDefinedNamesArr.push(convertToArr[i].trim())
+    }
+    NameFilterArrayStorage(preDefinedNamesArr, NameFilterationSystem)
 
 }
 
 
 /*<-------------------------->*/
-
