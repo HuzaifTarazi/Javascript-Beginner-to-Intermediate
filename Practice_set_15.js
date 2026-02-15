@@ -88,7 +88,6 @@ marksUpgradeGet.onclick = function () {
 
 /*<-------------------------->*/
 
-
 /* 2:
      
 Even Number Filter System
@@ -125,7 +124,43 @@ filterOpNow.onclick = function () {
     })
 
     NumberFilterationStorage(arrStorage, NumberFilterationSystem)
-
 }
 
 /*<-------------------------->*/
+
+/* 3: 
+    Total Expense Calculator
+
+    User enters expenses
+    Pass expenses using spread
+    Function receives using rest parameter
+    Use reduce() to calculate total
+*/
+
+function TotalExpenseCalculator(...expenseArr) {
+    let originalArr = [...expenseArr]
+
+    let totalExpense = expenseArr.reduce((accumulator, element) => {
+        return accumulator + element;
+    })
+    const printCalculationOp = document.getElementById("printCalculationOp");
+    printCalculationOp.textContent = `Original Total Expenses are [${originalArr}] and Calculated Total Expense are [${totalExpense}]`
+}
+
+const performCalculationOp = document.getElementById("performCalculationOp");
+performCalculationOp.onclick = function () {
+    const expenseCalculate = document.getElementById("expenseCalculate").value;
+    const storeValues = expenseCalculate.split(",");
+    console.log(storeValues)
+    for (let i = 0; i < storeValues.length; i++) {
+        storeValues[i] = Number(storeValues[i])
+    }
+
+    TotalExpenseCalculator(...storeValues)
+
+
+}
+
+
+/*<-------------------------->*/
+
