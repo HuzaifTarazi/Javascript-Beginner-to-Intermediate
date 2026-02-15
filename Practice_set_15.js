@@ -163,7 +163,7 @@ performCalculationOp.onclick = function () {
 /*<-------------------------->*/
 
 
-/* 3: 
+/* 4: 
     Total Expense Calculator
 
     User enters expenses
@@ -186,9 +186,7 @@ function NameFilterationSystem(...originalArr) {
 
     let convertTostring = "";
     getNewArr.forEach((element) => {
-
         convertTostring += element + ' | ';
-
     })
 
     const displayFormatedOp = document.getElementById("displayFormatedOp");
@@ -209,5 +207,54 @@ formatNameOp.onclick = function () {
 
 }
 
+/*<-------------------------->*/
+
+
+/* 5: 
+    Advanced Number Analyzer
+
+    User inputs numbers
+    Clone array using spread
+    Use:
+    map() → square numbers
+    filter() → keep numbers > 10
+    reduce() → find total
+*/
+
+
+function AdvanceNumberAnalyze(numberAnalyzeStorage, callBack) {
+    callBack(...numberAnalyzeStorage)
+}
+
+function AdvanceNumberAnalyzeSystem(...originalArr) {
+    let originalCloned = [...originalArr]
+
+    let mapping = originalArr.map((element) => {
+        return Math.pow(element, 2)
+    })
+
+    let filteration = mapping.filter((numbers) => {
+        return numbers > 10;
+    })
+
+    let reduction = filteration.reduce((accumulator, current) => {
+        return accumulator + current
+    })
+
+    const displayadvanceNumberAnalyze = document.getElementById("displayadvanceNumberAnalyze");
+    displayadvanceNumberAnalyze.textContent = `Original Array: ${originalCloned} | Mapped Array: ${mapping} | Filterd Array: ${filteration} | Reduced Array: ${reduction}`
+}
+
+const advanceNumberAnalyzeOp = document.getElementById("advanceNumberAnalyzeOp");
+advanceNumberAnalyzeOp.onclick = function () {
+    const advanceNumberAnalyze = document.getElementById("advanceNumberAnalyze").value.trim();
+    let numberAnalyzerStorage = advanceNumberAnalyze.split(",")
+
+    for (let i = 0; i < numberAnalyzerStorage.length; i++) {
+        numberAnalyzerStorage[i] = Number(numberAnalyzerStorage[i])
+    }
+
+    AdvanceNumberAnalyze(numberAnalyzerStorage, AdvanceNumberAnalyzeSystem)
+}
 
 /*<-------------------------->*/
