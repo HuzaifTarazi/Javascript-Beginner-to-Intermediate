@@ -121,15 +121,15 @@ Product Cart System (Intermediate)
     Create a callback function that prints each product
 */
 
-const cart = [
-    { product: "Shirt", price: 1000, quantity: 2 },
-    { product: "Shoes", price: 3000, quantity: 1 },
-    { product: "Cap", price: 500, quantity: 3 },
-    { product: "Jacket", price: 500, quantity: 3 },
-    { product: "Ankel", price: 500, quantity: 3 },
-    { product: "Eyes", price: 500, quantity: 3 },
-    { product: "Glasses", price: 500, quantity: 3 },
-];
+// const cart = [
+//     { product: "Shirt", price: 1000, quantity: 2 },
+//     { product: "Shoes", price: 3000, quantity: 1 },
+//     { product: "Cap", price: 500, quantity: 3 },
+//     { product: "Jacket", price: 500, quantity: 3 },
+//     { product: "Ankel", price: 500, quantity: 3 },
+//     { product: "Eyes", price: 500, quantity: 3 },
+//     { product: "Glasses", price: 500, quantity: 3 },
+// ];
 
 // TOTAL OF BILL
 // let calculateBill = cart.reduce((total, element) => { return total + element.price }, 0)
