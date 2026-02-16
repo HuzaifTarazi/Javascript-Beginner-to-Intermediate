@@ -169,17 +169,17 @@ Product Cart System (Intermediate)
 
 // CallBack FUNCTION
 
-function cartStorage(cart, callBack){
-    callBack(...cart)
-}
+// function cartStorage(cart, callBack){
+//     callBack(...cart)
+// }
 
-function CartItemsDisplay(...cart){
+// function CartItemsDisplay(...cart){
 
-    cart.forEach(function(element){
-        console.log(element)
-    })
-}
+//     cart.forEach(function(element){
+//         console.log(element)
+//     })
+// }
 
-cartStorage( cart, CartItemsDisplay )
+// cartStorage( cart, CartItemsDisplay )
 
 /*<-------------------------->*/
