@@ -109,7 +109,7 @@ Student Records System (Beginner)
 
 Product Cart System (Intermediate)
   Tasks:
-    Calculate total bill using reduce() 
+    Calculate total bill using reduce()
     Add a new product using push()
     Remove product "Cap" using splice()
     Get all product names using map()
@@ -137,7 +137,7 @@ Product Cart System (Intermediate)
 // NEW PRODUCT IN ARRAY
 // cart.push({product: "Jacket", price: 3000, quantity: 2})
 
-// REMOVE PRODUCT CAP 
+// REMOVE PRODUCT CAP
 // let index = cart.findIndex( (element)=> element.product === "Cap");
 // let spliceNow = index !== 1 ? cart.splice(index, 1, "item1", "item2") : " ";
 // console.log(spliceNow)
@@ -163,7 +163,7 @@ Product Cart System (Intermediate)
 // mergeArr = cart.concat(mergeArr)
 // console.log(mergeArr)
 
-// SLICE 2 ITEMS 
+// SLICE 2 ITEMS
 // let sliceFirst = cart.slice(0, 2)
 // console.log(sliceFirst)
 
@@ -181,5 +181,33 @@ Product Cart System (Intermediate)
 // }
 
 // cartStorage( cart, CartItemsDisplay )
+
+/*<-------------------------->*/
+
+
+
+/* 3:
+
+  Employee Management (Intermediate → Advanced)
+
+  Tasks:
+  Clone array using spread operator
+  Add new employee using spread
+  Increase all salaries by 10% using map()
+  Find highest salary using reduce()
+  Filter employees with salary > 50000
+  Create function using rest parameter to add multiple employees
+  Merge two employee arrays using spread
+  Convert salaries into string using toString()
+  Get index of "Ayesha" using indexOf() (hint: use names array)
+  Sort employees by salary (high to low)
+*/
+
+const employees = [
+  { name: "Zain", salary: 50000 },
+  { name: "Ayesha", salary: 60000 },
+  { name: "Usman", salary: 45000 }
+];
+
 
 /*<-------------------------->*/
