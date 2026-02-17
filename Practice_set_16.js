@@ -209,5 +209,65 @@ const employees = [
   { name: "Usman", salary: 45000 }
 ];
 
+const employees2 = [
+  { name: "tarazi", salary: 50000 },
+  { name: "adsf", salary: 50000 },
+  { name: "ggewe", salary: 50000 },
+  { name: "zxcv", salary: 50000 },
+]
 
+// CLONED ARRAY USING SPREAD
+// let cloneArr = [...employees];
+// console.log(cloneArr)
+
+// ADD NEW EMPLOYEE USING SPREAD
+// let newEmployee = [...employees, { name: "huzaif", salary: 50000 }]
+// console.log(newEmployee)
+
+// INCREASE SALARY BY 10
+// let increaseSalary = employees.map(function (element) {
+//   return element.salary * 10
+// })
+// console.log(increaseSalary)
+
+// HIGHEST SALARY
+// let highSalary = employees.reduce((accumulator, element) => {
+//   return element.salary > accumulator ? element.salary : accumulator;
+// },0)
+// console.log(highSalary)
+
+// FITLER EMPLOYEES SALARY > 5000
+// let filterEmployee = employees.filter(function(element){
+//   return element.salary >= 50000
+// })
+// console.log(filterEmployee)
+
+// REST PARAMETER FUNCTION
+// function restPara(employees, callback) {
+//   callback(...employees)
+// }
+// function insertEmployees(...arrayInsert) {
+//   arrayInsert.push({ name: "tarazi", salary: 5000 })
+//   console.log(arrayInsert)
+// }
+
+// restPara(employees, insertEmployees)
+
+// MERGE TWO ARRAYS
+// let mergeArr = [...employees, ...employees2]
+// console.log(mergeArr)
+
+// CONVERT SALARY TO STRING
+// let convertToString = employees.map(function (element) {
+//   return (element.salary).toString();
+// })
+// console.log(convertToString)
+
+// GET NAME INDEX
+// let nameIndex = employees.map((element)=>{ return element.name})
+// console.log(nameIndex.indexOf("Ayesha"))
+
+// SORT EMPLOYEES BY SALARY
+let sortingEmp = employees.toSorted((a ,b)=> b.salary - a.salary)
+console.log(sortingEmp)
 /*<-------------------------->*/
