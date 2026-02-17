@@ -203,18 +203,18 @@ Product Cart System (Intermediate)
   Sort employees by salary (high to low)
 */
 
-const employees = [
-  { name: "Zain", salary: 50000 },
-  { name: "Ayesha", salary: 60000 },
-  { name: "Usman", salary: 45000 }
-];
+// const employees = [
+//   { name: "Zain", salary: 50000 },
+//   { name: "Ayesha", salary: 60000 },
+//   { name: "Usman", salary: 45000 }
+// ];
 
-const employees2 = [
-  { name: "tarazi", salary: 50000 },
-  { name: "adsf", salary: 50000 },
-  { name: "ggewe", salary: 50000 },
-  { name: "zxcv", salary: 50000 },
-]
+// const employees2 = [
+//   { name: "tarazi", salary: 50000 },
+//   { name: "adsf", salary: 50000 },
+//   { name: "ggewe", salary: 50000 },
+//   { name: "zxcv", salary: 50000 },
+// ]
 
 // CLONED ARRAY USING SPREAD
 // let cloneArr = [...employees];
@@ -268,6 +268,7 @@ const employees2 = [
 // console.log(nameIndex.indexOf("Ayesha"))
 
 // SORT EMPLOYEES BY SALARY
-let sortingEmp = employees.toSorted((a ,b)=> b.salary - a.salary)
-console.log(sortingEmp)
+// let sortingEmp = employees.toSorted((a, b) => b.salary - a.salary)
+// console.log(sortingEmp)
+
 /*<-------------------------->*/
