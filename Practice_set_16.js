@@ -185,7 +185,6 @@ Product Cart System (Intermediate)
 /*<-------------------------->*/
 
 
-
 /* 3:
 
   Employee Management (Intermediate → Advanced)
@@ -270,5 +269,84 @@ Product Cart System (Intermediate)
 // SORT EMPLOYEES BY SALARY
 // let sortingEmp = employees.toSorted((a, b) => b.salary - a.salary)
 // console.log(sortingEmp)
+
+/*<-------------------------->*/
+
+
+
+/* 4:
+
+  Order System with this (Advanced)
+
+  Tasks:
+  Complete getTotal() using this
+  Add new item using this.items.push()
+  Remove item using splice()
+  Use map() to get item names
+  Use filter() to get items above 5000
+  Convert items into string using join()
+  Reverse items list
+  Sort items by price
+  Use forEach() to print items
+  Create arrow function version of a helper function
+  
+*/
+
+// const order = {
+//   customer: "Huzaif",
+//   items: [
+//     { name: "Laptop", price: 100000 },
+//     { name: "Mouse", price: 2000 },
+//     { name: "Keyboard", price: 4000 },
+//     { name: "Monitor", price: 3000 },
+//   ],
+
+//   getTotal: function () {
+//     // calculate total using reduce
+//     return this.items.reduce((accu, element) => { return accu + element.price }, 0)
+
+//   },
+
+//   newItems: function () {
+//     this.items.push({ name: "Tarazi", price: 50000 })
+//     return this.items
+//   },
+
+// };
+
+// console.log(order.getTotal());
+
+// // NEW ITEM
+// order.newItems();
+// console.log(order)
+
+// REMOVE ITEMS
+// let cut = order.items.splice(0, 1);
+// console.log(cut)
+
+// GET ITEM NAMES
+// let orderItemName = order.items.map((element)=>{ return element.name})
+// console.log(orderItemName.join(" , "))
+
+// GET ITEMS ABOVE 5000
+// let getItemsAbove = order.items.filter(function(elements) { return elements.price > 5000})
+// console.log(getItemsAbove)
+
+// CONVERT ITEMS INTO STRING 
+// let convertString = order.items.map((element)=>{ return element.name + element.price})
+// console.log(convertString.join(" , "))
+
+// REVERSE ITEMS LIST
+// let getReversed = order.items.toReversed(function(a, b){ return a.price - b.price})
+// console.log(getReversed)
+
+//  SORTING ITEMS BY PRICE
+// let sortNow = order.items.sort((a,b)=>{ return a.price - b.price})
+// console.log(sortNow)
+
+// PRINT ALL ITEMS USING FOREACH
+// order.items.forEach((element)=>{  console.log(element)})
+
+
 
 /*<-------------------------->*/
