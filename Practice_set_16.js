@@ -289,7 +289,7 @@ Product Cart System (Intermediate)
   Sort items by price
   Use forEach() to print items
   Create arrow function version of a helper function
-  
+
 */
 
 // const order = {
@@ -332,7 +332,7 @@ Product Cart System (Intermediate)
 // let getItemsAbove = order.items.filter(function(elements) { return elements.price > 5000})
 // console.log(getItemsAbove)
 
-// CONVERT ITEMS INTO STRING 
+// CONVERT ITEMS INTO STRING
 // let convertString = order.items.map((element)=>{ return element.name + element.price})
 // console.log(convertString.join(" , "))
 
@@ -347,6 +347,32 @@ Product Cart System (Intermediate)
 // PRINT ALL ITEMS USING FOREACH
 // order.items.forEach((element)=>{  console.log(element)})
 
+/*<-------------------------->*/
+
+
+/* 5:
+
+  Advanced Analytics System (Expert Level)
+
+  Tasks:
+  Calculate total revenue using reduce()
+  Get all products using map()
+  Filter products where quantity > 2
+  Sort by revenue (price * quantity)
+  Create a function that accepts callback to process sales
+  Use spread operator to duplicate sales array
+  Add multiple sales using rest parameter
+  Convert sales to string using join()
+  Find product index using indexOf()
+  Create a full summary object:
+  
+*/
+
+const sales = [
+  { product: "Phone", price: 50000, quantity: 2 },
+  { product: "Laptop", price: 100000, quantity: 1 },
+  { product: "Headphones", price: 5000, quantity: 5 }
+];
 
 
 /*<-------------------------->*/
