@@ -374,5 +374,45 @@ const sales = [
   { product: "Headphones", price: 5000, quantity: 5 }
 ];
 
+// const sales2 = [
+//   { product: "Phone", price: 50000, quantity: 2 },
+//   { product: "Laptop", price: 100000, quantity: 1 },
+//   { product: "Headphones", price: 5000, quantity: 5 }
+// ];
+
+
+// TOTAL REVENUE
+// let revenueSum = sales.reduce((accumulator, element)=>{ return  accumulator + element.price * element.quantity}, 0)
+// console.log(revenueSum)
+
+// GET ALL PRODUCTS 
+// let allProducts = sales.map((salesProduct)=>{return salesProduct.product})
+// console.log(allProducts.join(" , "))
+
+// FILTER LOW QUANTITY PRODUCT 
+// let filterPro = sales.filter((element)=>{return element.quantity > 2})
+// console.log(filterPro)
+
+// COUNT REVENUE 
+// let checkRevenue = sales.map((element)=>{ return `${element.product} ${element.price * element.quantity}`})
+// console.log(checkRevenue.toSorted())
+
+// DUPLICATION OF SALES ARRAY
+// let duplication = [...sales]
+// console.log(duplication)
+
+// COMBINE MULTIPLE ARRAYS
+// let mergeSales = [...sales, ...sales2]
+// console.log(mergeSales)
+ 
+// CONVERT SALES TO STRING 
+// let convertSales = sales.map(function(element){ return `\n Product: ${element.product}, Price: ${element.price},  Quantity: ${element.quantity}`})
+// console.log(convertSales.join(" , "))
+
+// FIND INDEX OF ITEM
+// let findIndex = sales.map((elemnt)=>{ return elemnt.product})
+// console.log(findIndex.indexOf("Phone"))
+
+// CREATE FULL SUMMARY: 
 
 /*<-------------------------->*/
