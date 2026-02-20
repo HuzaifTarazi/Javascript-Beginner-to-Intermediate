@@ -64,36 +64,36 @@ Class, Constructor, Object Creation Using Class, Static Keyword
         else → "Fail"
         getDetails()
         Return full string
-// */
+*/
 
-class StudentResultSystem {
-    // Properties
-    constructor(name, marks) {
-        this.name = name;
-        this.marks = marks;
-    }
-    // Methods
-    getGrade(){
-        if(this.marks >= 80){
-            return `You Have Got Grade A`;
-        } else if(this.marks >= 60){
-            return `You Have Got Grade B`;
-        } else {
-            return `You Have Got Grade C`;
-        }
-    }
+// class StudentResultSystem {
+//     // Properties
+//     constructor(name, marks) {
+//         this.name = name;
+//         this.marks = marks;
+//     }
+//     // Methods
+//     getGrade(){
+//         if(this.marks >= 80){
+//             return `You Have Got Grade A`;
+//         } else if(this.marks >= 60){
+//             return `You Have Got Grade B`;
+//         } else {
+//             return `You Have Got Grade C`;
+//         }
+//     }
 
-    getResult(){
-        return this.marks >= 50 ? "You Have Pass The Exams" : "You Have Failed The Exams";
-    }
+//     getResult(){
+//         return this.marks >= 50 ? "You Have Pass The Exams" : "You Have Failed The Exams";
+//     }
 
-    getDetails(){
-        return `Student Name: ${this.name} \n Student Marks: ${this.marks} \n ${this.getGrade()} \n ${this.getResult()}`
-    }
-}
+//     getDetails(){
+//         return `Student Name: ${this.name} \n Student Marks: ${this.marks} \n ${this.getGrade()} \n ${this.getResult()}`
+//     }
+// }
 
-let student1 = new StudentResultSystem("Huzaif Tarazi", 70);
+// let student1 = new StudentResultSystem("Huzaif Tarazi", 70);
 
-console.log(student1.getDetails())
+// console.log(student1.getDetails())
 
 /*<-------------------------->*/
