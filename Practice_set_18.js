@@ -96,7 +96,7 @@ Inheritance, Super Keyword,
 /*<-------------------------->*/
 
 
-/* 1:   
+/* 2:   
     Banking System
         You are creating a bank system.
     📌 Requirements
@@ -144,5 +144,140 @@ Inheritance, Super Keyword,
 // console.log(savinAcc.AddInterest());
 // console.log(savinAcc.Deposit(13));
 
+
+/*<-------------------------->*/
+
+
+/* 3:   
+    Employee Management
+        You are creating a Company system
+    📌 Requirements
+            Class Employee:
+                property: name, salary
+                method: work()
+            Class Manager extends Employee
+                override work()
+                static method: companyPolicy()
+*/
+
+// class Employee {
+//     constructor(name, salary){
+//         this.name = name;
+//         this.salary = salary;
+//     }
+
+//     work(){
+//         return `The Employee ${this.name} is Working.`;
+//     }
+// }
+
+// class Manager extends Employee {
+//     constructor(name, salary){
+//         super(name, salary);
+//     }
+
+//     work(){
+//         return `${super.work()}`
+//     }
+
+//     static companyPolicy(salary){
+//         return `9 to 5 Time On salary: ${salary}`
+//     }
+// }
+// const employee = new Employee("Zukhruf", 3000);
+// const manager = new Manager("Huzaif", 5000)
+
+// console.log(employee.work())
+// console.log(manager.work())
+
+/*<-------------------------->*/
+
+
+/* 4:   
+    Vehicle System
+        You are creating a Transport system
+    📌 Requirements
+            Class Vehicle:
+                property: brand
+                method: start()
+            Class Car extends Vehicle
+                property: speed
+                method: drive()
+                Static method totalVehicles(count)
+// */
+
+// class Vehicle {
+//     constructor(brand){
+//         this.brand = brand;
+//     }
+
+//     start(){
+//         return `The ${this.brand} is Started.`
+//     }
+// }
+
+// class Car extends Vehicle{
+//     constructor(brand, speed){
+//         super(brand);
+//         this.speed = speed;
+//     }
+
+//     drive(){
+//         return `Driving the car at ${this.speed} km/h`;
+//     }
+// }
+
+// const Ride1 = new Car("Honda", 60);
+// const Ride2 = new Car("Toyota", 60);
+
+// console.log(Ride1.start())
+// console.log(Ride1.drive())
+
+// console.log(Ride2.start())
+// console.log(Ride2.drive())
+
+/*<-------------------------->*/
+
+
+
+/* 5:   
+    Online Learning Platform
+        You are creating a Education system
+    📌 Requirements
+            Class Course:
+                property: title
+                method: enroll()
+            Class PaidCourse extends Course
+                property: price
+                override enroll()
+                Static method platformName()
+// */
+
+class Course {
+    constructor(title) {
+        this.title = title;
+    }
+    enroll() {
+        console.log(`You are Enrolled in ${this.title}`);
+    }
+
+    static platform() {
+        console.log(`Microsoft`);
+    }
+}
+
+class PaidCourse extends Course {
+    constructor(title, price) {
+        super(title);
+        this.price = price;
+    }
+    enroll() {
+        super.enroll();
+    }
+}
+
+const course = new PaidCourse("udemey", 500)
+course.enroll();
+Course.platform();
 
 /*<-------------------------->*/
