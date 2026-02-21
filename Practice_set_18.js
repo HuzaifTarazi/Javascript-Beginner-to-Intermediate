@@ -253,31 +253,31 @@ Inheritance, Super Keyword,
                 Static method platformName()
 // */
 
-class Course {
-    constructor(title) {
-        this.title = title;
-    }
-    enroll() {
-        console.log(`You are Enrolled in ${this.title}`);
-    }
+// class Course {
+//     constructor(title) {
+//         this.title = title;
+//     }
+//     enroll() {
+//         console.log(`You are Enrolled in ${this.title}`);
+//     }
 
-    static platform() {
-        console.log(`Microsoft`);
-    }
-}
+//     static platform() {
+//         console.log(`Microsoft`);
+//     }
+// }
 
-class PaidCourse extends Course {
-    constructor(title, price) {
-        super(title);
-        this.price = price;
-    }
-    enroll() {
-        super.enroll();
-    }
-}
+// class PaidCourse extends Course {
+//     constructor(title, price) {
+//         super(title);
+//         this.price = price;
+//     }
+//     enroll() {
+//         super.enroll();
+//     }
+// }
 
-const course = new PaidCourse("udemey", 500)
-course.enroll();
-Course.platform();
+// const course = new PaidCourse("udemey", 500)
+// course.enroll();
+// Course.platform();
 
 /*<-------------------------->*/
