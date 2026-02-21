@@ -250,42 +250,42 @@ Class, Constructor, Object Creation Using Class, Static Keyword
             Return total salary of all employees
 */
 
-class EmployeeSalarySystem {
-    constructor() {
-        this.employees = [];
-    }
+// class EmployeeSalarySystem {
+//     constructor() {
+//         this.employees = [];
+//     }
 
-    AddEmployees(name, salary) {
-        return this.employees.push({ name, salary })
-    }
+//     AddEmployees(name, salary) {
+//         return this.employees.push({ name, salary })
+//     }
 
-    SalaryIncrement(percentage) {
-        return this.employees.map((element) => {
-            return {
-                name: element.name,
-                Salary: element.salary + (element.salary * percentage / 100),
-            };
-        });
-    }
+//     SalaryIncrement(percentage) {
+//         return this.employees.map((element) => {
+//             return {
+//                 name: element.name,
+//                 Salary: element.salary + (element.salary * percentage / 100),
+//             };
+//         });
+//     }
 
-    HighSalaryEmployees() {
-        return this.employees.filter((element) => { return element.salary > 50000 })
-    }
+//     HighSalaryEmployees() {
+//         return this.employees.filter((element) => { return element.salary > 50000 })
+//     }
 
-    TotalSalary() {
-        return this.employees.reduce((accu, element) => { return accu + element.salary }, 0)
-    }
+//     TotalSalary() {
+//         return this.employees.reduce((accu, element) => { return accu + element.salary }, 0)
+//     }
 
-}
+// }
 
-let employeSetOne = new EmployeeSalarySystem();
+// let employeSetOne = new EmployeeSalarySystem();
 
-console.log(employeSetOne.AddEmployees("Huzaif Tarazi", 55000))
-console.log(employeSetOne.AddEmployees("Moeez Khan", 23000))
-console.log(employeSetOne.AddEmployees("Furqan Awan", 52000))
-console.log(employeSetOne.AddEmployees("Haseeb Zafar", 15000))
-console.log(employeSetOne.SalaryIncrement(1))
-console.log(employeSetOne.HighSalaryEmployees());
-console.log(employeSetOne.TotalSalary());
+// console.log(employeSetOne.AddEmployees("Huzaif Tarazi", 55000))
+// console.log(employeSetOne.AddEmployees("Moeez Khan", 23000))
+// console.log(employeSetOne.AddEmployees("Furqan Awan", 52000))
+// console.log(employeSetOne.AddEmployees("Haseeb Zafar", 15000))
+// console.log(employeSetOne.SalaryIncrement(1))
+// console.log(employeSetOne.HighSalaryEmployees());
+// console.log(employeSetOne.TotalSalary());
 
 /*<-------------------------->*/

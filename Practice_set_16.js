@@ -368,11 +368,11 @@ Product Cart System (Intermediate)
   
 */
 
-const sales = [
-  { product: "Phone", price: 50000, quantity: 2 },
-  { product: "Laptop", price: 100000, quantity: 1 },
-  { product: "Headphones", price: 5000, quantity: 5 }
-];
+// const sales = [
+//   { product: "Phone", price: 50000, quantity: 2 },
+//   { product: "Laptop", price: 100000, quantity: 1 },
+//   { product: "Headphones", price: 5000, quantity: 5 }
+// ];
 
 // const sales2 = [
 //   { product: "Phone", price: 50000, quantity: 2 },
