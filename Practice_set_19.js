@@ -1,5 +1,5 @@
 /* -----------------------------------------
-               << Practice Set 18 >>
+               << Practice Set 19 >>
 
 let, const
 + - * / %
@@ -45,7 +45,7 @@ Function Expression , Arrow Function, Objects, This Method
 
 Class, Constructor, Object Creation Using Class, Static Keyword
 
-Inheritance, Super Keyword, this, getter, setter
+Inheritance, Super Keyword, this, Getter, Setter, Destructuring
 
 -------------------------------------------- */
 
