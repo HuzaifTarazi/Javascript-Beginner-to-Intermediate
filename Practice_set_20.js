@@ -54,7 +54,7 @@ Inheritance, Super Keyword, this, Getter, Setter, Destructuring
     Student Grade Calculator
      Task:
          1. Calculate total and average marks for each student
-         2. Use if/else if/else to assign grade: 
+         2. Use if/else if/else to assign grade:
             A => 90+, B => 75-89, C => 60-74, F < 60
          3. Print: "Ali has total 240, average 80 and grade B"
 */
@@ -100,30 +100,54 @@ Inheritance, Super Keyword, this, Getter, Setter, Destructuring
 
 // Exercise:
 
-function GradingSystem(itemPrice, quantity) {
-    let totalPrice = itemPrice * quantity;
-    let discountPrice = totalPrice > 500 ? totalPrice * 0.9 : `Error`;
+// function GradingSystem(itemPrice, quantity) {
+//     let totalPrice = itemPrice * quantity;
+//     let discountPrice = totalPrice > 500 ? totalPrice * 0.9 : `Error`;
 
-    const output = document.getElementById("output");
-    output.textContent = `Total Price: ${Math.round(totalPrice)}. The 10% Discount will be: ${discountPrice}`
-}
+//     const output = document.getElementById("output");
+//     output.textContent = `Total Price: ${Math.round(totalPrice)}. The 10% Discount will be: ${discountPrice}`
+// }
 
+// const calculate = document.getElementById("calculate");
+// calculate.onclick = function () {
+//     const itemPrice = Number(document.getElementById("itemPrice").value);
+//     const quantity = Number(document.getElementById("quantity").value);
 
-const calculate = document.getElementById("calculate");
-calculate.onclick = function () {
-    const itemPrice = Number(document.getElementById("itemPrice").value);
-    const quantity = Number(document.getElementById("quantity").value);
+//     if (!itemPrice || itemPrice === "") {
+//         console.error(`Please Fill Item Price Correctly.`);
+//         return;
+//     }
+//     if (!quantity || quantity === "") {
+//         console.error(`Please Fill Quantity Correctly.`)
+//         return;
+//     }
 
-    if (!itemPrice || itemPrice === "") {
-        console.error(`Please Fill Item Price Correctly.`);
-        return;
-    }
-    if (!quantity || quantity === "") {
-        console.error(`Please Fill Quantity Correctly.`)
-        return;
-    }
+//     GradingSystem(itemPrice, quantity);
+// }
 
-    GradingSystem(itemPrice, quantity);
-}
+/*<-------------------------->*/
 
+/* 3:
+    String & Array Manipulation
+      Task:
+        1. Trim sentence and convert to lower case
+        2. Split words into an array
+        3. Filter words that include "js" (case insensitive)
+        4. Map the filtered words to uppercase
+        5. Join them with comma and print
+*/
+
+const sentence = "  JavaScript is fun and JavaScript is powerful  ";
+
+const splitArr = sentence.trim().toLowerCase().split(" ");
+console.log(splitArr)
+
+const filterArr = splitArr.filter(function (element) { return element.includes("javascript") })
+console.log(filterArr)
+
+const mapped = filterArr.map((element)=>{return element.toUpperCase()})
+console.log(mapped)
+
+const showArr = mapped.join(", ")
+console.log(showArr)
 /*<-------------------------->*/
