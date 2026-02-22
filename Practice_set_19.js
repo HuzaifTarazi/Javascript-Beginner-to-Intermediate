@@ -173,74 +173,74 @@ Inheritance, Super Keyword, this, getter, setter
             Use function expression somewhere
 */
 
-class Course {
-    constructor(user, title, price) {
-        this.user = user;
-        this.title = title
-        this.price = price;
-    }
+// class Course {
+//     constructor(user, title, price) {
+//         this.user = user;
+//         this.title = title
+//         this.price = price;
+//     }
 
-    get price() {
-        return this._price;
-    }
+//     get price() {
+//         return this._price;
+//     }
 
-    set price(checkPrice) {
-        if (typeof checkPrice === "string") {
-            console.error(`The Price Can't Be a String`);
-        } else {
-            this._price = checkPrice
-        }
-    }
-    courseAvailable() {
-        return `There is: ${this.title} Courses Available`;
-    }
+//     set price(checkPrice) {
+//         if (typeof checkPrice === "string") {
+//             console.error(`The Price Can't Be a String`);
+//         } else {
+//             this._price = checkPrice
+//         }
+//     }
+//     courseAvailable() {
+//         return `There is: ${this.title} Courses Available`;
+//     }
 
-    enrollUser() {
-        return `${this.user} purchased ${this.title} for Rs.${this.price} `
-    }
-}
+//     enrollUser() {
+//         return `${this.user} purchased ${this.title} for Rs.${this.price} `
+//     }
+// }
 
-class FreeCourse extends Course {
-    constructor(user, title, price) {
-        super(user, title, price)
-    }
+// class FreeCourse extends Course {
+//     constructor(user, title, price) {
+//         super(user, title, price)
+//     }
 
-    freeCourse() {
-        return `There is ${this.title} Course Available for Free.`
-    }
-}
+//     freeCourse() {
+//         return `There is ${this.title} Course Available for Free.`
+//     }
+// }
 
-class PaidCourse extends Course {
-    constructor(user, title, price) {
-        super(user, title, price)
-    }
+// class PaidCourse extends Course {
+//     constructor(user, title, price) {
+//         super(user, title, price)
+//     }
 
-    enrollUser() {
-        return super.enrollUser();
-    }
-}
+//     enrollUser() {
+//         return super.enrollUser();
+//     }
+// }
 
-// Converting Object
-const course1 = new Course("Huziaf", "MernStack", 50)
-const course2 = new Course("Zukhruf", "Graphic Designer", 50)
-const course3 = new Course("Rufaf", "Doctork", 50)
+// // Converting Object
+// const course1 = new Course("Huziaf", "MernStack", 50)
+// const course2 = new Course("Zukhruf", "Graphic Designer", 50)
+// const course3 = new Course("Rufaf", "Doctork", 50)
 
-// Child Class
-const freecourse = new FreeCourse("Huzaif", "MernStack-Ai", 0)
+// // Child Class
+// const freecourse = new FreeCourse("Huzaif", "MernStack-Ai", 0)
 
-// Paid Course Child Class
-const paidCourse = new PaidCourse("Tarazi", "mern", 5)
+// // Paid Course Child Class
+// const paidCourse = new PaidCourse("Tarazi", "mern", 5)
 
-// Courses Available
-console.log(course1.courseAvailable())
-console.log(course2.courseAvailable())
-console.log(course3.courseAvailable())
+// // Courses Available
+// console.log(course1.courseAvailable())
+// console.log(course2.courseAvailable())
+// console.log(course3.courseAvailable())
 
-// Free Courses 
-console.log(freecourse.freeCourse())
+// // Free Courses 
+// console.log(freecourse.freeCourse())
 
-// Paid Courses
-console.log(paidCourse.enrollUser())
+// // Paid Courses
+// console.log(paidCourse.enrollUser())
 
 /*<-------------------------->*/
 
