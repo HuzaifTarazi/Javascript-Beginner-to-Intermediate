@@ -206,3 +206,36 @@ Inheritance, Super Keyword, this, Getter, Setter, Destructuring
 // console.log(person1.AccountDetail, person1.interestR(0.1))
 
 /*<-------------------------->*/
+
+/* 5:
+    Advanced Array + Callback + Reduce + Destructuring
+       Task:
+         1. Filter products with stock > 0
+         2. Map product names to uppercase
+         3. Find total price of in-stock products
+         4. Find index of product with price > 900
+         5. Print results
+*/
+
+// const products = [
+//   { id: 1, name: "Laptop", price: 500, stock: 5 },
+//   { id: 2, name: "Mobile", price: 700, stock: 0 },
+//   { id: 3, name: "Tablet", price: 1000, stock: 3 }
+// ];
+
+// FIlteration.
+// let saveFilter = products.filter((element)=>{ return element.stock > 0 ? element.stock : ""; })
+// console.log(saveFilter)
+
+// // Map Products to UpperCase
+// let UpperCase = products.map((element)=>{return element.name.toUpperCase()})
+// console.log(UpperCase)
+
+// // Finding Total Price in Stock Products
+// let totalPrice = products.reduce((accumulator, element)=>{return accumulator + (element.price * element.stock)}, 0)
+// console.log(totalPrice)
+
+// Find Index of Product with Price > 900
+// let newIndex = products.findIndex((element)=>{return element.price > 900 })
+// console.log(newIndex)
+/*<-------------------------->*/
