@@ -137,17 +137,72 @@ Inheritance, Super Keyword, this, Getter, Setter, Destructuring
         5. Join them with comma and print
 */
 
-const sentence = "  JavaScript is fun and JavaScript is powerful  ";
+// const sentence = "  JavaScript is fun and JavaScript is powerful  ";
 
-const splitArr = sentence.trim().toLowerCase().split(" ");
-console.log(splitArr)
+// const splitArr = sentence.trim().toLowerCase().split(" ");
+// console.log(splitArr)
 
-const filterArr = splitArr.filter(function (element) { return element.includes("javascript") })
-console.log(filterArr)
+// const filterArr = splitArr.filter(function (element) { return element.includes("javascript") })
+// console.log(filterArr)
 
-const mapped = filterArr.map((element)=>{return element.toUpperCase()})
-console.log(mapped)
+// const mapped = filterArr.map((element) => { return element.toUpperCase() })
+// console.log(mapped)
 
-const showArr = mapped.join(", ")
-console.log(showArr)
+// const showArr = mapped.join(", ")
+// console.log(showArr)
+
+/*<-------------------------->*/
+
+
+/* 4:
+    String & Array Manipulation
+       Task:
+         1. Create class BankAccount with name, balance
+         2. Create deposit(amount) and withdraw(amount) methods
+         3. Create a subclass SavingsAccount with interestRate
+         4. Add a getter to show account summary
+         5. Create 2 accounts using spread/rest for initial data
+*/
+
+// class BankAccount {
+//   constructor(name, balance) {
+//     this.name = name;
+//     this.balance = balance;
+
+//   }
+
+//   Desposit(addMoney) {
+//     this.balance += addMoney;
+//     return `${this.balance} Added to ${this.name}'s Account.`
+//   }
+
+//   WithdrawBalance(getMoney) {
+//     if (this.balance > getMoney) {
+//       this.balance = this.balance - getMoney;
+//       return `${this.balance} Amount Withdrawn From ${this.name}'s Account`;
+//     } else {
+//       return `Insufficient Balance`;
+//     }
+//   }
+// }
+
+// class SavingAccount extends BankAccount {
+//   constructor(name, balance) {
+//     super(name, balance);
+//   }
+//   interestR(data) {
+//     this.interestRate = this.balance * data;
+//     return this.interestRate;
+//   }
+//   get AccountDetail() {
+//     return `Account Name: ${this.name} got $${this.balance} in account with Interest Rate:`;
+//   }
+// }
+// let person1 = new SavingAccount("Huzaif", 10000)
+// // console.log(person2.name)
+// // console.log(person2.balance)
+// // console.log(person2.interestR(0.1))
+
+// console.log(person1.AccountDetail, person1.interestR(0.1))
+
 /*<-------------------------->*/

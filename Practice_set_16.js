@@ -77,9 +77,9 @@ Student Records System (Beginner)
 // // students.push({name: "Bohemia", marks: 60});
 // students.unshift({name: "Nazli Rauf", marks: 90})
 
-// // students.forEach(function(element){
-// //     console.log(element.name, element.marks)
-// // })
+// students.forEach(function(element){
+//      console.log(element.name, element.marks)
+// })
 
 // let increase = students.map(function(element){
 //     return element.name, element.marks + 5;
