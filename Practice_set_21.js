@@ -131,4 +131,25 @@ Inheritance, Super Keyword, this, Getter, Setter, Destructuring
 /*<-------------------------->*/
 
 
+/* 5:
+    Find Topper (Logic Building 🔥)
+*/
+
+// const students = [
+//     { name: "Ali", marks: 80 },
+//     { name: "Sara", marks: 60 },
+//     { name: "Ahmed", marks: 95 }
+// ];
+
+// let maxNumber = Math.max(...students.map((element)=>{return element.marks}))
+// console.log(maxNumber)
+
+// let filterMarks = students.filter(({name, marks})=>{
+//     return marks === maxNumber ? console.log(`${name} Has Highest Numbers. ${marks}`) : ""
+// });
+
+/*<-------------------------->*/
+
+
+
 
