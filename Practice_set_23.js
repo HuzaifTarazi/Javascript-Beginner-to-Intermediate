@@ -91,3 +91,168 @@ Date(), Closures
 // }
 
 /*<-------------------------->*/
+
+/* 2:
+    Age Checker Using Logical Operators
+*/
+
+// let namesArr = ["Huzaif", "Zukhruf", "Rufaf", "Osaf"]
+
+// for(let i = 0; i < namesArr.length; i++){
+
+//      let myAge = window.prompt(`Enter Your Age: `) 
+
+//      if(isNaN(myAge)){
+//           alert(`Enter Age Correctly: `)
+//           continue;
+//      } else if(myAge >= 70 && myAge <= 80){
+//           alert(`70 - 80 years old.`)
+//      } else if(myAge >= 50 && myAge <= 60){
+//           alert(`50 - 60 years old.`)
+//      } else if(myAge >= 30 && myAge <= 50){
+//           alert(`30 - 50 years old.`)
+//      } else if(myAge >= 15 && myAge <= 26){
+//           alert(`15 - 26 years old.`)
+//      }
+
+//      console.log(`${namesArr[i]} is ${myAge} Years Old.`)
+
+// }
+
+/*<-------------------------->*/
+
+
+/* 3:
+    DOM Interaction
+*/
+
+const greetbtn = document.getElementById("greetbtn");
+const greeting = document.getElementById("greeting");
+
+greetbtn.onclick = function () {
+     let greetInpu = document.getElementById("greetInpu").value;
+     let saveInpu = greetInpu.trim().slice(0, 1).toUpperCase() + greetInpu.trim().slice(1)
+     greeting.textContent = greetInpu ? `Hello ${saveInpu}! How are You..` : "Please Fill the Filed.!";
+}
+
+/*<-------------------------->*/
+
+
+/* 4:
+    Math Practice
+    Math.round,trunc
+    floor,ceil,random,max,
+    min,pow,sqrt,abs,
+*/
+
+// const numbers = [3.7, 5.2, -9.8, 10];
+
+// Round Number
+// let roundNumber = numbers.map((element)=>{return Math.round(element)})
+// console.log(roundNumber)
+
+// trunc Number
+// let truncNumber = numbers.map((element)=>{return Math.trunc(element)})
+// console.log(truncNumber)
+
+// floor Number
+// let floorNumber = numbers.forEach(element => console.log(Math.floor(element)))
+
+// Ceil Number
+// let ceilNumber = numbers.map(element => console.log(Math.ceil(element)))
+
+// random Number
+// let randomArr = [];
+// for(let i = 0; i <= 5; i++){
+//      randomArr.push(Math.floor(Math.random() * 100 + 1))
+// }
+// console.log(randomArr)
+
+// max Number
+// let maxNumberArr = [];
+// for(let i = 0; i <= 10; i++){
+//     maxNumberArr[i] =  maxNumberArr.push()
+// }
+// const MaxNumber = Math.max(...maxNumberArr)
+// console.log(MaxNumber)
+
+// Min Number
+// let emptyNumberArr = [];
+// for(let i = 0; i <= 5; i++){
+//      emptyNumberArr[i] = emptyNumberArr.push()
+// }
+// const minNumbersArr = Math.min(...emptyNumberArr)
+// console.log(minNumbersArr)
+
+// Pow Number
+// const powNumber = Math.pow(2, 3)
+// console.log(powNumber)
+
+// sqrt Number
+// const sqrtNumber = Math.sqrt(36);
+// console.log(sqrtNumber)
+
+// abs Number
+// const absNumber = Math.abs(-1999)
+// console.log(absNumber)
+
+/*<-------------------------->*/
+
+
+/* 5:
+    String Operations:
+          .length, .toUpperCase(), .toLowerCase(), 
+          .trim(), .includes(), .startsWith(), 
+          .endsWith(), .indexOf(), .slice(), 
+          .substring(), .replace(), .replaceAll(), 
+          .split(), .charAt() 
+*/
+
+// const text = "  JavaScript is fun! JavaScript is powerful!";
+
+// lenght
+// console.log(text.length)
+
+// To Upper Case
+// console.log(text.toUpperCase())
+
+// To Lower Case
+// console.log(text.toLowerCase())
+
+// trim Character
+// console.log(text.trim())
+
+// Include
+// console.log(text.includes("JavaScript"))
+
+// Starts With
+// console.log(text.startsWith(" "))
+
+// Ends With
+// console.log(text.endsWith("!"))
+
+// index Of 
+// console.log(text.indexOf("powerful"))
+
+// slicing 
+// console.log(text.slice(2, 5))
+
+//  Sub string
+// console.log(text.substring(2, 6))
+
+// replacing
+// console.log(text.trim().replace("JavaScript", "JARVIS"))
+
+// replacing all
+// console.log(text.trim().replaceAll("JavaScript", "Jarvis"))
+
+// split
+// let splitVal = text.split(" ")
+// console.log(splitVal)
+
+// character At 
+// console.log(text.indexOf("fun"))
+// console.log(text.charAt(16))
+// console.log(text.charAt(17))
+// console.log(text.charAt(18))
+/*<-------------------------->*/
