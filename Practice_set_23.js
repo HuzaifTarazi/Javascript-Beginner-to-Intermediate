@@ -130,9 +130,9 @@ const greetbtn = document.getElementById("greetbtn");
 const greeting = document.getElementById("greeting");
 
 greetbtn.onclick = function () {
-     let greetInpu = document.getElementById("greetInpu").value;
-     let saveInpu = greetInpu.trim().slice(0, 1).toUpperCase() + greetInpu.trim().slice(1)
-     greeting.textContent = greetInpu ? `Hello ${saveInpu}! How are You..` : "Please Fill the Filed.!";
+    let greetInpu = document.getElementById("greetInpu").value;
+    let saveInpu = greetInpu.trim().slice(0, 1).toUpperCase() + greetInpu.trim().slice(1)
+    greeting.textContent = greetInpu ? `Hello ${saveInpu}! How are You..` : "Please Fill the Filed.!";
 }
 
 /*<-------------------------->*/
@@ -201,11 +201,11 @@ greetbtn.onclick = function () {
 
 /* 5:
     String Operations:
-          .length, .toUpperCase(), .toLowerCase(), 
-          .trim(), .includes(), .startsWith(), 
-          .endsWith(), .indexOf(), .slice(), 
-          .substring(), .replace(), .replaceAll(), 
-          .split(), .charAt() 
+          .length, .toUpperCase(), .toLowerCase(),
+          .trim(), .includes(), .startsWith(),
+          .endsWith(), .indexOf(), .slice(),
+          .substring(), .replace(), .replaceAll(),
+          .split(), .charAt()
 */
 
 // const text = "  JavaScript is fun! JavaScript is powerful!";
@@ -231,10 +231,10 @@ greetbtn.onclick = function () {
 // Ends With
 // console.log(text.endsWith("!"))
 
-// index Of 
+// index Of
 // console.log(text.indexOf("powerful"))
 
-// slicing 
+// slicing
 // console.log(text.slice(2, 5))
 
 //  Sub string
@@ -250,9 +250,99 @@ greetbtn.onclick = function () {
 // let splitVal = text.split(" ")
 // console.log(splitVal)
 
-// character At 
+// character At
 // console.log(text.indexOf("fun"))
 // console.log(text.charAt(16))
 // console.log(text.charAt(17))
 // console.log(text.charAt(18))
+
 /*<-------------------------->*/
+
+
+/* 6:
+    Array Methods:
+        push, pop, shift, unshift,
+        splice, slice, indexOf, 
+        includes, join, toString, 
+        concat, reverse, sort, forEach, 
+        map, filter, reduce, findIndex, 
+        spread operator
+*/
+
+// let fruits = ["Apple", "Banana", "Cherry"];
+
+// Add Items 
+// fruits.push("Jarvis");
+// console.log(fruits)
+
+// Removing Item
+// fruits.pop();
+// console.log(fruits)
+
+//Removing From Start
+// fruits.shift()
+// console.log(fruits)
+
+// Adding At Start 
+// fruits.unshift("Jarvis")
+// console.log(fruits)
+
+// splicing 
+// let splicing = fruits.splice(0, 2)
+// console.log(splicing)
+
+// slicing 
+// let slicing = fruits.slice(0, 2)
+// console.log(slicing)
+
+// finding index of String
+// console.log(fruits.indexOf("Cherry"))
+
+// Data Include
+// console.log(fruits.includes("Apple"))
+
+// Joining
+// console.log(fruits.join(", "))
+
+// Converting to String
+// console.log(fruits.toString())
+
+// Joining Two Strings Together
+// let array2 = ["Orange", "Avacado", "Grapes"]
+// console.log(fruits.concat(array2))
+
+// Reverse the Array
+// console.log(fruits.toReversed())
+
+// Sorting The Array
+// console.log(fruits.toSorted())
+
+// Looping through Array
+// fruits.forEach((element, index)=> {
+//         console.log(index +  element)
+// });
+
+// Returning with Map
+// let saveFruits = fruits.map((element, index, array)=>{return array})
+// console.log(saveFruits)
+
+// Filteration in Array
+// let filter = fruits.filter(element => element.includes("Cherry"))
+// console.log(filter)
+
+// reducing the Array
+// let arrNum = [1,2,3,4,5,6];
+// let saveArrNum = arrNum.reduce((accu, element)=>{return accu + element}, 0)
+// console.log(saveArrNum)
+
+// Finding Index
+// console.log(fruits.findIndex((element)=>{return element.includes("Banana")}))
+
+// spread operators
+// let numberArr = [1,2,3]
+// const newArr = [...fruits, ...numberArr]
+// console.log(newArr)
+
+
+/*<-------------------------->*/
+
