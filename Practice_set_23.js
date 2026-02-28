@@ -55,7 +55,6 @@ Date(), Closures
 
 -------------------------------------------- */
 
-
 /* 1:
      Calculator Using
      let, const, Math Operators, and Conditionals
@@ -126,14 +125,14 @@ Date(), Closures
     DOM Interaction
 */
 
-const greetbtn = document.getElementById("greetbtn");
-const greeting = document.getElementById("greeting");
+// const greetbtn = document.getElementById("greetbtn");
+// const greeting = document.getElementById("greeting");
 
-greetbtn.onclick = function () {
-    let greetInpu = document.getElementById("greetInpu").value;
-    let saveInpu = greetInpu.trim().slice(0, 1).toUpperCase() + greetInpu.trim().slice(1)
-    greeting.textContent = greetInpu ? `Hello ${saveInpu}! How are You..` : "Please Fill the Filed.!";
-}
+// greetbtn.onclick = function () {
+//     let greetInpu = document.getElementById("greetInpu").value;
+//     let saveInpu = greetInpu.trim().slice(0, 1).toUpperCase() + greetInpu.trim().slice(1)
+//     greeting.textContent = greetInpu ? `Hello ${saveInpu}! How are You..` : "Please Fill the Filed.!";
+// }
 
 /*<-------------------------->*/
 
@@ -342,6 +341,43 @@ greetbtn.onclick = function () {
 // let numberArr = [1,2,3]
 // const newArr = [...fruits, ...numberArr]
 // console.log(newArr)
+
+/*<-------------------------->*/
+
+/* 6:
+    Functions, Arrow Functions, Scope, Callback
+*/
+
+// Simple Function 
+
+function Greet(){
+    console.log("Hello How are You!")
+}
+Greet();
+
+// Arrow Function 
+
+const myFunc = (name)=>{
+    console.log(`Hello ${name} How are You!`)
+}
+myFunc("Huzaif");
+
+// CallBack Function
+
+let arr = [1,2,3,4]
+
+function NumberArr(callBack, ...storeArr){
+  
+   let saveArr = storeArr.reduce((accu , element)=>{return accu + element}, 0)
+
+    callBack(saveArr)
+}
+function CallbackArr(arr){
+console.log(arr)
+}
+
+NumberArr(CallbackArr, arr)
+
 
 
 /*<-------------------------->*/

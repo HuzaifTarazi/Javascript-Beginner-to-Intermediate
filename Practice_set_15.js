@@ -174,13 +174,8 @@ performCalculationOp.onclick = function () {
 
 
 
-function NameFilterArrayStorage(originalArr, callBack) {
-    callBack(...originalArr)
-}
-
-function NameFilterationSystem(...originalArr) {
-
-    let getNewArr = originalArr.map((element, index) => {
+function NameFilterArrayStorage(callBack, ...originalArr) {
+    let getNewArr = originalArr.map((element) => {
         return element.slice(0, 1).toUpperCase() + element.slice(1).toLowerCase();
     })
 
@@ -189,8 +184,13 @@ function NameFilterationSystem(...originalArr) {
         convertTostring += element + ' | ';
     })
 
+    callBack(convertTostring)
+}
+
+function NameFilterationSystem(originalArr) {
+
     const displayFormatedOp = document.getElementById("displayFormatedOp");
-    displayFormatedOp.textContent = `Modified Array: [${convertTostring}]`
+    displayFormatedOp.textContent = `Modified Array: [${originalArr}]`
 }
 
 const formatNameOp = document.getElementById("formatNameOp")
@@ -203,7 +203,7 @@ formatNameOp.onclick = function () {
     for (let i = 0; i < convertToArr.length; i++) {
         preDefinedNamesArr.push(convertToArr[i].trim())
     }
-    NameFilterArrayStorage(preDefinedNamesArr, NameFilterationSystem)
+    NameFilterArrayStorage(NameFilterationSystem, ...preDefinedNamesArr)
 
 }
 
