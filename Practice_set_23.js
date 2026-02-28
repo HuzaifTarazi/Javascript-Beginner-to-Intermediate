@@ -473,7 +473,71 @@ Date(), Closures
 // console.log(brotherD.brother1)
 // console.log(brotherD.brother2)
 
+/*<-------------------------->*/
+
+/* 8:
+    Date and Closure
+*/
+
+// const today = new Date();
+// console.log(today.toDateString());
+// console.log(today.getFullYear());
+// console.log(today.getDate())
+
+
+// function counter() {
+//     let countValue = 0;
+
+//     function ChangeBy(num) {
+//        console.log(countValue = countValue + num);
+//     }
+//     return {
+//         increment() {
+//             ChangeBy(1)
+//         },
+//         decrement() {
+//             ChangeBy(-1)
+//         },
+//         value(){
+//            return console.log(countValue)
+//         }
+//     }
+// }
+
+// const counting = counter()
+
+// counting.increment()
+// counting.increment()
+
+// counting.value()
 
 /*<-------------------------->*/
 
+
+
+/* 9:
+    Advanced Student Management System
+*/
+
+const students = [
+    { name: "Ali", marks: [80, 90, 85], age: 20 },
+    { name: "Sara", marks: [70, 60, 75], age: 19 },
+    { name: "Ahmed", marks: [95, 85, 100], age: 21 },
+];
+
+// Function to calculate average marks using reduce
+let avgMarks = students.map((element) => {
+    let total = element.marks.reduce((accu, marks)=> { return accu + marks }, 0)
+    let avg = total / element.marks.length;
+    return {
+        name: element.name,
+        marks: avg.toFixed(2)
+    }
+})
+console.log(...avgMarks)
+
+
+
+
+/*<-------------------------->*/
 
