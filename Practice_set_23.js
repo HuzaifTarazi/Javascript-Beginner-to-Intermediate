@@ -350,41 +350,88 @@ Date(), Closures
 
 // Simple Function 
 
-function Greet() {
-    console.log("Hello How are You!")
-}
-Greet();
+// function Greet() {
+//     console.log("Hello How are You!")
+// }
+// Greet();
 
 // Arrow Function 
 
-const myFunc = (name) => {
-    console.log(`Hello ${name} How are You!`)
-}
-myFunc("Huzaif");
+// const myFunc = (name) => {
+//     console.log(`Hello ${name} How are You!`)
+// }
+// myFunc("Huzaif");
 
 // CallBack Function
 
-let arr = [1, 2, 3, 4]
-function NumberArr(callBack, ...storeArr) {
-    let saveArr = storeArr.reduce((accu, element) => { return accu + element }, 0)
-    callBack(saveArr)
-}
-function CallbackArr(arr) {
-    console.log(arr)
-}
-NumberArr(CallbackArr, arr)
+// let arr = [1, 2, 3, 4]
+// function NumberArr(callBack, ...storeArr) {
+//     let saveArr = storeArr.reduce((accu, element) => { return accu + element }, 0)
+//     callBack(saveArr)
+// }
+// function CallbackArr(arr) {
+//     console.log(arr)
+// }
+// NumberArr(CallbackArr, arr)
 
 // Variable Scope
 
-let globalVariable = "I am Global";
+// let globalVariable = "I am Global";
 
-function variable() {
-    let localVar = "I am Local Variable"
-    console.log(localVar); //Accessible
-    console.log(globalVariable); //Accessible
-}
-console.log(localVar) // Not Accessible
-variable();
+// function variable() {
+//     let localVar = "I am Local Variable"
+//     console.log(localVar); //Accessible
+//     console.log(globalVariable); //Accessible
+// }
+// console.log(localVar) // Not Accessible
+// variable();
 
 /*<-------------------------->*/
+
+/* 7:
+    Objects, Classes, Inheritance, Getter/Setter
+*/
+
+// Object & Destructuring
+
+// const person = {
+//     name: "Ali",
+//     myAge: 25,
+//     address: { city: "Sahiwal", country: "Pakistan" },
+// };
+// const { name, myAge, address: { city, country } } = person
+// console.log(name + " " + myAge + " " + city + " " + country)
+
+// Class & Inheritance
+
+const personObj = {
+    name: "huzaif",
+    age: 23,
+    city: "Sahiwal",
+    country: "Pakistan"
+}
+
+class Person {
+    constructor({ name, age }) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+class NewData extends Person {
+    constructor({ name, age, city, country }) {
+        super({ name, age });
+        this.city = city;
+        this.country = country;
+    }
+    callme() {
+        console.log(this.name)
+    }
+
+}
+const returnData = new Person({name: "Huzaf", age: 34})
+console.log(returnData)
+
+/*<-------------------------->*/
+
 
