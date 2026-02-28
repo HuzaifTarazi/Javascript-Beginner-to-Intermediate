@@ -350,35 +350,41 @@ Date(), Closures
 
 // Simple Function 
 
-function Greet(){
+function Greet() {
     console.log("Hello How are You!")
 }
 Greet();
 
 // Arrow Function 
 
-const myFunc = (name)=>{
+const myFunc = (name) => {
     console.log(`Hello ${name} How are You!`)
 }
 myFunc("Huzaif");
 
 // CallBack Function
 
-let arr = [1,2,3,4]
-
-function NumberArr(callBack, ...storeArr){
-  
-   let saveArr = storeArr.reduce((accu , element)=>{return accu + element}, 0)
-
+let arr = [1, 2, 3, 4]
+function NumberArr(callBack, ...storeArr) {
+    let saveArr = storeArr.reduce((accu, element) => { return accu + element }, 0)
     callBack(saveArr)
 }
-function CallbackArr(arr){
-console.log(arr)
+function CallbackArr(arr) {
+    console.log(arr)
 }
-
 NumberArr(CallbackArr, arr)
 
+// Variable Scope
 
+let globalVariable = "I am Global";
+
+function variable() {
+    let localVar = "I am Local Variable"
+    console.log(localVar); //Accessible
+    console.log(globalVariable); //Accessible
+}
+console.log(localVar) // Not Accessible
+variable();
 
 /*<-------------------------->*/
 
