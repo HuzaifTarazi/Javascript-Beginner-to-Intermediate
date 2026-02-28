@@ -404,33 +404,75 @@ Date(), Closures
 
 // Class & Inheritance
 
-const personObj = {
-    name: "huzaif",
-    age: 23,
-    city: "Sahiwal",
-    country: "Pakistan"
-}
+// const personObj = {
+//     name: "huzaif",
+//     age: 23,
+//     city: "Sahiwal",
+//     country: "Pakistan"
+// }
 
-class Person {
-    constructor({ name, age }) {
-        this.name = name;
-        this.age = age;
-    }
-}
+// class Person {
+//     constructor({ name, age }) {
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
 
-class NewData extends Person {
-    constructor({ name, age, city, country }) {
-        super({ name, age });
-        this.city = city;
-        this.country = country;
-    }
-    callme() {
-        console.log(this.name)
-    }
+// class NewData extends Person {
+//     constructor({ name, age, city, country }) {
+//         super({ name, age });
+//         this.city = city;
+//         this.country = country;
+//     }
+//     callme() {
+//         console.log(this.name)
+//     }
 
-}
-const returnData = new Person({name: "Huzaf", age: 34})
-console.log(returnData)
+// }
+// const returnData = new Person({name: "Huzaf", age: 34})
+// console.log(returnData)
+
+//  Getters & Setters
+
+// class brothers{
+//     constructor(bro1, bro2, bro3, bro4){
+//         this.bro1 = bro1;
+//         this.bro2 = bro2;
+//         this.bro3 = bro3;
+//         this.bro4 = bro4
+//     }
+
+//     get brother1(){
+//         return `${this._bro1}`
+//     }
+//     get brother2(){
+//         return `${this._bro2}`
+//     }
+
+//     set bro1(value){
+//        if(typeof value !== "string"){
+//         console.error("Please provide string value")
+//        } else {
+//         this._bro1 = value
+//        }
+//     }
+
+//     set bro2(value){
+//        if(typeof value !== "string"){
+//         console.error("Please provide string value")
+//        } else {
+//         this._bro2 = value
+//        }
+//     }
+// }
+
+// const arrName = ["huzaif", "zukhruf"]
+
+// const brotherD = new brothers(...arrName)
+
+// console.log(brotherD.brother1)
+// console.log(brotherD.brother2)
+
 
 /*<-------------------------->*/
 
