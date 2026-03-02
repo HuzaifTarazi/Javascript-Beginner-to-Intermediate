@@ -514,7 +514,6 @@ Date(), Closures
 /*<-------------------------->*/
 
 
-
 /* 9:
     Advanced Student Management System
 */
@@ -525,19 +524,76 @@ const students = [
     { name: "Ahmed", marks: [95, 85, 100], age: 21 },
 ];
 
-// Function to calculate average marks using reduce
-let avgMarks = students.map((element) => {
-    let total = element.marks.reduce((accu, marks)=> { return accu + marks }, 0)
-    let avg = total / element.marks.length;
+
+
+// // Function to calculate average marks using reduce
+// let avgMarks = () => {
+//     const avgMarksData = students.map((element) => {
+//         let total = element.marks.reduce((accu, marks) => { return accu + marks }, 0)
+//         let avg = total / element.marks.length;
+//         return {
+//             name: element.name,
+//             marks: avg.toFixed(2)
+//         }
+//     })
+
+//     return avgMarksData
+// }
+
+// const storeMarks = avgMarks()
+// console.log(storeMarks)
+
+
+// Callback function to print student info
+
+// function average(student, Callback) {
+//     const avgMarks = student.map((element) => {
+//         let totalMarks = element.marks.reduce((accu, element) => { return accu + element }, 0)
+//         let avg = totalMarks / element.marks.length;
+//         return {
+//             name: element.name,
+//             marks: totalMarks,
+//             avgMarks: avg.toFixed(2),
+//             age: element.age,
+//         }
+//     })
+//     Callback(avgMarks)
+// }
+
+// function displayData(avgMarks) {
+//     avgMarks.forEach(element => {
+//         console.log(`The Student ${element.name} got ${element.marks} Marks. Average: ${element.avgMarks}% by age ${element.age}`)
+//     });
+// }
+
+// average(students, displayData)
+
+// Filter students with average > 80
+
+const filterStudents = students.map(element => {
+    let totalMarks = element.marks.reduce((accu, element) => { return accu + element }, 0)
+    let averageMarks = (totalMarks / element.marks.length).toFixed(2)
     return {
         name: element.name,
-        marks: avg.toFixed(2)
+        marks: totalMarks, 
+        avgMarks: averageMarks,
     }
-})
-console.log(...avgMarks)
+});
 
+const FilterationSystem = filterStudents.filter(element => {
+    return element.avgMarks > 80 ? element : "";    
+});
 
+console.log(FilterationSystem)
 
 
 /*<-------------------------->*/
+
+/* 10:
+    Advanced Student Management System
+*/
+
+
+/*<-------------------------->*/
+
 
