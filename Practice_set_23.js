@@ -570,22 +570,27 @@ const students = [
 
 // Filter students with average > 80
 
-const filterStudents = students.map(element => {
-    let totalMarks = element.marks.reduce((accu, element) => { return accu + element }, 0)
-    let averageMarks = (totalMarks / element.marks.length).toFixed(2)
-    return {
-        name: element.name,
-        marks: totalMarks, 
-        avgMarks: averageMarks,
-    }
-});
+// const filterStudents = students.map(element => {
+//     let totalMarks = element.marks.reduce((accu, element) => { return accu + element }, 0)
+//     let averageMarks = (totalMarks / element.marks.length).toFixed(2)
+//     return {
+//         name: element.name,
+//         marks: totalMarks, 
+//         avgMarks: averageMarks,
+//     }
+// });
 
-const FilterationSystem = filterStudents.filter(element => {
-    return element.avgMarks > 80 ? element : "";    
-});
+// const FilterationSystem = filterStudents.filter(element => {
+//     return element.avgMarks > 80 ? element : "";    
+// });
 
-console.log(FilterationSystem)
+// console.log(FilterationSystem)
 
+
+// Using findIndex
+
+const indexFind =  students.findIndex(element => element.name === "Ahmed")
+console.log(indexFind)
 
 /*<-------------------------->*/
 
