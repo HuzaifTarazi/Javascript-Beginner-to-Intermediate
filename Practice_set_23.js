@@ -589,16 +589,130 @@ const students = [
 
 // Using findIndex
 
-const indexFind =  students.findIndex(element => element.name === "Ahmed")
-console.log(indexFind)
+// const indexFind =  students.findIndex(element => element.name === "Ahmed")
+// console.log(indexFind)
 
 /*<-------------------------->*/
 
 /* 10:
-    Advanced Student Management System
+    Object Manipulation with Spread, Destructuring, and Arrow Functions
 */
 
+// const student = {
+//   name: "Ali",
+//   age1: 20,
+//   marks: [80, 90, 85],
+//   greet: function() {
+//     console.log(`Hello, my name is ${this.name}`);
+//   }
+// };
+
+// Using arrow function inside object (lexical this)
+
+// student.average = () => { return student.marks.reduce((a,b)=> a + b, 0) / student.marks.length}
+// console.log(`The Students Average Marks: ${student.average()}`)
+
+// Spread operator to clone and add new property
+
+// const updateStudent = { ...student, Grade: "B"}
+// console.log(updateStudent)
+
+
+// Destructuring
+
+// const {name, age1, marks} = student;
+// console.log(`${marks}`)
 
 /*<-------------------------->*/
 
+/* 11:
+    Class, Inheritance, Static Methods, Getter/Setter, Super Keyword
+*/
 
+// class Person {
+//     constructor({name, age}) {
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     greet() {
+//         console.log(`Hi, I'm ${this.name}`)
+//     }
+
+// }
+
+// class Student extends Person {
+//     constructor({ name, age, marks }) {
+//         super({name, age});
+//         this.marks = marks;
+//     }
+//     get updatedAge(){
+//        return `Updated Age: ${this.age}`
+//     }
+//     set newAge(newAge){
+//         this.age = newAge
+//     }
+
+//     getAvg() {
+//         let avgStore = this.marks.reduce((accu, element) => { return accu + element }, 0) / this.marks.length
+//         return avgStore.toFixed(2)
+//     }
+// }
+
+// const studentInfo = new Student({name: "huzaif", age: 34, marks: [34,20,53]})
+
+// console.log(studentInfo)
+// console.log(studentInfo.name)
+// console.log(studentInfo.age)
+// studentInfo.newAge = 23
+// console.log(studentInfo.updatedAge)
+// console.log(studentInfo.getAvg())
+
+/*<-------------------------->*/
+
+/* 11:
+    Class, Inheritance, Static Methods, Getter/Setter, Super Keyword
+*/
+
+
+// const courses = [
+//     { title: "JavaScript", duration: 30, students: [{ name: "Ali" }, { name: "Sara" }] },
+//     { title: "Python", duration: 25, students: [{ name: "Ahmed" }, { name: "Sara" }] },
+//     { title: "React", duration: 20, students: [{ name: "Ali" }, { name: "Ahmed" }] },
+// ];
+
+// Sort courses by duration (numeric)
+
+// let saveCourses = courses.sort((a, b) => { return a.duration - b.duration })
+// console.log(saveCourses)
+
+// Sort courses by title (string)
+
+// let sortBy = courses.sort((a, b) => { return b.title.localeCompare(a.title) })
+// console.log(sortBy)
+
+// Display course info
+
+// courses.forEach((element) => {
+//     console.log(`Course: ${element.title}, ${element.duration}, ${element.students.map(element => element.name)},`)
+// })
+
+/*<-------------------------->*/
+
+/* 11:
+    Class, Inheritance, Static Methods, Getter/Setter, Super Keyword
+*/
+
+function createReminder(message, daysLater){
+    const reminderDate = new Date();
+    reminderDate.setDate(reminderDate.getDate() + daysLater)
+   
+    return function(){
+        console.log(`Reminder: ${message} on ${reminderDate.toDateString()}`)
+    }
+}
+const newFun =  createReminder("metting", 10)
+const submitAssignment = createReminder("Assignment SUbmission", 20)
+newFun()
+submitAssignment()
+/*<-------------------------->*/
