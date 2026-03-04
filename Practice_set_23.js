@@ -742,7 +742,80 @@ const students = [
 // const merge = [...arr1, ...arr2]
 // console.log(merge)
 
+/*<-------------------------->*/
+
+
+/* 15:
+    Creating Date Objects
+*/
+
+// Current date and time
+
+// const now = new Date()
+// console.log(`Current Date: ${now}`)
+
+// Specific date (Year, Month-0Index, Day, Hours, Minutes, Seconds)
+
+// const birthday = new Date(2000, 7, 2);
+// console.log(birthday)
+
+
+// Using a date string
+
+// const event = new Date("2000-08-02T10:30:00")
+// console.log(event)
 
 /*<-------------------------->*/
+
+/* 16:
+    Getting Date Components
+*/
+
+// const date = new Date()
+
+// console.log(date.getFullYear())
+// console.log(date.getMonth())
+// console.log(date.getDate())
+// console.log(date.getDay())
+// console.log(date.getHours())
+// console.log(date.getMinutes())
+
+/*<-------------------------->*/
+
+/* 17:
+    Getting Date Components
+*/
+
+// const date = new Date("2026-02-26T17:00:00");
+
+// console.log(date.getFullYear())
+// console.log(date.getMonth())
+// console.log(date.getDate())
+// console.log(date.getDay())
+// console.log(date.getHours())
+// console.log(date.getMinutes())
+
+// const date = new Date();
+
+// console.log("ISO String:", date.toISOString()); // 2026-02-26T17:00:00.000Z
+// console.log("Date String:", date.toDateString()); // Thu Feb 26 2026
+// console.log("Time String:", date.toTimeString()); // 17:00:00 GMT+0500
+// console.log("Locale String:", date.toLocaleString()); // 2/26/2026, 5:00:00 PM
+// console.log("Locale Date:", date.toLocaleDateString()); // 2/26/2026
+// console.log("Locale Time:", date.toLocaleTimeString()); // 5:00:00 PM
+
+// Generate 7 days from today
+
+// const days = [];
+// for(let i = 0; i < 7; i++){
+//     const temp = new Date();
+//     temp.setDate(temp.getDate() + i);
+//     days.push(temp.toDateString());
+// }
+// console.log("Next 7 Days:", );
+
+/*<-------------------------->*/
+
+
 
 
