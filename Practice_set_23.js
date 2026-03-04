@@ -670,7 +670,7 @@ const students = [
 
 /*<-------------------------->*/
 
-/* 11:
+/* 12:
     Class, Inheritance, Static Methods, Getter/Setter, Super Keyword
 */
 
@@ -699,20 +699,50 @@ const students = [
 
 /*<-------------------------->*/
 
-/* 11:
+/* 13:
     Class, Inheritance, Static Methods, Getter/Setter, Super Keyword
 */
 
-function createReminder(message, daysLater){
-    const reminderDate = new Date();
-    reminderDate.setDate(reminderDate.getDate() + daysLater)
-   
-    return function(){
-        console.log(`Reminder: ${message} on ${reminderDate.toDateString()}`)
-    }
-}
-const newFun =  createReminder("metting", 10)
-const submitAssignment = createReminder("Assignment SUbmission", 20)
-newFun()
-submitAssignment()
+// function createReminder(message, daysLater){
+//     const reminderDate = new Date();
+//     reminderDate.setDate(reminderDate.getDate() + daysLater)
+
+//     return function(){
+//         console.log(`Reminder: ${message} on ${reminderDate.toDateString()}`)
+//     }
+// }
+// const newFun =  createReminder("metting", 10)
+// const submitAssignment = createReminder("Assignment SUbmission", 20)
+
+// newFun()
+// submitAssignment()
+
 /*<-------------------------->*/
+
+
+/* 14:
+    Combined Rest Parameters + Spread + Callback + Map/Filter/Reduce
+*/
+
+// Function expression using rest parameters
+
+// const sumNumbers = (...numbers) => { return numbers.reduce((accu, element) => { return accu + element }, 0) }
+// console.log(`Sum: ${sumNumbers(1, 2, 3, 4)}`)
+
+// Array manipulation with callbacks
+
+// const numbers = [1,2,3,4,5,6];
+// const proceed = numbers.map(elmenet => elmenet).filter(element => element > 4).reduce((accu, element) => accu + element, 0)
+// console.log(`Processed Numbers: ${proceed}`)
+
+
+// Spread operator to merge arrays
+
+// const arr1 = [1,2,3], arr2 = [4,5,6];
+// const merge = [...arr1, ...arr2]
+// console.log(merge)
+
+
+/*<-------------------------->*/
+
+
