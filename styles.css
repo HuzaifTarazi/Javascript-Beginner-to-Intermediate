@@ -233,12 +233,13 @@ button:hover {
 
 
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70vh;
 }
+
 /* Main Container */
 #clock-container {
     background: #111;
@@ -303,4 +304,82 @@ button:hover {
     font-size: 1.2rem;
     color: #00ffcc;
     letter-spacing: 2px;
+}
+
+/* Stopwatch Container */
+.stopwatch-container {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+#stopwatch-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+/* Stopwatch Display */
+#stopwatch {
+    display: flex;
+    font-size: 48px;
+    font-weight: bold;
+    color: #222;
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Time Units */
+#stopwatch span {
+    display: inline-block;
+}
+
+/* Separators */
+#sw-separator-1, #sw-separator-2, #sw-separator-3 {
+    margin: 0 5px;
+    color: #555;
+}
+
+/* Buttons Container */
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Buttons Styling */
+.btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: #fff;
+    background-color: #007bff; /* Blue color */
+    box-shadow: 0 5px 12px rgba(0, 123, 255, 0.4);
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.5);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 12px rgba(0, 123, 255, 0.4);
 }

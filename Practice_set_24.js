@@ -11,7 +11,7 @@ function digitalClock() {
     })
     const newTime = time.formatToParts(new Date())
 
-    const [hour, colon1 , minute, colon2 ,second, colon3 , hour12] = newTime 
+    const [hour,, minute,, second,, hour12] = newTime 
 
     const setHour = document.getElementById("hours");
     setHour.textContent = hour.value
