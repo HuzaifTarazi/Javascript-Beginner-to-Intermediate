@@ -23,7 +23,6 @@ function start() {
 function active() {
     let currentTIme = Date.now();
     elapsedTime = currentTIme - startTime
-
     let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
     let minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
@@ -34,22 +33,29 @@ function active() {
     swseconds.textContent = seconds.toString().padStart(2, "0")
     swmilliseconds.textContent = milliseconds.toString().padStart(2, "0")
 }
+
 function stop() {
     if (isRunning) {
         clearInterval(timer)
         isRunning = false
     }
 }
-function reset() {
-    startTime = 0;
-    elapsedTime = 0;
-    isRunning = false;
-    timer = null;
 
-    swhours.textContent = "00"
-    swminutes.textContent = "00"
-    swseconds.textContent = "00"
-    swmilliseconds.textContent = "00"
+function reset() {
+
+    if (isRunning || !isRunning) {
+        clearInterval(timer)
+        isRunning = false
+        startTime = 0
+        elapsedTime = 0
+        timer = null
+
+        swhours.textContent = "00"
+        swminutes.textContent = "00"
+        swseconds.textContent = "00"
+        swmilliseconds.textContent = "00"
+    }
+
 }
 
 
