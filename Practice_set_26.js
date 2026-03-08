@@ -179,7 +179,121 @@ function showName() {
 
 /*<-------------------------->*/
 
+// DOM Navigation Practice Set 
 
+/* 1:
+    When button is clicked:
+        Select the paragraph using getElementById
+        Navigate to its parent element
+        Change the parent's background color to lightblue
+*/
+
+const fetchSibling = document.getElementById("text");
+
+function prntText() {
+    const chngPrnt = fetchSibling.parentElement
+
+    chngPrnt.style.backgroundColor = `lightblue`
+    chngPrnt.style.padding = `1px`
+    chngPrnt.style.margin = `4px`
+    chngPrnt.style.color = `black`
+}
+
+/*<-------------------------->*/
+
+/* 2:
+    When button is clicked:
+        Select the ul
+        Access its children
+        Change the text color of all children to green
+*/
+
+const btnChng = document.getElementById("btnChng");
+const fetchSiblings = document.querySelector("#fruits")
+
+btnChng.onclick = function () {
+    const selectChildren = fetchSiblings.children;
+    Array.from(selectChildren).forEach((element) => {
+        element.style.color = `green`
+    })
+}
+
+/*<-------------------------->*/
+
+/* 3:
+    When button is clicked:
+        Select the div
+        Change first child background → yellow
+        Change last child background → orange
+*/
+
+const divBox = document.getElementById("box")
+const btnBox = document.getElementById("btnBox")
+
+btnBox.onclick = function () {
+    const firstSibling = divBox.firstElementChild;
+    firstSibling.style.color = `orange`
+    const lastSibling = divBox.lastElementChild;
+    lastSibling.style.color = `yellow`
+}
+
+/*<-------------------------->*/
+
+/* 4:
+    When button is clicked:
+        Select the h2
+        Find the next element sibling
+        Change its text to:
+*/
+
+const titleSlct = document.querySelector("#title")
+
+function slctNextSibling() {
+    const selectNextSibling = titleSlct.nextElementSibling
+    selectNextSibling.textContent = `This Content is Updated..!`
+    selectNextSibling.style.color = `red`
+
+    setInterval(() => {
+        const selectPreviousSibling = titleSlct.previousElementSibling;
+        selectPreviousSibling.textContent = `Changed Using Set Interval After Few Seconds..!`
+        selectPreviousSibling.style.color = `orange`
+    }, 1000);
+}
+
+/*<-------------------------->*/
+
+
+/* 5:
+    When button is clicked:
+        Select #special
+        Change its parent background → lightgray
+        Change first child text color → blue
+        Change previous sibling text → Updated Text
+*/
+
+const h1Parent = document.querySelector("#special");
+const divParent = document.querySelector("#divElement");
+const special = document.querySelector("#special");
+
+const btnUpdateElement = document.getElementById("btnUpdateElement");
+
+btnUpdateElement.onclick = () => {
+    const changeParent = h1Parent.parentElement;
+    const slctFirstSibling = divParent.firstElementChild
+    const slctpreviousSibling = special.previousElementSibling
+    changeParent.style.backgroundColor = `orange`;
+    changeParent.style.padding = `4px`
+    changeParent.style.margin = `10px`
+    slctFirstSibling.style.color = `black`
+
+    setTimeout(() => {
+        slctpreviousSibling.textContent = `Text Updated..!`
+        slctpreviousSibling.style.color = `green`
+    }, 1000);
+
+}
+
+/*<-------------------------->*/
 
 
 
