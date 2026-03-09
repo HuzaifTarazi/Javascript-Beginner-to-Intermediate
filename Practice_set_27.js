@@ -130,11 +130,40 @@ btnCreateElement.onclick = function () {
     paraElement.style.margin = `5px`
     paraElement.style.padding = `5px`
 
-
     elementToAdd.prepend(h2Element)
     elementToAdd.append(paraElement)
 }
 
+/*<-------------------------->*/
+
+
+/* 4:
+    When button is clicked:
+        Create a new <li> element.
+        Set its text to "Apple".
+        Insert it before Mango using insertBefore().
+*/
+
+const btnApple = document.getElementById("btnApple");
+const myMango = document.getElementById("myMango");
+const myfruits = document.getElementById("myfruits");
+
+btnApple.onclick = () => {
+    const createElmnt = document.createElement("li");
+    createElmnt.textContent = `New Element`;
+    createElmnt.style.color = `red`
+    myfruits.insertBefore(createElmnt, myMango); // correct order
+    console.log(createElmnt);
+}
+
+/*<-------------------------->*/
+
+/* 5:
+    When button is clicked:
+        Create a new <li> element.
+        Set its text to "Apple".
+        Insert it before Mango using insertBefore().
+*/
 
 
 /*<-------------------------->*/
