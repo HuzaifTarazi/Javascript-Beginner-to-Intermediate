@@ -160,10 +160,21 @@ btnApple.onclick = () => {
 
 /* 5:
     When button is clicked:
-        Create a new <li> element.
-        Set its text to "Apple".
-        Insert it before Mango using insertBefore().
+        Create a <p> element.
+        Set its text to "First Paragraph".
+        Insert it before the second paragraph.
 */
 
+const btnParaInsert = document.getElementById("btnParaInsert")
+const elementsSet = document.getElementById("elementsSet")
+const secondItem = document.getElementById("second")
+
+btnParaInsert.onclick = function (){
+    const newParaElement = document.createElement("p")
+    newParaElement.textContent = `First Paragraph`
+    newParaElement.style.color = `red`
+
+    elementsSet.insertBefore(newParaElement, secondItem)
+}
 
 /*<-------------------------->*/
