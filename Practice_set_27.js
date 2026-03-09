@@ -59,5 +59,82 @@ DOM, getElementById(), getElementByClassName(), getElementsByTagName(), querySel
 
 .firstElementChild, LastElementChild, nextElementSibling, previousElementSibling, parentElement, childern
 
+createElement(), append(), prepend(), removeChild()
+
 -------------------------------------------- */
 
+/* 1:
+    When button is clicked:
+        Create a new <p> element
+        Set its text to
+        "This paragraph was created with JavaScript"
+        Add it inside the #container using append()
+*/
+
+const myContain = document.getElementById("myContain")
+const appendBtn = document.getElementById("appendBtn");
+
+appendBtn.onclick = () => {
+    const createUl = document.createElement("ul");
+    createUl.id = `myUl`;
+    const createLi1 = document.createElement("li")
+    createLi1.textContent = `Item 1`
+    createLi1.style.color = `red`
+    const createLi2 = document.createElement("li")
+    createLi2.textContent = `Item 2`
+    createLi2.style.color = `yellow`
+
+    myContain.prepend(createUl)
+    myUl.prepend(createLi1)
+    myUl.append(createLi2)
+}
+
+/*<-------------------------->*/
+
+/* 2:
+    When button is clicked:
+        Select the <ul>
+        Select the first task
+        Remove it using removeChild()
+*/
+
+const tasks = document.getElementById("tasks")
+const btnRemoveChild = document.getElementById("btnRemoveChild");
+const task1 = document.getElementById("task1")
+btnRemoveChild.onclick = function () {
+    tasks.removeChild(task1)
+}
+
+/*<-------------------------->*/
+
+/* 3:
+    When button is clicked:
+        Create a <h2> element with text "Dynamic Title"
+        Create a <p> element with text "Created using DOM"
+        Append both elements inside #box
+*/
+
+const elementToAdd = document.getElementById("elementToAdd")
+const btnCreateElement = document.getElementById("btnCreateElement")
+
+btnCreateElement.onclick = function () {
+    const h2Element = document.createElement("h2")
+    h2Element.textContent = `Dynamic Title`
+    h2Element.style.color = `yellow`
+    h2Element.style.margin = `5px`
+    h2Element.style.padding = `5px`
+
+    const paraElement = document.createElement("p")
+    paraElement.textContent = `Dynamic Title`
+    paraElement.style.color = `red`
+    paraElement.style.margin = `5px`
+    paraElement.style.padding = `5px`
+
+
+    elementToAdd.prepend(h2Element)
+    elementToAdd.append(paraElement)
+}
+
+
+
+/*<-------------------------->*/
