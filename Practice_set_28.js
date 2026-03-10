@@ -129,21 +129,29 @@ boxEvent.addEventListener("mouseout", () => {
 const boxClickEvent = document.getElementById("boxClickEvent")
 const pElement = document.createElement("p")
 
+let isRed = false;
+
 boxClickEvent.addEventListener("click", () => {
-    boxClickEvent.style.backgroundColor = `tomato`
-    pElement.textContent = `Changed to Red Color..!`
+
+
     boxClickEvent.style.display = `flex`
     boxClickEvent.style.flexDirection = `colume`
     boxClickEvent.style.justifyContent = `center`
     boxClickEvent.style.alignItems = `center`
-    boxClickEvent.prepend(pElement)
 
-    boxClickEvent.addEventListener("click", () => {
+
+    if (!isRed) {
+        boxClickEvent.style.backgroundColor = `tomato`
+        pElement.textContent = `Changed to Red Color..!`
+        isRed = true
+    } 
+    else {
         boxClickEvent.style.backgroundColor = `lightblue`
         boxClickEvent.style.color = `black`
         pElement.textContent = `Background Color Revered.!`
+        isRed = false
+    }
 
-    })
 })
 
 
@@ -161,16 +169,20 @@ boxClickEvent.addEventListener("click", () => {
 const cardChngEvent = document.getElementById("cardChngEvent");
 
 
-cardChngEvent.addEventListener("mouseover", ()=>{
+cardChngEvent.addEventListener("mouseover", () => {
     cardChngEvent.style.backgroundColor = `blue`;
+
 })
 
-cardChngEvent.addEventListener("mouseout", ()=>{
+cardChngEvent.addEventListener("mouseout", () => {
     cardChngEvent.style.backgroundColor = `grey`;
 })
 
-cardChngEvent.addEventListener("click", ()=>{
+cardChngEvent.addEventListener("click", () => {
     cardChngEvent.textContent = `Card Clicked!`;
 })
 
 /*<-------------------------->*/
+
+
+
