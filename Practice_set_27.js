@@ -59,7 +59,9 @@ DOM, getElementById(), getElementByClassName(), getElementsByTagName(), querySel
 
 .firstElementChild, LastElementChild, nextElementSibling, previousElementSibling, parentElement, childern
 
-createElement(), append(), prepend(), removeChild()
+createElement(), append(), prepend(), removeChild(), insertBefore()
+
+click, mouseover, mouseout, addEventListener(event, callback)
 
 -------------------------------------------- */
 
