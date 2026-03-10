@@ -149,7 +149,7 @@ boxClickEvent.addEventListener("click", () => {
 
 /*<-------------------------->*/
 
-/* 4:
+/* 5:
         On mouseover
             change background to blue
         On mouseout
