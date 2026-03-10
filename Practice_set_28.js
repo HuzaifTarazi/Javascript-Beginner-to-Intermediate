@@ -157,6 +157,33 @@ boxClickEvent.addEventListener("click", () => {
 
 /*<-------------------------->*/
 
+/* 4:
+        show and hide element
+*/
+
+const changeImgState = document.getElementById("changeImgState")
+const changeState = document.getElementById("changeState")
+let isHidden = false;
+changeState.addEventListener("click", ()=>{
+
+    if(!isHidden){
+        changeImgState.style.visibility = `hidden`
+        changeState.textContent = `Show`
+        isHidden = true;
+    } else {
+        changeImgState.style.visibility = `visible`
+        changeState.textContent = `Hide`
+        isHidden = false
+    }
+})
+
+/*<-------------------------->*/
+
+
+
+
+
+
 /* 5:
         On mouseover
             change background to blue
