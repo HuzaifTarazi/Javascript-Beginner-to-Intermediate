@@ -177,19 +177,18 @@ Promises, async / awaite
        Generate a random number.
 */
 
+// function randomTaskPromise(number) {
+//     numberRandomPro = Math.floor(Math.random() * 10 + 1)
+//     console.log(numberRandomPro)
+//     return new Promise((resolve, reject) => {
+//         if (number > numberRandomPro) {
+//             resolve("Task Completed")
+//         } else {
+//             reject("Task Failed To Complete.!")
+//         }
+//     })
+// }
 
-function randomTaskPromise(number) {
-    numberRandomPro = Math.floor(Math.random() * 10 + 1)
-    console.log(numberRandomPro)
-    return new Promise((resolve, reject) => {
-        if (number > numberRandomPro) {
-            resolve("Task Completed")
-        } else {
-            reject("Task Failed To Complete.!")
-        }
-    })
-}
-
-randomTaskPromise(10).then(value => console.log(value))
+// randomTaskPromise(10).then(value => console.log(value))
 
 /*<-------------------------->*/
