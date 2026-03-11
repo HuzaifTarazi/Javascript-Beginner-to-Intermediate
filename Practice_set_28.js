@@ -181,9 +181,6 @@ changeState.addEventListener("click", ()=>{
 
 
 
-
-
-
 /* 5:
         On mouseover
             change background to blue
@@ -210,6 +207,4 @@ cardChngEvent.addEventListener("click", () => {
 })
 
 /*<-------------------------->*/
-
-
 
