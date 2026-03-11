@@ -121,7 +121,7 @@ Promises, async / awaite
 /* 3:
     <-- Promise Chaining -->
     Goal: Learn how .then() chains work.
-    
+
     Task:
        Create a function multiplyByTwo(num) that returns a Promise.
     Rules:
@@ -146,23 +146,50 @@ Promises, async / awaite
 /* 4:
     <-- Login Validation System -->
     Goal: Practice reject logic.
-    
+
     Task:
        Create a function login(username, password) returning a Promise.
     Rules:
        Correct credentials:
 */
 
-function loginPromise(username, password){
-    return new Promise((resolve, reject)=>{
-        if(!username || !password){
-            reject("Error Empty Feilds!")
+// function loginPromise(username, password){
+//     return new Promise((resolve, reject)=>{
+//         if(!username || !password){
+//             reject("Error Empty Feilds!")
+//         } else {
+//             resolve("LoggedIn.!")
+//         }
+//     })
+// }
+
+// loginPromise("huzaif", "1234").then(value=>{ console.log(value)})
+
+/*<-------------------------->*/
+
+/* 5:
+    <-- Random Success / Failure -->
+    Goal: Understand unpredictable async results.
+    
+    Task:
+       Create a function randomTask() that returns a Promise.
+    Rules:
+       Generate a random number.
+*/
+
+
+function randomTaskPromise(number) {
+    numberRandomPro = Math.floor(Math.random() * 10 + 1)
+    console.log(numberRandomPro)
+    return new Promise((resolve, reject) => {
+        if (number > numberRandomPro) {
+            resolve("Task Completed")
         } else {
-            resolve("LoggedIn.!")
+            reject("Task Failed To Complete.!")
         }
     })
 }
 
-loginPromise("huzaif", "1234").then(value=>{ console.log(value)})
+randomTaskPromise(10).then(value => console.log(value))
 
 /*<-------------------------->*/
