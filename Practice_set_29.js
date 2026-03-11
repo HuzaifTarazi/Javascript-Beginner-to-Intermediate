@@ -99,23 +99,70 @@ Promises, async / awaite
 /* 2:
     <-- Simulating API Delay -->
     Goal: Practice asynchronous behavior using setTimeout.
-    
+
     Task:
         Create a function getUserData() that returns a Promise.
     Rules:
        After 2 seconds, resolve with an object
 */
 
-function GetUserPromise(){
+// function GetUserPromise(){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(() => {
+//                 resolve({name: "Huzaif", age: 34})
+//         }, 2000);
+//     })
+// }
+
+// GetUserPromise().then(value =>{ console.log(value)})
+
+/*<-------------------------->*/
+
+/* 3:
+    <-- Promise Chaining -->
+    Goal: Learn how .then() chains work.
+    
+    Task:
+       Create a function multiplyByTwo(num) that returns a Promise.
+    Rules:
+       Then chain multiple calls.
+*/
+
+// function MultiplyByTwoPromise(numberPassed) {
+//     return new Promise((resolve, reject) => {
+//         if(numberPassed) {
+//             resolve(numberPassed * 2)
+//         } else{
+//             reject("Error Empty Feild.!")
+//         }
+//     })
+// }
+
+// MultiplyByTwoPromise(10).then(value =>{ return MultiplyByTwoPromise(value)}).then(value => console.log(value))
+
+/*<-------------------------->*/
+
+
+/* 4:
+    <-- Login Validation System -->
+    Goal: Practice reject logic.
+    
+    Task:
+       Create a function login(username, password) returning a Promise.
+    Rules:
+       Correct credentials:
+*/
+
+function loginPromise(username, password){
     return new Promise((resolve, reject)=>{
-        setTimeout(() => {
-                resolve({name: "Huzaif", age: 34})
-        }, 2000);
+        if(!username || !password){
+            reject("Error Empty Feilds!")
+        } else {
+            resolve("LoggedIn.!")
+        }
     })
 }
 
-GetUserPromise().then(value =>{ console.log(value)})
-
-
+loginPromise("huzaif", "1234").then(value=>{ console.log(value)})
 
 /*<-------------------------->*/
