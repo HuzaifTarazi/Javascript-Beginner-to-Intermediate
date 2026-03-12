@@ -121,7 +121,6 @@ Promises, async / awaite
 
 /*<-------------------------->*/
 
-
 /* 3:
     <-- Sequential Tasks -->
 
@@ -132,62 +131,88 @@ Promises, async / awaite
     Each step should take 1 second..
 
 */
-function BoilWater() {
-    const boilWater = true;
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (!boilWater) {
-                reject("You Did not Boil the Water")
-            } else {
-                resolve("You boiled Water")
-            }
-        }, 1000);
-    })
-}
 
-function AddTeaLeaves() {
-    const teaLeave = true;
+// function BoilWater() {
+//     const boilWater = true;
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (!boilWater) {
+//                 reject("You Did not Boil the Water")
+//             } else {
+//                 resolve("You boiled Water")
+//             }
+//         }, 1000);
+//     })
+// }
 
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (!teaLeave) {
-                reject("You did not add tea leaves")
-            } else {
-                resolve("You Added Tea leaves")
-            }
-        }, 1000);
-    })
-}
+// function AddTeaLeaves() {
+//     const teaLeave = true;
 
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (!teaLeave) {
+//                 reject("You did not add tea leaves")
+//             } else {
+//                 resolve("You Added Tea leaves")
+//             }
+//         }, 1000);
+//     })
+// }
 
-function TeaReady() {
-    const teaReady = true;
+// function TeaReady() {
+//     const teaReady = true;
 
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (!teaReady) {
-                reject("Tea is not Ready")
-            } else {
-                resolve("Tea is Ready 😀")
-            }
-        }, 1000);
-    })
-}
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (!teaReady) {
+//                 reject("Tea is not Ready")
+//             } else {
+//                 resolve("Tea is Ready 😀")
+//             }
+//         }, 1000);
+//     })
+// }
 
-async function choresDone() {
-    try {
-        const boiledWater = await BoilWater()
-        console.log(boiledWater)
-        const teaLeave = await AddTeaLeaves()
-        console.log(teaLeave)
+// async function choresDone() {
+//     try {
+//         const boiledWater = await BoilWater()
+//         console.log(boiledWater)
+//         const teaLeave = await AddTeaLeaves()
+//         console.log(teaLeave)
 
-        const teaReadyNow = await TeaReady()
-        console.log(teaReadyNow)
-    } catch (error) {
-        console.error(error)
-    }
-}
+//         const teaReadyNow = await TeaReady()
+//         console.log(teaReadyNow)
+//     } catch (error) {
+//         console.error(error)
+//     }
+// }
 
-choresDone()
+// choresDone()
+
 /*<-------------------------->*/
 
+
+/* 4:
+    <-- Async Error Handling -->
+
+    Create a login function.
+        If wrong → throw error "Invalid Credentials".
+
+*/
+
+function LoginCredentials(username, password) {
+    return new Promise((resolve, reject) => {
+        if (username === "admin" && password === "1234") {
+            resolve("Login Complete!")
+        } else {
+            reject("Login Unsuccessful!")
+        }
+    })
+}
+
+async function LoginAsync() {
+    const loginNow = await LoginCredentials("admin", "1234")
+    console.log(loginNow)
+}
+LoginAsync()
+/*<-------------------------->*/
