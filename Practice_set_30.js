@@ -191,7 +191,6 @@ Promises, async / awaite
 
 /*<-------------------------->*/
 
-
 /* 4:
     <-- Async Error Handling -->
 
@@ -200,19 +199,51 @@ Promises, async / awaite
 
 */
 
-function LoginCredentials(username, password) {
+// function LoginCredentials(username, password) {
+//     return new Promise((resolve, reject) => {
+//         if (username === "admin" && password === "1234") {
+//             resolve("Login Complete!")
+//         } else {
+//             reject("Login Unsuccessful!")
+//         }
+//     })
+// }
+
+// async function LoginAsync() {
+//     const loginNow = await LoginCredentials("admin", "1234")
+//     console.log(loginNow)
+// }
+
+// LoginAsync()
+
+/*<-------------------------->*/
+
+
+/* 5:
+    <-- Async Error Handling -->
+    
+    Create a function fetchData() that randomly succeeds or fails..
+
+*/
+
+function fetchData() {
+    const randomData = Math.random();
     return new Promise((resolve, reject) => {
-        if (username === "admin" && password === "1234") {
-            resolve("Login Complete!")
+        if (Math.random > 0.5) {
+            resolve("Server Success.!")
         } else {
-            reject("Login Unsuccessful!")
+            reject("Server Error.!")
         }
     })
 }
 
-async function LoginAsync() {
-    const loginNow = await LoginCredentials("admin", "1234")
-    console.log(loginNow)
+async function FetchData() {
+    try {
+        const storeValue = await fetchData();
+        console.log(storeValue)
+    } catch (error) {
+        console.error(error)
+    }
 }
-LoginAsync()
+fetchData()
 /*<-------------------------->*/
