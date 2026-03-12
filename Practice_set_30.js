@@ -226,24 +226,25 @@ Promises, async / awaite
 
 */
 
-function fetchData() {
-    const randomData = Math.random();
-    return new Promise((resolve, reject) => {
-        if (Math.random > 0.5) {
-            resolve("Server Success.!")
-        } else {
-            reject("Server Error.!")
-        }
-    })
-}
+// function fetchData() {
+//     const randomData = Math.random();
+//     return new Promise((resolve, reject) => {
+//         if (Math.random > 0.5) {
+//             resolve("Server Success.!")
+//         } else {
+//             reject("Server Error.!")
+//         }
+//     })
+// }
 
-async function FetchData() {
-    try {
-        const storeValue = await fetchData();
-        console.log(storeValue)
-    } catch (error) {
-        console.error(error)
-    }
-}
-fetchData()
+// async function FetchData() {
+//     try {
+//         const storeValue = await fetchData();
+//         console.log(storeValue)
+//     } catch (error) {
+//         console.error(error)
+//     }
+// }
+// fetchData()
+
 /*<-------------------------->*/
