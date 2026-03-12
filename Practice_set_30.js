@@ -82,28 +82,41 @@ Promises, async / awaite
         Hello Huzaif! Welcome to Async JavaScript
 */
 
-function getGreeting() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("Hello, Huzaif! Welcome to Async Javascript")
-        }, 2000);
-    })
-}
+// function getGreeting() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Hello, Huzaif! Welcome to Async Javascript")
+//         }, 2000);
+//     })
+// }
 
-async function greetAsyncFun() {
-    const storeMessage = await getGreeting();
-    console.log(storeMessage)
-}
+// async function greetAsyncFun() {
+//     const storeMessage = await getGreeting();
+//     console.log(storeMessage)
+// }
 
-greetAsyncFun()
+// greetAsyncFun()
 
 /*<-------------------------->*/
 
 /* 2:
     <-- Simulate Fetching User Data -->
-    
+
     Goal: Create an async function getUser() that returns a user object after 2 seconds.
 
-    
 */
+    
+function simulateFetch(){
+    return new Promise((resolve, reject)=>{
+        resolve({name: "Huzaif", age: 23})
+    })
+}
+
+async function getSimulateFetch(){
+    const fetch = await simulateFetch()
+    console.log(fetch)
+}
+
+getSimulateFetch()
+
 /*<-------------------------->*/
