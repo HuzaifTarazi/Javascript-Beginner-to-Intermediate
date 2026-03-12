@@ -105,18 +105,89 @@ Promises, async / awaite
     Goal: Create an async function getUser() that returns a user object after 2 seconds.
 
 */
-    
-function simulateFetch(){
-    return new Promise((resolve, reject)=>{
-        resolve({name: "Huzaif", age: 23})
+
+// function simulateFetch(){
+//     return new Promise((resolve, reject)=>{
+//         resolve({name: "Huzaif", age: 23})
+//     })
+// }
+
+// async function getSimulateFetch(){
+//     const fetch = await simulateFetch()
+//     console.log(fetch)
+// }
+
+// getSimulateFetch()
+
+/*<-------------------------->*/
+
+
+/* 3:
+    <-- Sequential Tasks -->
+
+    Simulate making tea with three steps:
+        Boil water
+        Add tea leaves
+        Tea ready
+    Each step should take 1 second..
+
+*/
+function BoilWater() {
+    const boilWater = true;
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (!boilWater) {
+                reject("You Did not Boil the Water")
+            } else {
+                resolve("You boiled Water")
+            }
+        }, 1000);
     })
 }
 
-async function getSimulateFetch(){
-    const fetch = await simulateFetch()
-    console.log(fetch)
+function AddTeaLeaves() {
+    const teaLeave = true;
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (!teaLeave) {
+                reject("You did not add tea leaves")
+            } else {
+                resolve("You Added Tea leaves")
+            }
+        }, 1000);
+    })
 }
 
-getSimulateFetch()
 
+function TeaReady() {
+    const teaReady = true;
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (!teaReady) {
+                reject("Tea is not Ready")
+            } else {
+                resolve("Tea is Ready 😀")
+            }
+        }, 1000);
+    })
+}
+
+async function choresDone() {
+    try {
+        const boiledWater = await BoilWater()
+        console.log(boiledWater)
+        const teaLeave = await AddTeaLeaves()
+        console.log(teaLeave)
+
+        const teaReadyNow = await TeaReady()
+        console.log(teaReadyNow)
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+choresDone()
 /*<-------------------------->*/
+
